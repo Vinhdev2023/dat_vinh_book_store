@@ -7,7 +7,7 @@
 	 <title>Book Library</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="icon" href="apple-touch-icon.png">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -106,7 +106,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-01.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Our State Fair Is A Great Function</a></h5>
@@ -116,7 +116,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-02.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Bring Me To Light</a></h5>
@@ -126,7 +126,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-03.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Have Faith In Your Soul</a></h5>
@@ -1473,7 +1473,7 @@
 			<!--************************************
 					Testimonials End
 			*************************************-->
-			
+
 			<!--************************************
 					Call to Action Start
 			*************************************-->
