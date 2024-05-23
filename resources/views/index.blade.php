@@ -32,23 +32,10 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<ul class="tg-addnav">
-								<li>
-									<a href="javascript:void(0);">
-										<i class="icon-envelope"></i>
-										<em>Contact</em>
-									</a>
-								</li>
-								<li>
-									<a href="javascript:void(0);">
-										<i class="icon-question-circle"></i>
-										<em>Help</em>
-									</a>
-								</li>
+
 							</ul>
-							<div class="dropdown tg-themedropdown tg-currencydropdown">
+							<div class="dropdown  tg-currencydropdown">
 								<a href="javascript:void(0);" id="tg-currenty" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<i class="icon-earth"></i>
-									<span>Currency</span>
 								</a>
 								<ul class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-currenty">
 									<li>
@@ -71,10 +58,12 @@
 									</li>
 								</ul>
 							</div>
+
 							<div class="tg-userlogin">
-								<figure><a href="javascript:void(0);"><img src="images/users/img-01.jpg" alt="image description"></a></figure>
-								<span>Hi, John</span>
+								<figure><a  href="javascript:void(0);"><img src="images/users/vinhmoi.jpg" alt="image description"></a></figure>
+								<span>Hi, Vinh Moi</span>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -83,16 +72,16 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<strong class="tg-logo"><a href="index-2.html"><img src="images/logo.png" alt="company name here"></a></strong>
+							<strong class="tg-logo"><a href="index-2.html"><img src="images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
 							<div class="tg-wishlistandcart">
-								<div class="dropdown tg-themedropdown tg-wishlistdropdown">
-									<a href="javascript:void(0);" id="tg-wishlisst" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<span class="tg-themebadge">3</span>
-										<i class="icon-heart"></i>
-										<span>Wishlist</span>
-									</a>
+								<div class="dropdown  tg-wishlistdropdown">
+{{--									<a href="javascript:void(0);" id="tg-wishlisst" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--										<span class="tg-themebadge">3</span>--}}
+{{--										<i class="icon-heart"></i>--}}
+{{--										<span>Wishlist</span>--}}
+{{--									</a>--}}
 									<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
-										<div class="tg-description"><p>No products were added to the wishlist!</p></div>
+										<div class="tg-description"><p>Cart</p></div>
 									</div>
 								</div>
 								<div class="dropdown tg-themedropdown tg-minicartdropdown">
@@ -106,7 +95,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-01.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Our State Fair Is A Great Function</a></h5>
@@ -116,7 +105,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-02.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Bring Me To Light</a></h5>
@@ -126,7 +115,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-03.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Have Faith In Your Soul</a></h5>
@@ -176,7 +165,7 @@
 								</div>
 								<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
 									<ul>
-										<li class="menu-item-has-children menu-item-has-mega-menu">
+										<li class="menu-item-has-children ">
 											<a href="javascript:void(0);">All Categories</a>
 											<div class="mega-menu">
 												<ul class="tg-themetabnav" role="tablist">
@@ -210,579 +199,19 @@
 														<a href="#sciencefiction" aria-controls="sciencefiction" role="tab" data-toggle="tab">Science Fiction</a>
 													</li>
 												</ul>
-												<div class="tab-content tg-themetabcontent">
-													<div role="tabpanel" class="tab-pane active" id="artandphotography">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="biography">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="childrensbook">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="craftandhobbies">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="crimethriller">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="fantasyhorror">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="fiction">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="fooddrink">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="graphicanimemanga">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-													<div role="tabpanel" class="tab-pane" id="sciencefiction">
-														<ul>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>History</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Veniam quis nostrud</a></li>
-																	<li><a href="products.html">Exercitation</a></li>
-																	<li><a href="products.html">Laboris nisi ut aliuip</a></li>
-																	<li><a href="products.html">Commodo conseat</a></li>
-																	<li><a href="products.html">Duis aute irure</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Architecture</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Tough As Nails</a></li>
-																	<li><a href="products.html">Pro Grease Monkey</a></li>
-																	<li><a href="products.html">Building Memories</a></li>
-																	<li><a href="products.html">Bulldozer Boyz</a></li>
-																	<li><a href="products.html">Build Or Leave On Us</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-															<li>
-																<div class="tg-linkstitle">
-																	<h2>Art Forms</h2>
-																</div>
-																<ul>
-																	<li><a href="products.html">Consectetur adipisicing</a></li>
-																	<li><a href="products.html">Aelit sed do eiusmod</a></li>
-																	<li><a href="products.html">Tempor incididunt labore</a></li>
-																	<li><a href="products.html">Dolore magna aliqua</a></li>
-																	<li><a href="products.html">Ut enim ad minim</a></li>
-																</ul>
-																<a class="tg-btnviewall" href="products.html">View All</a>
-															</li>
-														</ul>
-														<ul>
-															<li>
-																<figure><img src="images/img-01.png" alt="image description"></figure>
-																<div class="tg-textbox">
-																	<h3>More Than<span>12,0657,53</span>Books Collection</h3>
-																	<div class="tg-description">
-																		<p>Consectetur adipisicing elit sed doe eiusmod tempor incididunt laebore toloregna aliqua enim.</p>
-																	</div>
-																	<a class="tg-btn" href="products.html">view all</a>
-																</div>
-															</li>
-														</ul>
-													</div>
-												</div>
 											</div>
 										</li>
 										<li class="menu-item-has-children current-menu-item">
 											<a href="javascript:void(0);">Home</a>
-											<ul class="sub-menu">
-												<li class="current-menu-item"><a href="index-2.html">Home V one</a></li>
-												<li><a href="indexv2.html">Home V two</a></li>
-												<li><a href="indexv3.html">Home V three</a></li>
-											</ul>
 										</li>
 										<li class="menu-item-has-children">
-											<a href="javascript:void(0);">Authors</a>
+											<a href="javascript:void(0);">Publisher</a>
 											<ul class="sub-menu">
 												<li><a href="authors.html">Authors</a></li>
 												<li><a href="authordetail.html">Author Detail</a></li>
 											</ul>
 										</li>
-										<li><a href="products.html">Best Selling</a></li>
-										<li><a href="products.html">Weekly Sale</a></li>
-										<li class="menu-item-has-children">
-											<a href="javascript:void(0);">Latest News</a>
+
 											<ul class="sub-menu">
 												<li><a href="newslist.html">News List</a></li>
 												<li><a href="newsgrid.html">News Grid</a></li>
@@ -800,9 +229,6 @@
 														<li><a href="productdetail.html">Product Detail</a></li>
 													</ul>
 												</li>
-												<li><a href="aboutus.html">About Us</a></li>
-												<li><a href="404error.html">404 Error</a></li>
-												<li><a href="comingsoon.html">Coming Soon</a></li>
 											</ul>
 										</li>
 									</ul>
@@ -1441,24 +867,24 @@
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-push-2">
 								<div id="tg-testimonialsslider" class="tg-testimonialsslider tg-testimonials owl-carousel">
 									<div class="item tg-testimonial">
-										<figure><img src="images/author/imag-02.jpg" alt="image description"></figure>
-										<blockquote><q>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore tolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamcoiars nisi ut aliquip commodo.</q></blockquote>
+										<figure><img src="images/author/vinh.jpg" alt="image description"></figure>
+										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
 										<div class="tg-testimonialauthor">
 											<h3>Holli Fenstermacher</h3>
 											<span>Manager @ CIFP</span>
 										</div>
 									</div>
 									<div class="item tg-testimonial">
-										<figure><img src="images/author/imag-02.jpg" alt="image description"></figure>
-										<blockquote><q>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore tolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamcoiars nisi ut aliquip commodo.</q></blockquote>
+										<figure><img src="images/author/hip.jpg" alt="image description"></figure>
+										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
 										<div class="tg-testimonialauthor">
 											<h3>Holli Fenstermacher</h3>
 											<span>Manager @ CIFP</span>
 										</div>
 									</div>
 									<div class="item tg-testimonial">
-										<figure><img src="images/author/imag-02.jpg" alt="image description"></figure>
-										<blockquote><q>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore tolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamcoiars nisi ut aliquip commodo.</q></blockquote>
+										<figure><img src="images/author/vinh.jpg" alt="image description"></figure>
+										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
 										<div class="tg-testimonialauthor">
 											<h3>Holli Fenstermacher</h3>
 											<span>Manager @ CIFP</span>
@@ -1473,156 +899,8 @@
 			<!--************************************
 					Testimonials End
 			*************************************-->
-			
-			<!--************************************
-					Call to Action Start
-			*************************************-->
-			<section class="tg-parallax tg-bgcalltoaction tg-haslayout" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="images/parallax/bgparallax-06.jpg">
-				<div class="tg-sectionspace tg-haslayout">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<div class="tg-calltoaction">
-									<h2>Open Discount For All</h2>
-									<h3>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</h3>
-									<a class="tg-btn tg-active" href="javascript:void(0);">Read More</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--************************************
-					Call to Action End
-			*************************************-->
-			<!--************************************
-					Latest News Start
-			*************************************-->
-			<section class="tg-sectionspace tg-haslayout">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<div class="tg-sectionhead">
-								<h2><span>Latest News &amp; Articles</span>What's Hot in The News</h2>
-								<a class="tg-btn" href="javascript:void(0);">View All</a>
-							</div>
-						</div>
-						<div id="tg-postslider" class="tg-postslider tg-blogpost owl-carousel">
-							<article class="item tg-post">
-								<figure><a href="javascript:void(0);"><img src="images/blog/img-01.jpg" alt="image description"></a></figure>
-								<div class="tg-postcontent">
-									<ul class="tg-bookscategories">
-										<li><a href="javascript:void(0);">Adventure</a></li>
-										<li><a href="javascript:void(0);">Fun</a></li>
-									</ul>
-									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>
-									<div class="tg-posttitle">
-										<h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
-									</div>
-									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-									<ul class="tg-postmetadata">
-										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>
-										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>
-									</ul>
-								</div>
-							</article>
-							<article class="item tg-post">
-								<figure><a href="javascript:void(0);"><img src="images/blog/img-02.jpg" alt="image description"></a></figure>
-								<div class="tg-postcontent">
-									<ul class="tg-bookscategories">
-										<li><a href="javascript:void(0);">Adventure</a></li>
-										<li><a href="javascript:void(0);">Fun</a></li>
-									</ul>
-									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>
-									<div class="tg-posttitle">
-										<h3><a href="javascript:void(0);">All She Wants To Do Is Dance</a></h3>
-									</div>
-									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-									<ul class="tg-postmetadata">
-										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>
-										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>
-									</ul>
-								</div>
-							</article>
-							<article class="item tg-post">
-								<figure><a href="javascript:void(0);"><img src="images/blog/img-03.jpg" alt="image description"></a></figure>
-								<div class="tg-postcontent">
-									<ul class="tg-bookscategories">
-										<li><a href="javascript:void(0);">Adventure</a></li>
-										<li><a href="javascript:void(0);">Fun</a></li>
-									</ul>
-									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>
-									<div class="tg-posttitle">
-										<h3><a href="javascript:void(0);">Why Walk When You Can Climb?</a></h3>
-									</div>
-									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-									<ul class="tg-postmetadata">
-										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>
-										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>
-									</ul>
-								</div>
-							</article>
-							<article class="item tg-post">
-								<figure><a href="javascript:void(0);"><img src="images/blog/img-04.jpg" alt="image description"></a></figure>
-								<div class="tg-postcontent">
-									<ul class="tg-bookscategories">
-										<li><a href="javascript:void(0);">Adventure</a></li>
-										<li><a href="javascript:void(0);">Fun</a></li>
-									</ul>
-									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>
-									<div class="tg-posttitle">
-										<h3><a href="javascript:void(0);">Dance Like Nobody’s Watching</a></h3>
-									</div>
-									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-									<ul class="tg-postmetadata">
-										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>
-										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>
-									</ul>
-								</div>
-							</article>
-							<article class="item tg-post">
-								<figure><a href="javascript:void(0);"><img src="images/blog/img-02.jpg" alt="image description"></a></figure>
-								<div class="tg-postcontent">
-									<ul class="tg-bookscategories">
-										<li><a href="javascript:void(0);">Adventure</a></li>
-										<li><a href="javascript:void(0);">Fun</a></li>
-									</ul>
-									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>
-									<div class="tg-posttitle">
-										<h3><a href="javascript:void(0);">All She Wants To Do Is Dance</a></h3>
-									</div>
-									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-									<ul class="tg-postmetadata">
-										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>
-										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>
-									</ul>
-								</div>
-							</article>
-							<article class="item tg-post">
-								<figure><a href="javascript:void(0);"><img src="images/blog/img-03.jpg" alt="image description"></a></figure>
-								<div class="tg-postcontent">
-									<ul class="tg-bookscategories">
-										<li><a href="javascript:void(0);">Adventure</a></li>
-										<li><a href="javascript:void(0);">Fun</a></li>
-									</ul>
-									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>
-									<div class="tg-posttitle">
-										<h3><a href="javascript:void(0);">Why Walk When You Can Climb?</a></h3>
-									</div>
-									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-									<ul class="tg-postmetadata">
-										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>
-										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>
-									</ul>
-								</div>
-							</article>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--************************************
-					Latest News End
-			*************************************-->
+
+
 		</main>
 		<!--************************************
 				Main End
@@ -1669,7 +947,7 @@
 						<div class="tg-threecolumns">
 							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 								<div class="tg-footercol">
-									<strong class="tg-logo"><a href="javascript:void(0);"><img src="images/flogo.png" alt="image description"></a></strong>
+									<strong class="tg-logo"><a href="javascript:void(0);"><img src="images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
 									<ul class="tg-contactinfo">
 										<li>
 											<i class="icon-apartment"></i>
@@ -1705,55 +983,34 @@
 							</div>
 							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 								<div class="tg-footercol tg-widget tg-widgetnavigation">
-									<div class="tg-widgettitle">
-										<h3>Shipping And Help Information</h3>
-									</div>
-									<div class="tg-widgetcontent">
-										<ul>
-											<li><a href="javascript:void(0);">Terms of Use</a></li>
-											<li><a href="javascript:void(0);">Terms of Sale</a></li>
-											<li><a href="javascript:void(0);">Returns</a></li>
-											<li><a href="javascript:void(0);">Privacy</a></li>
-											<li><a href="javascript:void(0);">Cookies</a></li>
-											<li><a href="javascript:void(0);">Contact Us</a></li>
-											<li><a href="javascript:void(0);">Our Affiliates</a></li>
-											<li><a href="javascript:void(0);">Vision &amp; Aim</a></li>
-										</ul>
-										<ul>
-											<li><a href="javascript:void(0);">Our Story</a></li>
-											<li><a href="javascript:void(0);">Meet Our Team</a></li>
-											<li><a href="javascript:void(0);">FAQ</a></li>
-											<li><a href="javascript:void(0);">Testimonials</a></li>
-											<li><a href="javascript:void(0);">Join Our Team</a></li>
-										</ul>
-									</div>
+
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
 								<div class="tg-footercol tg-widget tg-widgettopsellingauthors">
 									<div class="tg-widgettitle">
-										<h3>Top Selling Authors</h3>
+										<h3>User</h3>
 									</div>
 									<div class="tg-widgetcontent">
 										<ul>
 											<li>
-												<figure><a href="javascript:void(0);"><img src="images/author/imag-09.jpg" alt="image description"></a></figure>
+												<figure><a href="javascript:void(0);"><img src="images/author/vinhmoi.jpg" alt="image description" height="auto" width="100px"></a></figure>
 												<div class="tg-authornamebooks">
-													<h4><a href="javascript:void(0);">Jude Morphew</a></h4>
+													<h4><a href="javascript:void(0);">Vinh moi</a></h4>
 													<p>21,658 Published Books</p>
 												</div>
 											</li>
 											<li>
-												<figure><a href="javascript:void(0);"><img src="images/author/imag-10.jpg" alt="image description"></a></figure>
+												<figure><a href="javascript:void(0);"><img src="images/author/vinh.jpg" alt="image description" height="auto" width="100px"></a></figure>
 												<div class="tg-authornamebooks">
-													<h4><a href="javascript:void(0);">Shaun Humes</a></h4>
+													<h4><a href="javascript:void(0);">Vinh Moi</a></h4>
 													<p>20,257 Published Books</p>
 												</div>
 											</li>
 											<li>
-												<figure><a href="javascript:void(0);"><img src="images/author/imag-11.jpg" alt="image description"></a></figure>
+												<figure><a href="javascript:void(0);"><img src="images/author/vinhmoi.jpg" alt="image description height="auto" width="100px""></a></figure>
 												<div class="tg-authornamebooks">
-													<h4><a href="javascript:void(0);">Kathrine Culbertson</a></h4>
+													<h4><a href="javascript:void(0);">Moi Moi</a></h4>
 													<p>15,686 Published Books</p>
 												</div>
 											</li>
@@ -1765,31 +1022,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="tg-newsletter">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-							<h4>Signup Newsletter!</h4>
-							<h5>Consectetur adipisicing elit sed do eiusmod tempor incididunt.</h5>
-						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-							<form class="tg-formtheme tg-formnewsletter">
-								<fieldset>
-									<input type="email" name="email" class="form-control" placeholder="Enter Your Email ID">
-									<button type="button"><i class="icon-envelope"></i></button>
-								</fieldset>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="tg-footerbar">
 				<a id="tg-btnbacktotop" class="tg-btnbacktotop" href="javascript:void(0);"><i class="icon-chevron-up"></i></a>
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<span class="tg-paymenttype"><img src="images/paymenticon.png" alt="image description"></span>
-							<span class="tg-copyright">2017 All Rights Reserved By &copy; Book Library</span>
+							<span class="tg-copyright">2024 All rights reserved by Vinh Moi & Dat; BookStore</span>
 						</div>
 					</div>
 				</div>
