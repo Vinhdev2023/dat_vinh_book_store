@@ -106,7 +106,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-01.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Our State Fair Is A Great Function</a></h5>
@@ -116,7 +116,7 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-02.jpg" alt="image description">
-													
+
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Bring Me To Light</a></h5>
@@ -126,7 +126,6 @@
 											<div class="tg-minicarproduct">
 												<figure>
 													<img src="images/products/img-03.jpg" alt="image description">
-													
 												</figure>
 												<div class="tg-minicarproductdata">
 													<h5><a href="javascript:void(0);">Have Faith In Your Soul</a></h5>
@@ -1064,5 +1063,5 @@
 	<script src="js/main.js"></script>
 </body>
 
- 
+
 </html>
