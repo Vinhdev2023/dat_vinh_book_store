@@ -31,34 +31,6 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-{{--							<ul class="tg-addnav">--}}
-
-{{--							</ul>--}}
-{{--							<div class="dropdown  tg-currencydropdown">--}}
-{{--								<a href="javascript:void(0);" id="tg-currenty" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--								</a>--}}
-{{--								<ul class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-currenty">--}}
-{{--									<li>--}}
-{{--										<a href="javascript:void(0);">--}}
-{{--											<i>£</i>--}}
-{{--											<span>British Pound</span>--}}
-{{--										</a>--}}
-{{--									</li>--}}
-{{--									<li>--}}
-{{--										<a href="javascript:void(0);">--}}
-{{--											<i>$</i>--}}
-{{--											<span>Us Dollar</span>--}}
-{{--										</a>--}}
-{{--									</li>--}}
-{{--									<li>--}}
-{{--										<a href="javascript:void(0);">--}}
-{{--											<i>€</i>--}}
-{{--											<span>Euro</span>--}}
-{{--										</a>--}}
-{{--									</li>--}}
-{{--								</ul>--}}
-{{--							</div>--}}
-
 							<div class="tg-userlogin">
 								<figure><a  href="javascript:void(0);"><img src="cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
 								<span>Hi, Vinh Moi</span>
@@ -74,11 +46,6 @@
 							<strong class="tg-logo"><a href="index-2.html"><img src="cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
 							<div class="tg-wishlistandcart">
 								<div class="dropdown  tg-wishlistdropdown">
-{{--									<a href="javascript:void(0);" id="tg-wishlisst" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--										<span class="tg-themebadge">3</span>--}}
-{{--										<i class="icon-heart"></i>--}}
-{{--										<span>Wishlist</span>--}}
-{{--									</a>--}}
 									<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
 										<div class="tg-description"><p>Cart</p></div>
 									</div>
@@ -142,7 +109,6 @@
 										<input type="text" name="search" class="typeahead form-control" placeholder="Search book by keyword">
 										<button type="submit"><i class="icon-magnifier"></i></button>
 									</fieldset>
-{{--									<a href="javascript:void(0);">+  Advanced Search</a>--}}
 								</form>
 							</div>
 						</div>
@@ -210,13 +176,6 @@
 												<li><a href="authordetail.html">Publisher Detail</a></li>
 											</ul>
 										</li>
-{{--                                        <li>--}}
-{{--											<ul class="sub-menu">--}}
-{{--												<li><a href="newslist.html">News List</a></li>--}}
-{{--												<li><a href="newsgrid.html">News Grid</a></li>--}}
-{{--												<li><a href="newsdetail.html">News Detail</a></li>--}}
-{{--											</ul>--}}
-{{--										</li>--}}
 										<li><a href="contactus.html">Contact</a></li>
 										<li class="menu-item-has-children current-menu-item">
 											<a href="javascript:void(0);"><i class="icon-menu"></i></a>
@@ -499,44 +458,6 @@
 			<!--************************************
 					Best Selling End
 			*************************************-->
-
-			<!--************************************
-					Featured Item Start
-			*************************************-->
-{{--			<section class="tg-bglight tg-haslayout">--}}
-{{--				<div class="container">--}}
-{{--					<div class="row">--}}
-{{--						<div class="tg-featureditm">--}}
-{{--							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 hidden-sm hidden-xs">--}}
-{{--								<figure><img src="images/img-02.png" alt="image description"></figure>--}}
-{{--							</div>--}}
-{{--							<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">--}}
-{{--								<div class="tg-featureditmcontent">--}}
-{{--									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>--}}
-{{--									<div class="tg-booktitle">--}}
-{{--										<h3><a href="javascript:void(0);">Things To Know About Green Flat Design</a></h3>--}}
-{{--									</div>--}}
-{{--									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Farrah Whisenhunt</a></span>--}}
-{{--									<span class="tg-stars"><span></span></span>--}}
-{{--									<div class="tg-priceandbtn">--}}
-{{--										<span class="tg-bookprice">--}}
-{{--											<ins>$23.18</ins>--}}
-{{--											<del>$30.20</del>--}}
-{{--										</span>--}}
-{{--										<a class="tg-btn tg-btnstyletwo tg-active" href="javascript:void(0);">--}}
-{{--											<i class="fa fa-shopping-basket"></i>--}}
-{{--											<em>Add To Basket</em>--}}
-{{--										</a>--}}
-{{--									</div>--}}
-{{--								</div>--}}
-{{--							</div>--}}
-{{--						</div>--}}
-{{--					</div>--}}
-{{--				</div>--}}
-{{--			</section>--}}
-			<!--************************************
-					Featured Item End
-			*************************************-->
 			<!--************************************
 					New Release Start
 			*************************************-->
@@ -695,166 +616,6 @@
 			</section>
 			<!--************************************
 					Collection Count End
-			*************************************-->
-			<!--************************************
-					Picked By Author Start
-			*************************************-->
-{{--			<section class="tg-sectionspace tg-haslayout">--}}
-{{--				<div class="container">--}}
-{{--					<div class="row">--}}
-{{--						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
-{{--							<div class="tg-sectionhead">--}}
-{{--								<h2><span>Some Great Books</span>Picked By Authors</h2>--}}
-{{--								<a class="tg-btn" href="javascript:void(0);">View All</a>--}}
-{{--							</div>--}}
-{{--						</div>--}}
-{{--						<div id="tg-pickedbyauthorslider" class="tg-pickedbyauthor tg-pickedbyauthorslider owl-carousel">--}}
-{{--							<div class="item">--}}
-{{--								<div class="tg-postbook">--}}
-{{--									<figure class="tg-featureimg">--}}
-{{--										<div class="tg-bookimg">--}}
-{{--											<div class="tg-frontcover"><img src="images/books/img-10.jpg" alt="image description"></div>--}}
-{{--										</div>--}}
-{{--										<div class="tg-hovercontent">--}}
-{{--											<div class="tg-description">--}}
-{{--												<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua enim adia minim veniam, quis nostrud.</p>--}}
-{{--											</div>--}}
-{{--											<strong class="tg-bookpage">Book Pages: 206</strong>--}}
-{{--											<strong class="tg-bookcategory">Category: Adventure, Fun</strong>--}}
-{{--											<strong class="tg-bookprice">Price: $23.18</strong>--}}
-{{--											<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>--}}
-{{--										</div>--}}
-{{--									</figure>--}}
-{{--									<div class="tg-postbookcontent">--}}
-{{--										<div class="tg-booktitle">--}}
-{{--											<h3><a href="javascript:void(0);">Seven Minutes In Heaven</a></h3>--}}
-{{--										</div>--}}
-{{--										<span class="tg-bookwriter">By: <a href="javascript:void(0);">Sunshine Orlando</a></span>--}}
-{{--										<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">--}}
-{{--											<i class="fa fa-shopping-basket"></i>--}}
-{{--											<em>Add To Basket</em>--}}
-{{--										</a>--}}
-{{--									</div>--}}
-{{--								</div>--}}
-{{--							</div>--}}
-{{--							<div class="item">--}}
-{{--								<div class="tg-postbook">--}}
-{{--									<figure class="tg-featureimg">--}}
-{{--										<div class="tg-bookimg">--}}
-{{--											<div class="tg-frontcover"><img src="images/books/img-11.jpg" alt="image description"></div>--}}
-{{--										</div>--}}
-{{--										<div class="tg-hovercontent">--}}
-{{--											<div class="tg-description">--}}
-{{--												<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua enim adia minim veniam, quis nostrud.</p>--}}
-{{--											</div>--}}
-{{--											<strong class="tg-bookpage">Book Pages: 206</strong>--}}
-{{--											<strong class="tg-bookcategory">Category: Adventure, Fun</strong>--}}
-{{--											<strong class="tg-bookprice">Price: $23.18</strong>--}}
-{{--											<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>--}}
-{{--										</div>--}}
-{{--									</figure>--}}
-{{--									<div class="tg-postbookcontent">--}}
-{{--										<div class="tg-booktitle">--}}
-{{--											<h3><a href="javascript:void(0);">Slow And Steady Wins The Race</a></h3>--}}
-{{--										</div>--}}
-{{--										<span class="tg-bookwriter">By: <a href="javascript:void(0);">Drusilla Glandon</a></span>--}}
-{{--										<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">--}}
-{{--											<i class="fa fa-shopping-basket"></i>--}}
-{{--											<em>Add To Basket</em>--}}
-{{--										</a>--}}
-{{--									</div>--}}
-{{--								</div>--}}
-{{--							</div>--}}
-{{--							<div class="item">--}}
-{{--								<div class="tg-postbook">--}}
-{{--									<figure class="tg-featureimg">--}}
-{{--										<div class="tg-bookimg">--}}
-{{--											<div class="tg-frontcover"><img src="images/books/img-12.jpg" alt="image description"></div>--}}
-{{--										</div>--}}
-{{--										<div class="tg-hovercontent">--}}
-{{--											<div class="tg-description">--}}
-{{--												<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua enim adia minim veniam, quis nostrud.</p>--}}
-{{--											</div>--}}
-{{--											<strong class="tg-bookpage">Book Pages: 206</strong>--}}
-{{--											<strong class="tg-bookcategory">Category: Adventure, Fun</strong>--}}
-{{--											<strong class="tg-bookprice">Price: $23.18</strong>--}}
-{{--											<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>--}}
-{{--										</div>--}}
-{{--									</figure>--}}
-{{--									<div class="tg-postbookcontent">--}}
-{{--										<div class="tg-booktitle">--}}
-{{--											<h3><a href="javascript:void(0);">There’s No Time Like The Present</a></h3>--}}
-{{--										</div>--}}
-{{--										<span class="tg-bookwriter">By: <a href="javascript:void(0);">Patrick Seller</a></span>--}}
-{{--										<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">--}}
-{{--											<i class="fa fa-shopping-basket"></i>--}}
-{{--											<em>Add To Basket</em>--}}
-{{--										</a>--}}
-{{--									</div>--}}
-{{--								</div>--}}
-{{--							</div>--}}
-{{--							<div class="item">--}}
-{{--								<div class="tg-postbook">--}}
-{{--									<figure class="tg-featureimg">--}}
-{{--										<div class="tg-bookimg">--}}
-{{--											<div class="tg-frontcover"><img src="images/books/img-10.jpg" alt="image description"></div>--}}
-{{--										</div>--}}
-{{--										<div class="tg-hovercontent">--}}
-{{--											<div class="tg-description">--}}
-{{--												<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua enim adia minim veniam, quis nostrud.</p>--}}
-{{--											</div>--}}
-{{--											<strong class="tg-bookpage">Book Pages: 206</strong>--}}
-{{--											<strong class="tg-bookcategory">Category: Adventure, Fun</strong>--}}
-{{--											<strong class="tg-bookprice">Price: $23.18</strong>--}}
-{{--											<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>--}}
-{{--										</div>--}}
-{{--									</figure>--}}
-{{--									<div class="tg-postbookcontent">--}}
-{{--										<div class="tg-booktitle">--}}
-{{--											<h3><a href="javascript:void(0);">Seven Minutes In Heaven</a></h3>--}}
-{{--										</div>--}}
-{{--										<span class="tg-bookwriter">By: <a href="javascript:void(0);">Sunshine Orlando</a></span>--}}
-{{--										<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">--}}
-{{--											<i class="fa fa-shopping-basket"></i>--}}
-{{--											<em>Add To Basket</em>--}}
-{{--										</a>--}}
-{{--									</div>--}}
-{{--								</div>--}}
-{{--							</div>--}}
-{{--							<div class="item">--}}
-{{--								<div class="tg-postbook">--}}
-{{--									<figure class="tg-featureimg">--}}
-{{--										<div class="tg-bookimg">--}}
-{{--											<div class="tg-frontcover"><img src="images/books/img-11.jpg" alt="image description"></div>--}}
-{{--										</div>--}}
-{{--										<div class="tg-hovercontent">--}}
-{{--											<div class="tg-description">--}}
-{{--												<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua enim adia minim veniam, quis nostrud.</p>--}}
-{{--											</div>--}}
-{{--											<strong class="tg-bookpage">Book Pages: 206</strong>--}}
-{{--											<strong class="tg-bookcategory">Category: Adventure, Fun</strong>--}}
-{{--											<strong class="tg-bookprice">Price: $23.18</strong>--}}
-{{--											<div class="tg-ratingbox"><span class="tg-stars"><span></span></span></div>--}}
-{{--										</div>--}}
-{{--									</figure>--}}
-{{--									<div class="tg-postbookcontent">--}}
-{{--										<div class="tg-booktitle">--}}
-{{--											<h3><a href="javascript:void(0);">Slow And Steady Wins The Race</a></h3>--}}
-{{--										</div>--}}
-{{--										<span class="tg-bookwriter">By: <a href="javascript:void(0);">Drusilla Glandon</a></span>--}}
-{{--										<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">--}}
-{{--											<i class="fa fa-shopping-basket"></i>--}}
-{{--											<em>Add To Basket</em>--}}
-{{--										</a>--}}
-{{--									</div>--}}
-{{--								</div>--}}
-{{--							</div>--}}
-{{--						</div>--}}
-{{--					</div>--}}
-{{--				</div>--}}
-{{--			</section>--}}
-			<!--************************************
-					Picked By Author End
 			*************************************-->
 			<!--************************************
 					Testimonials Start
