@@ -1047,7 +1047,7 @@
 			<!--************************************
 					Latest News End
 			*************************************-->
-		</main>
+{{--		</main>--}}
 		<!--************************************
 				Main End
 		*************************************-->
@@ -1154,7 +1154,7 @@
 												</div>
 											</li>
 											<li>
-												<figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/vinhmoi.jpg" alt="image description height="auto" width="100px""></a></figure>
+												<figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/vinhmoi.jpg" alt="image description" height="auto" width="100px"></a></figure>
 												<div class="tg-authornamebooks">
 													<h4><a href="javascript:void(0);">Moi Moi</a></h4>
 													<p>15,686 Published Books</p>
