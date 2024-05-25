@@ -6,4 +6,5 @@ class ClientIndexController extends Controller {
     public function clientIndex() {
         return view("/client-index");
     }
+
 }
