@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientIndexController;
 
-Route::get('/', function () {
-    return view('Index');
-});
+
+Route::get('/', [ClientIndexController::class, "clientIndex"]);

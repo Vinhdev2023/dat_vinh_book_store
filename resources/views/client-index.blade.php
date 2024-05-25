@@ -72,7 +72,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<strong class="tg-logo"><a href="index-2.html"><img src="images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
+							<strong class="tg-logo"><a ><img src="images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
 							<div class="tg-wishlistandcart">
 								<div class="dropdown  tg-wishlistdropdown">
 {{--									<a href="javascript:void(0);" id="tg-wishlisst" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
@@ -264,10 +264,7 @@
 												<div class="tg-frontcover"><img src="images/books/img-01.jpg" alt="image description"></div>
 												<div class="tg-backcover"><img src="images/books/img-01.jpg" alt="image description"></div>
 											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
-											</a>
+
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
@@ -298,10 +295,7 @@
 												<div class="tg-frontcover"><img src="images/books/img-02.jpg" alt="image description"></div>
 												<div class="tg-backcover"><img src="images/books/img-02.jpg" alt="image description"></div>
 											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
-											</a>
+
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
@@ -332,10 +326,7 @@
 												<div class="tg-frontcover"><img src="images/books/img-03.jpg" alt="image description"></div>
 												<div class="tg-backcover"><img src="images/books/img-03.jpg" alt="image description"></div>
 											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
-											</a>
+
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
@@ -365,10 +356,7 @@
 												<div class="tg-frontcover"><img src="images/books/img-04.jpg" alt="image description"></div>
 												<div class="tg-backcover"><img src="images/books/img-04.jpg" alt="image description"></div>
 											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
-											</a>
+
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
@@ -399,10 +387,7 @@
 												<div class="tg-frontcover"><img src="images/books/img-05.jpg" alt="image description"></div>
 												<div class="tg-backcover"><img src="images/books/img-05.jpg" alt="image description"></div>
 											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
-											</a>
+
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
@@ -432,10 +417,7 @@
 												<div class="tg-frontcover"><img src="images/books/img-06.jpg" alt="image description"></div>
 												<div class="tg-backcover"><img src="images/books/img-06.jpg" alt="image description"></div>
 											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
-											</a>
+
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
@@ -467,9 +449,7 @@
 												<div class="tg-backcover"><img src="images/books/img-03.jpg" alt="image description"></div>
 											</div>
 											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-												<i class="icon-heart"></i>
-												<span>add to wishlist</span>
-											</a>
+
 										</figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
@@ -567,10 +547,7 @@
 														<div class="tg-frontcover"><img src="images/books/img-07.jpg" alt="image description"></div>
 														<div class="tg-backcover"><img src="images/books/img-07.jpg" alt="image description"></div>
 													</div>
-													<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-														<i class="icon-heart"></i>
-														<span>add to wishlist</span>
-													</a>
+
 												</figure>
 												<div class="tg-postbookcontent">
 													<ul class="tg-bookscategories">
@@ -592,10 +569,7 @@
 														<div class="tg-frontcover"><img src="images/books/img-08.jpg" alt="image description"></div>
 														<div class="tg-backcover"><img src="images/books/img-08.jpg" alt="image description"></div>
 													</div>
-													<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-														<i class="icon-heart"></i>
-														<span>add to wishlist</span>
-													</a>
+
 												</figure>
 												<div class="tg-postbookcontent">
 													<ul class="tg-bookscategories">
@@ -617,10 +591,7 @@
 														<div class="tg-frontcover"><img src="images/books/img-09.jpg" alt="image description"></div>
 														<div class="tg-backcover"><img src="images/books/img-09.jpg" alt="image description"></div>
 													</div>
-													<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-														<i class="icon-heart"></i>
-														<span>add to wishlist</span>
-													</a>
+
 												</figure>
 												<div class="tg-postbookcontent">
 													<ul class="tg-bookscategories">
@@ -1099,7 +1070,7 @@
 						<div class="tg-threecolumns">
 							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 								<div class="tg-footercol">
-									<strong class="tg-logo"><a href="javascript:void(0);"><img src="images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
+									<strong class="tg-logo"><a ><img src="images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
 									<ul class="tg-contactinfo">
 										<li>
 											<i class="icon-apartment"></i>
@@ -1119,17 +1090,17 @@
 										<li>
 											<i class="icon-envelope"></i>
 											<span>
-												<em><a href="mailto:support@domain.com">support@domain.com</a></em>
-												<em><a href="mailto:info@domain.com">info@domain.com</a></em>
+												<em><a >vinhmoi@gmail.com</a></em>
+												<em><a >datnguyen@gmail.com</a></em>
 											</span>
 										</li>
 									</ul>
 									<ul class="tg-socialicons">
-										<li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-										<li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-										<li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
-										<li class="tg-googleplus"><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
-										<li class="tg-rss"><a href="javascript:void(0);"><i class="fa fa-rss"></i></a></li>
+										<li class="tg-facebook"><a ><i class="fa fa-facebook"></i></a></li>
+										<li class="tg-twitter"><a ><i class="fa fa-twitter"></i></a></li>
+										<li class="tg-linkedin"><a ><i class="fa fa-linkedin"></i></a></li>
+										<li class="tg-googleplus"><a ><i class="fa fa-google-plus"></i></a></li>
+										<li class="tg-rss"><a ><i class="fa fa-rss"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -1146,21 +1117,21 @@
 									<div class="tg-widgetcontent">
 										<ul>
 											<li>
-												<figure><a href="javascript:void(0);"><img src="images/author/vinhmoi.jpg" alt="image description" height="auto" width="100px"></a></figure>
+												<figure><a "><img src="images/author/vinhmoi.jpg" alt="image description" height="auto" width="100px"></a></figure>
 												<div class="tg-authornamebooks">
 													<h4><a href="javascript:void(0);">Vinh moi</a></h4>
 													<p>21,658 Published Books</p>
 												</div>
 											</li>
 											<li>
-												<figure><a href="javascript:void(0);"><img src="images/author/vinh.jpg" alt="image description" height="auto" width="100px"></a></figure>
+												<figure><a ><img src="images/author/vinh.jpg" alt="image description" height="auto" width="100px"></a></figure>
 												<div class="tg-authornamebooks">
 													<h4><a href="javascript:void(0);">Vinh Moi</a></h4>
 													<p>20,257 Published Books</p>
 												</div>
 											</li>
 											<li>
-												<figure><a href="javascript:void(0);"><img src="images/author/vinhmoi.jpg" alt="image description height="auto" width="100px""></a></figure>
+												<figure><a ><img src="images/author/vinhmoi.jpg" alt="image description height="auto" width="100px""></a></figure>
 												<div class="tg-authornamebooks">
 													<h4><a href="javascript:void(0);">Moi Moi</a></h4>
 													<p>15,686 Published Books</p>
