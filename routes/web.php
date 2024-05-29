@@ -5,9 +5,7 @@ use App\Http\Controllers\ClientIndexController;
 use App\Http\Controllers\PublisherController;
 
 
-Route::get('/', function () {
-    return view('CustomerPages.Index');
-});
+Route::get('/', [ClientIndexController::class, 'clientIndex']);
 
 Route::get('/sign-up', function () {
     return view('CustomerPages.SignInAndSignUp.SignUp');
