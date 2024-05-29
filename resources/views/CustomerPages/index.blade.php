@@ -26,7 +26,7 @@
 		<!--************************************
 				Header Start
 		*************************************-->
-		<header id="tg-header" class="tg-header tg-haslayout">
+		{{--<header id="tg-header" class="tg-header tg-haslayout">
 			<div class="tg-topbar">
 				<div class="container">
 					<div class="row">
@@ -196,7 +196,8 @@
 					</div>
 				</div>
 			</div>
-		</header>
+		</header>--}}
+        @include('CustomerPages.header')
 		<!--************************************
 				Header End
 		*************************************-->

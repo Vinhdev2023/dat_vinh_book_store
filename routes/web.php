@@ -7,11 +7,11 @@ Route::get('/', function () {
 });
 
 Route::get('/sign-up', function () {
-    return view('SignInAndSignUp.SignUp');
+    return view('CustomerPages.SignInAndSignUp.SignUp');
 });
 
 Route::get('/sign-in', function () {
-    return view('SignInAndSignUp.SignIn');
+    return view('CustomerPages.SignInAndSignUp.SignIn');
 });
 
 require __DIR__.'/web_admin.php';
