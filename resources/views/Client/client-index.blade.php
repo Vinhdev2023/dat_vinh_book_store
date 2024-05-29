@@ -26,7 +26,7 @@
 		<!--************************************
 				Header Start
 		*************************************-->
-		{{--<header id="tg-header" class="tg-header tg-haslayout">
+		<header id="tg-header" class="tg-header tg-haslayout">
 			<div class="tg-topbar">
 				<div class="container">
 					<div class="row">
@@ -44,8 +44,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-							<strong class="tg-logo"><a ><img src="cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
-
+							<strong class="tg-logo"><a href="index-2.html"><img src="cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
 							<div class="tg-wishlistandcart">
 								<div class="dropdown  tg-wishlistdropdown">
 									<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
@@ -198,8 +197,7 @@
 					</div>
 				</div>
 			</div>
-		</header>--}}
-        @include('CustomerPages.header')
+		</header>
 		<!--************************************
 				Header End
 		*************************************-->
@@ -409,9 +407,8 @@
 												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
 												<div class="tg-backcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
 											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-                                            </a>
-										</figure>
+											<a class="tg-btnaddtowishlist" href="javascript:void(0);"> </a>
+                                        </figure>
 										<div class="tg-postbookcontent">
 											<ul class="tg-bookscategories">
 												<li><a href="javascript:void(0);">Adventure</a></li>
@@ -829,7 +826,7 @@
 							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 								<div class="tg-footercol">
 
-									<strong class="tg-logo"><a ><img src="cus_plugin/images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
+									<strong class="tg-logo"><a href="javascript:void(0);"><img src="cus_plugin/images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
 
 									<ul class="tg-contactinfo">
 										<li>
@@ -897,7 +894,6 @@
 											<li>
 
 												<figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/vinhmoi.jpg" alt="image description" height="auto" width="100px"></a></figure>
-
 												<div class="tg-authornamebooks">
 													<h4><a href="javascript:void(0);">Moi Moi</a></h4>
 													<p>15,686 Published Books</p>
