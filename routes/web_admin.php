@@ -2,8 +2,12 @@
 
 use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\AdminProductController;
+use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/admin', [AdminHomeController::class, 'index']);
+Route::prefix('/admin')->middleware(AdminMiddleware::class)->group(function (){
+    Route::get('/', [AdminHomeController::class, 'index']);
 
-Route::get('/admin/products', [AdminProductController::class, 'index']);
+    Route::get('/products', [AdminProductController::class, 'index']);
+});
+

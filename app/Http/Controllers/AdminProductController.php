@@ -8,6 +8,6 @@ class AdminProductController extends Controller
 {
     public function index(){
         $path = '/admin/products';
-        return view('AdminPages.AdminProductsData', compact('path'));
+        return view('AdminPages.AdminBooksData', compact('path'));
     }
 }
