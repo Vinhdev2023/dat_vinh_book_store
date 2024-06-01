@@ -33,12 +33,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Product DataTables</h1>
+                        <h1>Publisher DataTables</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Product DataTables</li>
+                            <li class="breadcrumb-item active">Publisher DataTables</li>
                         </ol>
                     </div>
                 </div>
@@ -87,6 +87,9 @@
                                 </table>
                             </div>
                             <!-- /.card-body -->
+                            <div class="card-footer">
+                                <a href="#" class="btn btn-primary">Add a new publisher</a>
+                            </div>
                         </div>
                         <!-- /.card -->
                     </div>

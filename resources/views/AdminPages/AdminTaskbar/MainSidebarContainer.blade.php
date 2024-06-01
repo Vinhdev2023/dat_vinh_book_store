@@ -67,7 +67,7 @@
                                 <p>Add A New Book</p>
                             </a>
                         </li>
-                        <li class="nav-item ">
+                        <li class="nav-item @if($path == '/admin/products') {{'menu-open'}} @endif">
                             <a href="/admin/products" class="nav-link @if($path == '/admin/products') {{'active'}} @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Books</p>
@@ -75,8 +75,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item @if($path == '/admin/categories') {{'menu-open'}} @endif">
+                    <a href="/admin/categories" class="nav-link @if($path == '/admin/categories') {{'active'}} @endif">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Categories
@@ -91,16 +91,16 @@
                                 <p>Add A New Category</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item @if($path == '/admin/categories') {{'menu-open'}} @endif">
+                            <a href="/admin/categories" class="nav-link @if($path == '/admin/categories') {{'active'}} @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Categories</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item  @if($path == '/admin/publishers') {{'menu-open'}} @endif">
+                    <a href="/admin/publishers" class="nav-link @if($path == '/admin/publishers') {{'active'}} @endif">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Publishers
@@ -115,8 +115,8 @@
                                 <p>Add A New Publisher</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item @if($path == '/admin/publishers') {{'menu-open'}} @endif">
+                            <a href="/admin/publishers" class="nav-link @if($path == '/admin/publishers') {{'active'}} @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Publishers</p>
                             </a>
