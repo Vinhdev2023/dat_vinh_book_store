@@ -174,7 +174,7 @@
 										<li class="menu-item-has-children">
 											<a href="javascript:void(0);">Publisher</a>
 											<ul class="sub-menu">
-												<li><a href="authors.html">Publishers</a></li>
+												<li><a href="/publisher">Publishers</a></li>
 												<li><a href="authordetail.html">Publisher Detail</a></li>
 											</ul>
 										</li>
