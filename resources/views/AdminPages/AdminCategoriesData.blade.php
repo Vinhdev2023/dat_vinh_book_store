@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | Dashboard</title>
 
-    <link rel="icon" href="/apple-touch-icon.png">
+    @include('IconWeb')
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
@@ -19,6 +19,8 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
+    <!-- Preloader -->
+    @include('AdminPages.AdminTaskbar.Preloader')
     <!-- Navbar -->
     @include('AdminPages.AdminTaskbar.Navbar')
     <!-- /.navbar -->
@@ -52,43 +54,39 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                                <h3 class="card-title">Category DataTables</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
                                 <table id="example2" class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
+                                            <th>Category</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($categories as $obj)
                                         <tr>
-                                            <td>Other browsers</td>
-                                            <td>All others</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>U</td>
+                                            <td>{{$obj->name}}</td>
+                                            <td>
+                                                <a href="/admin/category/edit-form/{{$obj->id}}" class="btn btn-primary">Edit</a>
+                                                <a href="#" class="btn btn-danger">Delete</a>
+                                            </td>
                                         </tr>
+                                    @endforeach
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
+                                            <th>Category</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                 </table>
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <a href="#" class="btn btn-primary">Add a new category</a>
+                                <a href="/admin/category/add-form" class="btn btn-primary">Add a new category</a>
                             </div>
                         </div>
                         <!-- /.card -->

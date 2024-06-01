@@ -10,4 +10,9 @@ class AdminProductController extends Controller
         $path = '/admin/products';
         return view('AdminPages.AdminBooksData', compact('path'));
     }
+
+    public function add_form(){
+        $path = '/admin/product/add-form';
+        return view('AdminPages.AdminFormBooks', compact('path'));
+    }
 }

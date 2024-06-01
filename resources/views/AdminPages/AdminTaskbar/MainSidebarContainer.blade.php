@@ -51,8 +51,8 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item @if($path == '/admin/products') {{'menu-open'}} @endif">
-                    <a href="/admin/products" class="nav-link @if($path == '/admin/products') {{'active'}} @endif">
+                <li class="nav-item @if($path == '/admin/products' || $path == '/admin/product/add-form') {{'menu-open'}} @endif">
+                    <a href="#" class="nav-link @if($path == '/admin/products' || $path == '/admin/product/add-form') {{'active'}} @endif">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Books
@@ -61,8 +61,8 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item @if($path == '/admin/product/add-form') {{'menu-open'}} @endif">
+                            <a href="/admin/product/add-form" class="nav-link @if($path == '/admin/product/add-form') {{'active'}} @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add A New Book</p>
                             </a>
@@ -75,8 +75,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if($path == '/admin/categories') {{'menu-open'}} @endif">
-                    <a href="/admin/categories" class="nav-link @if($path == '/admin/categories') {{'active'}} @endif">
+                <li class="nav-item @if($path == '/admin/categories' || $path == '/admin/category/add-form' || $path == '/admin/category/edit-form') {{'menu-open'}} @endif">
+                    <a href="#" class="nav-link @if($path == '/admin/categories' || $path == '/admin/category/add-form' || $path == '/admin/category/edit-form') {{'active'}} @endif">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Categories
@@ -85,12 +85,21 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add A New Category</p>
-                            </a>
-                        </li>
+                        @if($path == '/admin/category/edit-form')
+                            <li class="nav-item @if($path == '/admin/category/edit-form') {{'menu-open'}} @endif">
+                                <a href="/admin/category/edit-form/{{$category[0]->id}}" class="nav-link @if($path == '/admin/category/edit-form') {{'active'}} @endif">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Edit Category</p>
+                                </a>
+                            </li>
+                        @else
+                            <li class="nav-item @if($path == '/admin/category/add-form') {{'menu-open'}} @endif">
+                                <a href="/admin/category/add-form" class="nav-link @if($path == '/admin/category/add-form') {{'active'}} @endif">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add A New Category</p>
+                                </a>
+                            </li>
+                        @endif
                         <li class="nav-item @if($path == '/admin/categories') {{'menu-open'}} @endif">
                             <a href="/admin/categories" class="nav-link @if($path == '/admin/categories') {{'active'}} @endif">
                                 <i class="far fa-circle nav-icon"></i>
@@ -99,8 +108,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item  @if($path == '/admin/publishers') {{'menu-open'}} @endif">
-                    <a href="/admin/publishers" class="nav-link @if($path == '/admin/publishers') {{'active'}} @endif">
+                <li class="nav-item  @if($path == '/admin/publishers' || $path == '/admin/publisher/add-form') {{'menu-open'}} @endif">
+                    <a href="/admin/publishers" class="nav-link @if($path == '/admin/publishers' || $path == '/admin/publisher/add-form') {{'active'}} @endif">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Publishers
@@ -109,8 +118,8 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item @if($path == '/admin/publisher/add-form') {{'menu-open'}} @endif">
+                            <a href="/admin/publisher/add-form" class="nav-link @if($path == '/admin/publisher/add-form') {{'active'}} @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add A New Publisher</p>
                             </a>
