@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="cus_plugin/css/main.css">
     <link rel="stylesheet" href="cus_plugin/css/color.css">
     <link rel="stylesheet" href="cus_plugin/css/responsive.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="cus_plugin/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
 
@@ -793,14 +793,14 @@
 {{--                                    <li class="menu-item-has-children current-menu-item">--}}
 {{--                                        <a href="javascript:void(0);"><i class="icon-menu"></i></a>--}}
 {{--                                        <ul class="sub-menu">--}}
-{{--                                            <li class="menu-item-has-children current-menu-item">--}}
-{{--                                                <a href="javascript:void(0);">Products</a>--}}
+{{--                                            <li class="menu-item-has-children">--}}
+{{--                                                <a href="/products">Products</a>--}}
 {{--                                                <ul class="sub-menu">--}}
-{{--                                                    <li class="current-menu-item"><a href="products.html">Products</a></li>--}}
+{{--                                                    <li><a href="products.html">Products</a></li>--}}
 {{--                                                    <li><a href="productdetail.html">Product Detail</a></li>--}}
 {{--                                                </ul>--}}
 {{--                                            </li>--}}
-{{--                                            <li><a href="aboutus.html">About Us</a></li>--}}
+{{--                                            <li class="current-menu-item"><a href="/products">About Us</a></li>--}}
 {{--                                            <li><a href="404error.html">404 Error</a></li>--}}
 {{--                                            <li><a href="comingsoon.html">Coming Soon</a></li>--}}
 {{--                                        </ul>--}}
@@ -825,10 +825,10 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-innerbannercontent">
-                        <h1>All Products</h1>
+                        <h1>About Us</h1>
                         <ol class="tg-breadcrumb">
-                            <li><a >home</a></li>
-                            <li class="tg-active">Products</li>
+                            <li><a href="javascript:void(0);">home</a></li>
+                            <li class="tg-active">About Us</li>
                         </ol>
                     </div>
                 </div>
@@ -843,629 +843,252 @@
     *************************************-->
     <main id="tg-main" class="tg-main tg-haslayout">
         <!--************************************
-                News Grid Start
+                About Us Start
         *************************************-->
-        <div class="tg-sectionspace tg-haslayout">
+        <section class="tg-sectionspace tg-haslayout">
             <div class="container">
                 <div class="row">
-                    <div id="tg-twocolumns" class="tg-twocolumns">
-                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
-                            <div id="tg-content" class="tg-content">
-                                <div class="tg-products">
-                                    <div class="tg-sectionhead">
-                                        <h2><span>People’s Choice</span>Bestselling Books</h2>
-                                    </div>
-                                    <div class="tg-featurebook alert" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <div class="tg-featureditm">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 hidden-sm hidden-xs">
-                                                    <figure><img src="cus_plugin/images/img-04.png" alt="image description"></figure>
-                                                </div>
-                                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                                                    <div class="tg-featureditmcontent">
-                                                        <div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>
-                                                        <div class="tg-booktitle">
-                                                            <h3><a href="javascript:void(0);">Things To Know About Green Flat Design</a></h3>
-                                                        </div>
-                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Farrah Whisenhunt</a></span>
-                                                        <span class="tg-stars"><span></span></span>
-                                                        <div class="tg-priceandbtn">
-																<span class="tg-bookprice">
-																	<ins>$23.18</ins>
-																	<del>$30.20</del>
-																</span>
-                                                            <a class="tg-btn tg-btnstyletwo tg-active" href="javascript:void(0);">
-                                                                <i class="fa fa-shopping-basket"></i>
-                                                                <em>Add To Basket</em>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                    <div class="tg-aboutus">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <div class="tg-aboutusshortcode">
+                                <div class="tg-sectionhead">
+                                    <h2><span>Greetings &amp; Welcome</span>Know More About Us</h2>
+                                </div>
+                                <div class="tg-description">
+                                    <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoiars nisiuip commodo consequat aute irure dolor in aprehenderit aveli esseati cillum dolor fugiat nulla pariatur cepteur sint occaecat cupidatat.</p>
+                                </div>
+                                <div class="tg-btns">
+                                    <a class="tg-btn tg-active" href="javascript:void(0);">Our History</a>
+                                    <a class="tg-btn" href="javascript:void(0);">Meet Our Team</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <figure>
+                                <img src="cus_plugin/images/placeholder.jpg" alt="image description">
+                                <iframe src="https://www.youtube.com/embed/acwr_Islo9A?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--************************************
+                About Us End
+        *************************************-->
+        <!--************************************
+                Call to Action Start
+        *************************************-->
+        <section class="tg-parallax tg-bgcalltoaction tg-haslayout" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-06.jpg">
+            <div class="tg-sectionspace tg-haslayout">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="tg-calltoaction">
+                                <h2>Fully Loaded Template</h2>
+                                <h3>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</h3>
+                                <a class="tg-btn tg-active" href="javascript:void(0);">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--************************************
+                Call to Action End
+        *************************************-->
+        <!--************************************
+                Success Start
+        *************************************-->
+        <section class="tg-sectionspace tg-haslayout">
+            <div class="container">
+                <div class="row">
+                    <div class="tg-successstory">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="tg-sectionhead">
+                                <h2><span>Our Pride Moments</span>Journey of Success</h2>
+                            </div>
+                            <div id="tg-successslider" class="tg-successslider tg-success owl-carousel">
+                                <div class="item">
+                                    <figure>
+                                        <img src="cus_plugin/images/img-01.jpg" alt="image description">
+                                    </figure>
+                                    <div class="tg-successcontent">
+                                        <div class="tg-sectionhead">
+                                            <h2><span>June 27, 2017</span>First Step Toward Success</h2>
+                                        </div>
+                                        <div class="tg-description">
+                                            <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoiars nisiuip commodo consequat aute irure dolor in aprehenderit aveli esseati cillum dolor fugiat nulla pariatur cepteur sint occaecat cupidatat.</p>
                                         </div>
                                     </div>
-                                    <div class="tg-productgrid">
-                                        <div class="tg-refinesearch">
-                                            <span>showing 1 to 8 of 20 total</span>
-                                            <form class="tg-formtheme tg-formsortshoitems">
-                                                <fieldset>
-                                                    <div class="form-group">
-                                                        <label>sort by:</label>
-                                                        <span class="tg-select">
-																<select>
-																	<option>name</option>
-																	<option>name</option>
-																	<option>name</option>
-																</select>
-															</span>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>show:</label>
-                                                        <span class="tg-select">
-																<select>
-																	<option>8</option>
-																	<option>16</option>
-																	<option>20</option>
-																</select>
-															</span>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <img src="cus_plugin/images/img-01.jpg" alt="image description">
+                                    </figure>
+                                    <div class="tg-successcontent">
+                                        <div class="tg-sectionhead">
+                                            <h2><span>June 27, 2017</span>First Step Toward Success</h2>
                                         </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-01.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-01.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Art &amp; Photography</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-															<del>$27.20</del>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                        <div class="tg-description">
+                                            <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoiars nisiuip commodo consequat aute irure dolor in aprehenderit aveli esseati cillum dolor fugiat nulla pariatur cepteur sint occaecat cupidatat.</p>
                                         </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-02.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-02.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Children’s Book</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-															<del>$27.20</del>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <figure>
+                                        <img src="cus_plugin/images/img-01.jpg" alt="image description">
+                                    </figure>
+                                    <div class="tg-successcontent">
+                                        <div class="tg-sectionhead">
+                                            <h2><span>June 27, 2017</span>First Step Toward Success</h2>
                                         </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Comic</a></li>
-                                                        <li><a href="javascript:void(0);">Adventure</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-04.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-04.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Fantacy &amp; Horor</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-05.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-05.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Children’s Book</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-															<del>$27.20</del>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-06.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-06.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Comic</a></li>
-                                                        <li><a href="javascript:void(0);">Adventure</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-07.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-07.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Adventure</a></li>
-                                                        <li><a href="javascript:void(0);">Fiction</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-															<del>$27.20</del>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-08.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-08.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Fantacy &amp; Horor</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-09.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-09.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Children’s Book</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-															<del>$27.20</del>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-10.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-10.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Comic</a></li>
-                                                        <li><a href="javascript:void(0);">Adventure</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/s/books/img-11.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-11.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Adventure</a></li>
-                                                        <li><a href="javascript:void(0);">Fiction</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-															<del>$27.20</del>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="tg-postbook">
-                                                <figure class="tg-featureimg">
-                                                    <div class="tg-bookimg">
-                                                        <div class="tg-frontcover"><img src="cus_plugin/images/books/img-12.jpg" alt="image description"></div>
-                                                        <div class="tg-backcover"><img src="cus_plugin/images/books/img-12.jpg" alt="image description"></div>
-                                                    </div>
-                                                </figure>
-                                                <div class="tg-postbookcontent">
-                                                    <ul class="tg-bookscategories">
-                                                        <li><a href="javascript:void(0);">Adventure</a></li>
-                                                        <li><a href="javascript:void(0);">Fun</a></li>
-                                                    </ul>
-                                                    <div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-                                                    <div class="tg-booktitle">
-                                                        <h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-                                                    </div>
-                                                    <span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-                                                    <span class="tg-stars"><span></span></span>
-                                                    <span class="tg-bookprice">
-															<ins>$25.18</ins>
-														</span>
-                                                    <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-                                                        <i class="fa fa-shopping-basket"></i>
-                                                        <em>Add To Basket</em>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                        <div class="tg-description">
+                                            <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoiars nisiuip commodo consequat aute irure dolor in aprehenderit aveli esseati cillum dolor fugiat nulla pariatur cepteur sint occaecat cupidatat.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
-                            <aside id="tg-sidebar" class="tg-sidebar">
-                                <div class="tg-widget tg-widgetsearch">
-                                    <form class="tg-formtheme tg-formsearch">
-                                        <div class="form-group">
-                                            <button type="submit"><i class="icon-magnifier"></i></button>
-                                            <input type="search" name="search" class="form-group" placeholder="Search by title, author, key...">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="tg-widget tg-catagories">
-                                    <div class="tg-widgettitle">
-                                        <h3>Categories</h3>
-                                    </div>
-                                    <div class="tg-widgetcontent">
-                                        <ul>
-                                            <li><a href="javascript:void(0);"><span>Art &amp; Photography</span><em>28245</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Biography</span><em>4856</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Children’s Book</span><em>8654</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Craft &amp; Hobbies</span><em>6247</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Crime &amp; Thriller</span><em>888654</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Fantasy &amp; Horror</span><em>873144</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Fiction</span><em>18465</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Fod &amp; Drink</span><em>3148</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Graphic, Anime &amp; Manga</span><em>77531</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>Science Fiction</span><em>9247</em></a></li>
-                                            <li><a href="javascript:void(0);"><span>View All</span></a></li>
-                                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--************************************
+                Success End
+        *************************************-->
+        <!--************************************
+                Testimonials Start
+        *************************************-->
+        <section class="tg-parallax tg-bgtestimonials tg-haslayout" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-05.jpg">
+            <div class="tg-sectionspace tg-haslayout">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-push-2">
+                            <div id="tg-testimonialsslider" class="tg-testimonialsslider tg-testimonials owl-carousel">
+                                <div class="item tg-testimonial">
+                                    <figure><img src="cus_plugin/images/author/imag-02.jpg" alt="image description"></figure>
+                                    <blockquote><q>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore tolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamcoiars nisi ut aliquip commodo.</q></blockquote>
+                                    <div class="tg-testimonialauthor">
+                                        <h3>Holli Fenstermacher</h3>
+                                        <span>Manager @ CIFP</span>
                                     </div>
                                 </div>
-                                <div class="tg-widget tg-widgettrending">
-                                    <div class="tg-widgettitle">
-                                        <h3>Trending Products</h3>
-                                    </div>
-                                    <div class="tg-widgetcontent">
-                                        <ul>
-                                            <li>
-                                                <article class="tg-post">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-04.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-postcontent">
-                                                        <div class="tg-posttitle">
-                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
-                                                        </div>
-                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                            <li>
-                                                <article class="tg-post">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-05.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-postcontent">
-                                                        <div class="tg-posttitle">
-                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
-                                                        </div>
-                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                            <li>
-                                                <article class="tg-post">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-06.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-postcontent">
-                                                        <div class="tg-posttitle">
-                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
-                                                        </div>
-                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                            <li>
-                                                <article class="tg-post">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-07.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-postcontent">
-                                                        <div class="tg-posttitle">
-                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>
-                                                        </div>
-                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </ul>
+                                <div class="item tg-testimonial">
+                                    <figure><img src="cus_plugin/images/author/imag-02.jpg" alt="image description"></figure>
+                                    <blockquote><q>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore tolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamcoiars nisi ut aliquip commodo.</q></blockquote>
+                                    <div class="tg-testimonialauthor">
+                                        <h3>Holli Fenstermacher</h3>
+                                        <span>Manager @ CIFP</span>
                                     </div>
                                 </div>
-                                <div class="tg-widget tg-widgetinstagram">
-                                    <div class="tg-widgettitle">
-                                        <h3>Instagram</h3>
-                                    </div>
-                                    <div class="tg-widgetcontent">
-                                        <ul>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-01.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-02.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-03.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-04.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-05.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-06.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-07.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-08.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                            <li>
-                                                <figure>
-                                                    <img src="cus_plugin/images/instagram/img-09.jpg" alt="image description">
-                                                    <figcaption><a href="javascript:void(0);"><i class="icon-heart"></i><em>50,134</em></a></figcaption>
-                                                </figure>
-                                            </li>
-                                        </ul>
+                                <div class="item tg-testimonial">
+                                    <figure><img src="cus_plugin/images/author/imag-02.jpg" alt="image description"></figure>
+                                    <blockquote><q>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore tolore magna aliqua enim ad minim veniam, quis nostrud exercitation ullamcoiars nisi ut aliquip commodo.</q></blockquote>
+                                    <div class="tg-testimonialauthor">
+                                        <h3>Holli Fenstermacher</h3>
+                                        <span>Manager @ CIFP</span>
                                     </div>
                                 </div>
-                                <div class="tg-widget tg-widgetblogers">
-                                    <div class="tg-widgettitle">
-                                        <h3>Top Bloogers</h3>
-                                    </div>
-                                    <div class="tg-widgetcontent">
-                                        <ul>
-                                            <li>
-                                                <div class="tg-author">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/imag-03.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-authorcontent">
-                                                        <h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-                                                        <span>21,658 Published Books</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tg-author">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/imag-04.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-authorcontent">
-                                                        <h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-                                                        <span>21,658 Published Books</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tg-author">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/imag-05.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-authorcontent">
-                                                        <h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-                                                        <span>21,658 Published Books</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="tg-author">
-                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/imag-06.jpg" alt="image description"></a></figure>
-                                                    <div class="tg-authorcontent">
-                                                        <h2><a href="javascript:void(0);">Jude Morphew</a></h2>
-                                                        <span>21,658 Published Books</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </aside>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!--************************************
-                News Grid End
+                Testimonials End
+        *************************************-->
+        <!--************************************
+                Authors Start
+        *************************************-->
+        <section class="tg-sectionspace tg-haslayout">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="tg-sectionhead">
+                            <h2><span>Team Behind Book Library</span>Meet Our Professionals</h2>
+                        </div>
+                    </div>
+                    <div id="tg-teamsslider" class="tg-authors tg-authorsslider tg-teamsmember owl-carousel">
+                        <div class="item tg-author tg-member">
+                            <figure><a href="javascript:void(0);"><img src="cus_plugin/images/team/img-01.jpg" alt="image description"></a></figure>
+                            <div class="tg-authorcontent">
+                                <h2><a href="javascript:void(0);">Jude Morphew</a></h2>
+                                <span>Online Retail Manager</span>
+                                <ul class="tg-socialicons">
+                                    <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item tg-author tg-member">
+                            <figure><a href="javascript:void(0);"><img src="cus_plugin/images/team/img-02.jpg" alt="image description"></a></figure>
+                            <div class="tg-authorcontent">
+                                <h2><a href="javascript:void(0);">Book Burger</a></h2>
+                                <span>Bookstore Director</span>
+                                <ul class="tg-socialicons">
+                                    <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item tg-author tg-member">
+                            <figure><a href="javascript:void(0);"><img src="cus_plugin/images/team/img-03.jpg" alt="image description"></a></figure>
+                            <div class="tg-authorcontent">
+                                <h2><a href="javascript:void(0);">Book Ship &amp; Co.</a></h2>
+                                <span>Business Operations</span>
+                                <ul class="tg-socialicons">
+                                    <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item tg-author tg-member">
+                            <figure><a href="javascript:void(0);"><img src="cus_plugin/images/team/img-04.jpg" alt="image description"></a></figure>
+                            <div class="tg-authorcontent">
+                                <h2><a href="javascript:void(0);">Enoch Gallion</a></h2>
+                                <span>Assistant Director</span>
+                                <ul class="tg-socialicons">
+                                    <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item tg-author tg-member">
+                            <figure><a href="javascript:void(0);"><img src="cus_plugin/images/team/img-05.jpg" alt="image description"></a></figure>
+                            <div class="tg-authorcontent">
+                                <h2><a href="javascript:void(0);">Book House</a></h2>
+                                <span>Business Operations</span>
+                                <ul class="tg-socialicons">
+                                    <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item tg-author tg-member">
+                            <figure><a href="javascript:void(0);"><img src="cus_plugin/images/team/img-04.jpg" alt="image description"></a></figure>
+                            <div class="tg-authorcontent">
+                                <h2><a href="javascript:void(0);">Linnie Klimek</a></h2>
+                                <span>Assistant Director</span>
+                                <ul class="tg-socialicons">
+                                    <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--************************************
+                Authors End
         *************************************-->
     </main>
     <!--************************************

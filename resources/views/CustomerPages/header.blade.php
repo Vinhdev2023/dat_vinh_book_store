@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <strong class="tg-logo"><a href="index-2.html"><img src="cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
+                    <strong class="tg-logo"><a ><img src="cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
                     <div class="tg-wishlistandcart">
                         <div class="dropdown  tg-wishlistdropdown">
                             <div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
@@ -138,25 +138,22 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="menu-item-has-children current-menu-item">
-                                    <a href="javascript:void(0);">Home</a>
+                                <li >
+                                    <a href="/">Home</a>
                                 </li>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0);">Publisher</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="authors.html">Publishers</a></li>
-                                        <li><a href="authordetail.html">Publisher Detail</a></li>
-                                    </ul>
+                                <li >
+                                    <a href="/publisher">Publisher</a>
+
                                 </li>
-                                <li><a href="contactus.html">Contact</a></li>
+                                <li><a href="/contact">Contact</a></li>
                                 <li class="menu-item-has-children current-menu-item">
                                     <a href="javascript:void(0);"><i class="icon-menu"></i></a>
                                     <ul class="sub-menu">
                                         <li class="menu-item-has-children">
-                                            <a href="aboutus.html">Products</a>
+                                            <a href="/product">Products</a>
                                             <ul class="sub-menu">
-                                                <li><a href="products.html">Products</a></li>
-                                                <li><a href="productdetail.html">Product Detail</a></li>
+                                                <li><a href="/products">Product</a></li>
+                                                <li><a href="/productDetail">Product Detail</a></li>
                                             </ul>
                                         </li>
                                     </ul>
