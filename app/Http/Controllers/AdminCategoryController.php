@@ -49,12 +49,16 @@ class AdminCategoryController extends Controller
     }
 
     public function edit_category(Request $request, $id){
-        DB::table('categories')
-            ->where('id', $id)
-            ->update([
-                'name' => $request->CategoryName,
-                'updated_at' => Carbon::now()
-            ]);
-        return redirect('admin/categories');
+        if ($request->CategoryName == null){
+            return redirect('admin/category/edit-form/'.$id);
+        } else {
+            DB::table('categories')
+                ->where('id', $id)
+                ->update([
+                    'name' => $request->CategoryName,
+                    'updated_at' => Carbon::now()
+                ]);
+            return redirect('admin/categories');
+        }
     }
 }

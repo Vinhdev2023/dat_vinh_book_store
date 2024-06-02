@@ -91,7 +91,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <a href="#" class="btn btn-primary">Add a new book</a>
+                                <a href="/admin/product/add-form" class="btn btn-primary">Add a new book</a>
                             </div>
                         </div>
                         <!-- /.card -->
@@ -136,7 +136,7 @@
         $('#example2').DataTable({
             "paging": true,
             "lengthChange": false,
-            "searching": false,
+            "searching": true,
             "ordering": true,
             "info": true,
             "autoWidth": false,

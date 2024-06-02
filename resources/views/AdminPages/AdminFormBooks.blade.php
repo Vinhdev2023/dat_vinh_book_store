@@ -30,6 +30,10 @@
     <link rel="stylesheet" href="/admin_plugin/plugins/dropzone/min/dropzone.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/admin_plugin/dist/css/adminlte.min.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="/admin_plugin/plugins/summernote/summernote-bs4.min.css">
+    <!-- SimpleMDE -->
+    <link rel="stylesheet" href="/admin_plugin/plugins/simplemde/simplemde.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -48,12 +52,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Add Book Form</h1>
+                        <h1>Add Book</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Add Book Form</li>
+                            <li class="breadcrumb-item active">Add Book</li>
                         </ol>
                     </div>
                 </div>
@@ -68,28 +72,65 @@
                         <h3 class="card-title">Form add new book</h3>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Book title</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter book title">
+                    <form action="/admin/product/add" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Book title</label>
+                                <input type="text" class="form-control" placeholder="Enter book title">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputFile">File input</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">Upload</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="form-control" id="summernote"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Price</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" min="0" value="0" id="price" placeholder="Enter Price">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input type="number" class="form-control" min="0" value="0" id="quantity" placeholder="Enter Price">
+                            </div>
+                            <div class="form-group">
+                                <label>Publisher</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    @foreach($publishers as $obj)
+                                        <option value="{{$obj->id}}">{{$obj->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    @foreach($categories as $obj)
+                                        <option value="{{$obj->id}}">{{$obj->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Category</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Alabama</option>
-                                <option>Alaska</option>
-                                <option>California</option>
-                                <option>Delaware</option>
-                                <option>Tennessee</option>
-                                <option>Texas</option>
-                                <option>Washington</option>
-                            </select>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a href="/admin/products" class="btn btn-danger">Cancel</a>
                         </div>
-                    </div>
-                    <!-- /.card-body -->
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
+                    </form>
                 </div>
                 <!-- /.card -->
             </div>
@@ -106,6 +147,8 @@
 <script src="/admin_plugin/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/admin_plugin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="/admin_plugin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- Select2 -->
 <script src="/admin_plugin/plugins/select2/js/select2.full.min.js"></script>
 <!-- Bootstrap4 Duallistbox -->
@@ -129,11 +172,23 @@
 <script src="/admin_plugin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/admin_plugin/dist/js/adminlte.min.js"></script>
+<!-- Summernote -->
+<script src="/admin_plugin/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/admin_plugin/dist/js/demo.js"></script>
+
 <!-- Page specific script -->
 <script>
     $(function () {
+        bsCustomFileInput.init();
+        $('#summernote').summernote()
+
+        $('#quantity').on('input', function() {
+            $(this).val($(this).val().replace(/[^0-9]/, ''));
+        });
+        $('#price').on('input', function() {
+            $(this).val($(this).val().replace(/[e\+\-]/gi, ''));
+        });
         //Initialize Select2 Elements
         $('.select2').select2()
 

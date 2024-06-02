@@ -12,6 +12,7 @@ Route::prefix('/admin')->group(function (){
 
     Route::get('/products', [AdminProductController::class, 'index']);
     Route::get('/product/add-form', [AdminProductController::class, 'add_form']);
+    Route::post('/product/add', [AdminProductController::class, 'add_product']);
 
     Route::get('/categories', [AdminCategoryController::class, 'index']);
     Route::get('/category/add-form', [AdminCategoryController::class, 'add_form']);
@@ -22,5 +23,7 @@ Route::prefix('/admin')->group(function (){
     Route::get('/publishers', [AdminPublisherController::class, 'index']);
     Route::get('/publisher/add-form', [AdminPublisherController::class, 'add_form']);
     Route::post('/publisher/add', [AdminPublisherController::class, 'add_publisher']);
+    Route::get('/publisher/edit-form/{id}', [AdminPublisherController::class, 'edit_form']);
+    Route::post('/publisher/update/{id}', [AdminPublisherController::class, 'edit_publisher']);
 });
 

@@ -49,12 +49,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Add Publisher</h1>
+                        <h1>@if($path == '/admin/publisher/add-form'){{'Add Publisher'}}@else{{'Edit Publisher'}}@endif</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Add Publisher</li>
+                            <li class="breadcrumb-item active">@if($path == '/admin/publisher/add-form'){{'Add Publisher'}}@else{{'Edit Publisher'}}@endif</li>
                         </ol>
                     </div>
                 </div>
@@ -69,12 +69,12 @@
                         <h3 class="card-title">Form add new publisher</h3>
                     </div>
                     <!-- /.card-header -->
-                    <form action="@if($path == '/admin/publisher/add-form'){{'/admin/publisher/add'}}@else{{'/admin/publisher/update/'.$category[0]->id}}@endif" method="post">
+                    <form action="@if($path == '/admin/publisher/add-form'){{'/admin/publisher/add'}}@else{{'/admin/publisher/update/'.$publisher[0]->id}}@endif" method="post">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Publisher name</label>
-                                <input type="text" name="PublisherName" @if(@isset($category))value="{{$category[0]->name}}"@endif class="form-control" id="exampleInputEmail1" placeholder="Enter publisher name">
+                                <input type="text" name="PublisherName" @if(@isset($publisher))value="{{$publisher[0]->name}}"@endif class="form-control" id="exampleInputEmail1" placeholder="Enter publisher name">
                             </div>
                         </div>
                         <!-- /.card-body -->

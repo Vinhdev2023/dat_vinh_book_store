@@ -86,8 +86,8 @@
                     </a>
                     <ul class="nav nav-treeview">
                         @if($path == '/admin/category/edit-form')
-                            <li class="nav-item @if($path == '/admin/category/edit-form') {{'menu-open'}} @endif">
-                                <a href="/admin/category/edit-form/{{$category[0]->id}}" class="nav-link @if($path == '/admin/category/edit-form') {{'active'}} @endif">
+                            <li class="nav-item menu-open">
+                                <a href="/admin/category/edit-form/{{$category[0]->id}}" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Edit Category</p>
                                 </a>
@@ -108,8 +108,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item  @if($path == '/admin/publishers' || $path == '/admin/publisher/add-form') {{'menu-open'}} @endif">
-                    <a href="/admin/publishers" class="nav-link @if($path == '/admin/publishers' || $path == '/admin/publisher/add-form') {{'active'}} @endif">
+                <li class="nav-item  @if($path == '/admin/publishers' || $path == '/admin/publisher/add-form' || $path == '/admin/publisher/edit-form') {{'menu-open'}} @endif">
+                    <a href="/admin/publishers" class="nav-link @if($path == '/admin/publishers' || $path == '/admin/publisher/add-form' || $path == '/admin/publisher/edit-form') {{'active'}} @endif">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Publishers
@@ -118,12 +118,21 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item @if($path == '/admin/publisher/add-form') {{'menu-open'}} @endif">
-                            <a href="/admin/publisher/add-form" class="nav-link @if($path == '/admin/publisher/add-form') {{'active'}} @endif">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add A New Publisher</p>
-                            </a>
-                        </li>
+                        @if($path == '/admin/publisher/edit-form')
+                            <li class="nav-item menu-open">
+                                <a href="/admin/publisher/edit-form/{{$publisher[0]->id}}" class="nav-link active">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Edit Publisher</p>
+                                </a>
+                            </li>
+                        @else
+                            <li class="nav-item @if($path == '/admin/publisher/add-form') {{'menu-open'}} @endif">
+                                <a href="/admin/publisher/add-form" class="nav-link @if($path == '/admin/publisher/add-form') {{'active'}} @endif">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add A New Publisher</p>
+                                </a>
+                            </li>
+                        @endif
                         <li class="nav-item @if($path == '/admin/publishers') {{'menu-open'}} @endif">
                             <a href="/admin/publishers" class="nav-link @if($path == '/admin/publishers') {{'active'}} @endif">
                                 <i class="far fa-circle nav-icon"></i>

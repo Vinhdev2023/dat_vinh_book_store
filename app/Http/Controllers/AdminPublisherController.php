@@ -39,4 +39,26 @@ class AdminPublisherController extends Controller
             return redirect('admin/publisher/add-form');
         }
     }
+
+    public function edit_form($id){
+        $path = '/admin/publisher/edit-form';
+        $publisher = DB::table('publishers')
+            ->where('id', $id)
+            ->get();
+        return view('AdminPages.AdminFormPublishers', compact('path', 'publisher'));
+    }
+
+    public function edit_publisher(Request $request, $id){
+        if ($request->PublisherName == null){
+            return redirect('/admin/publisher/edit-form/'.$id);
+        } else {
+            DB::table('publishers')
+                ->where('id', $id)
+                ->update([
+                    'name' => $request->PublisherName,
+                    'updated_at' => Carbon::now()
+                ]);
+            return redirect('admin/publishers');
+        }
+    }
 }
