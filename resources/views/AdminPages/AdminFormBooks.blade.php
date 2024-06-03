@@ -72,18 +72,18 @@
                         <h3 class="card-title">Form add new book</h3>
                     </div>
                     <!-- /.card-header -->
-                    <form action="/admin/product/add" method="post" enctype="multipart/form-data">
+                    <form action="@if($path == '/admin/product/edit-form'){{'/admin/product/update/'.$book->id}}@else{{'/admin/product/add'}}@endif" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Book title</label>
-                                <input type="text" class="form-control" placeholder="Enter book title">
+                                <input type="text" name="BookTitle" class="form-control" @if(@isset($book))value="{{$book->title}}"@endif placeholder="Enter book title">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">File input</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                                        <input type="file" name="Image" class="custom-file-input" id="exampleInputFile">
                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                     </div>
                                     <div class="input-group-append">
@@ -93,12 +93,12 @@
                             </div>
                             <div class="form-group">
                                 <label>Description</label>
-                                <textarea class="form-control" id="summernote"></textarea>
+                                <textarea class="form-control" rows="3" name="Description">@if(@isset($book)){{$book->description}}@endif</textarea>
                             </div>
                             <div class="form-group">
                                 <label>Price</label>
                                 <div class="input-group">
-                                    <input type="number" class="form-control" min="0" value="0" id="price" placeholder="Enter Price">
+                                    <input type="number" name="Price" class="form-control" min="0" value="@if(@isset($book)){{$book->price}}@else{{'0'}}@endif" id="price" placeholder="Enter Price">
                                     <div class="input-group-append">
                                         <span class="input-group-text">VND</span>
                                     </div>
@@ -106,21 +106,21 @@
                             </div>
                             <div class="form-group">
                                 <label>Quantity</label>
-                                <input type="number" class="form-control" min="0" value="0" id="quantity" placeholder="Enter Price">
+                                <input type="number" name="Quantity" class="form-control" min="0" value="@if(@isset($book)){{$book->quantity}}@else{{'0'}}@endif" id="quantity" placeholder="Enter Price">
                             </div>
                             <div class="form-group">
-                                <label>Publisher</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    @foreach($publishers as $obj)
-                                        <option value="{{$obj->id}}">{{$obj->name}}</option>
+                                <label>Category</label>
+                                <select class="form-control select2" name="CategoriesId" style="width: 100%;">
+                                    @foreach($categories as $obj)
+                                        <option value="{{$obj->id}}" @if(@isset($book)) @if($book->category_id == $obj->id){{'selected'}} @endif @endif>{{$obj->name}}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Category</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    @foreach($categories as $obj)
-                                        <option value="{{$obj->id}}">{{$obj->name}}</option>
+                                <label>Publisher</label>
+                                <select class="form-control select2" name="PublisherId" style="width: 100%;">
+                                    @foreach($publishers as $obj)
+                                        <option value="{{$obj->id}}" @if(@isset($book)) @if($book->publisher_id == $obj->id){{'selected'}} @endif @endif>{{$obj->name}}</option>
                                     @endforeach
                                 </select>
                             </div>

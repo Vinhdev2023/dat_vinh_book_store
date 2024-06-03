@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-userlogin">
-                        <figure><a  href="javascript:void(0);"><img src="cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
+                        <figure><a  href="javascript:void(0);"><img src="/cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
                         <span>Hi, Vinh Moi</span>
                     </div>
                 </div>
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <strong class="tg-logo"><a ><img src="cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
+                    <strong class="tg-logo"><a href="#"><img src="/cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
                     <div class="tg-wishlistandcart">
                         <div class="dropdown  tg-wishlistdropdown">
                             <div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
@@ -32,8 +32,7 @@
                                 <div class="tg-minicartbody">
                                     <div class="tg-minicarproduct">
                                         <figure>
-                                            <img src="cus_plugin/images/products/img-01.jpg" alt="image description">
-
+                                            <img src="/cus_plugin/images/products/img-01.jpg" alt="image description">
                                         </figure>
                                         <div class="tg-minicarproductdata">
                                             <h5><a href="javascript:void(0);">Our State Fair Is A Great Function</a></h5>
@@ -42,7 +41,7 @@
                                     </div>
                                     <div class="tg-minicarproduct">
                                         <figure>
-                                            <img src="cus_plugin/images/products/img-02.jpg" alt="image description">
+                                            <img src="/cus_plugin/images/products/img-02.jpg" alt="image description">
 
                                         </figure>
                                         <div class="tg-minicarproductdata">
@@ -52,7 +51,7 @@
                                     </div>
                                     <div class="tg-minicarproduct">
                                         <figure>
-                                            <img src="cus_plugin/images/products/img-03.jpg" alt="image description">
+                                            <img src="/cus_plugin/images/products/img-03.jpg" alt="image description">
 
                                         </figure>
                                         <div class="tg-minicarproductdata">
@@ -102,61 +101,23 @@
                         </div>
                         <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
                             <ul>
-                                <li class="menu-item-has-children ">
+                                <li class="menu-item-has-children">
                                     <a href="javascript:void(0);">All Categories</a>
                                     <div class="mega-menu">
                                         <ul class="tg-themetabnav" role="tablist">
-                                            <li role="presentation" class="active">
-                                                <a href="#artandphotography" aria-controls="artandphotography" role="tab" data-toggle="tab">Art &amp; Photography</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#biography" aria-controls="biography" role="tab" data-toggle="tab">Biography</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#childrensbook" aria-controls="childrensbook" role="tab" data-toggle="tab">Children’s Book</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#craftandhobbies" aria-controls="craftandhobbies" role="tab" data-toggle="tab">Craft &amp; Hobbies</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#crimethriller" aria-controls="crimethriller" role="tab" data-toggle="tab">Crime &amp; Thriller</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#fantasyhorror" aria-controls="fantasyhorror" role="tab" data-toggle="tab">Fantasy &amp; Horror</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#fiction" aria-controls="fiction" role="tab" data-toggle="tab">Fiction</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#fooddrink" aria-controls="fooddrink" role="tab" data-toggle="tab">Food &amp; Drink</a>
-                                            </li><li role="presentation">
-                                                <a href="#graphicanimemanga" aria-controls="graphicanimemanga" role="tab" data-toggle="tab">Graphic, Anime &amp; Manga</a>
-                                            </li>
-                                            <li role="presentation">
-                                                <a href="#sciencefiction" aria-controls="sciencefiction" role="tab" data-toggle="tab">Science Fiction</a>
-                                            </li>
+                                            @foreach($categories as $obj)
+                                                <li role="presentation" class="active">
+                                                    <a href="#artandphotography" aria-controls="artandphotography" role="tab" data-toggle="tab">{{$obj->name}}</a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </li>
                                 <li >
                                     <a href="/">Home</a>
                                 </li>
-                                <li >
-                                    <a href="/publisher">Publisher</a>
-
-                                </li>
-                                <li><a href="/contact">Contact</a></li>
-                                <li class="menu-item-has-children current-menu-item">
-                                    <a href="javascript:void(0);"><i class="icon-menu"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item-has-children">
-                                            <a href="/product">Products</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="/products">Product</a></li>
-                                                <li><a href="/productDetail">Product Detail</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                <li class="">
+                                    <a href="/products">Products</a>
                                 </li>
                             </ul>
                         </div>

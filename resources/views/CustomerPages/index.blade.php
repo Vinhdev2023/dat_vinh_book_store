@@ -26,179 +26,6 @@
 		<!--************************************
 				Header Start
 		*************************************-->
-		{{--<header id="tg-header" class="tg-header tg-haslayout">
-			<div class="tg-topbar">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<div class="tg-userlogin">
-								<figure><a  href="javascript:void(0);"><img src="cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
-								<span>Hi, Vinh Moi</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tg-middlecontainer">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-							<strong class="tg-logo"><a ><img src="cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
-
-							<div class="tg-wishlistandcart">
-								<div class="dropdown  tg-wishlistdropdown">
-									<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
-										<div class="tg-description"><p>Cart</p></div>
-									</div>
-								</div>
-								<div class="dropdown tg-themedropdown tg-minicartdropdown">
-									<a href="javascript:void(0);" id="tg-minicart" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										<span class="tg-themebadge">3</span>
-										<i class="icon-cart"></i>
-										<span>$123.00</span>
-									</a>
-									<div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-minicart">
-										<div class="tg-minicartbody">
-											<div class="tg-minicarproduct">
-												<figure>
-													<img src="cus_plugin/images/products/img-01.jpg" alt="image description">
-
-												</figure>
-												<div class="tg-minicarproductdata">
-													<h5><a href="javascript:void(0);">Our State Fair Is A Great Function</a></h5>
-													<h6><a href="javascript:void(0);">$ 12.15</a></h6>
-												</div>
-											</div>
-											<div class="tg-minicarproduct">
-												<figure>
-													<img src="cus_plugin/images/products/img-02.jpg" alt="image description">
-
-												</figure>
-												<div class="tg-minicarproductdata">
-													<h5><a href="javascript:void(0);">Bring Me To Light</a></h5>
-													<h6><a href="javascript:void(0);">$ 12.15</a></h6>
-												</div>
-											</div>
-											<div class="tg-minicarproduct">
-												<figure>
-													<img src="cus_plugin/images/products/img-03.jpg" alt="image description">
-
-												</figure>
-												<div class="tg-minicarproductdata">
-													<h5><a href="javascript:void(0);">Have Faith In Your Soul</a></h5>
-													<h6><a href="javascript:void(0);">$ 12.15</a></h6>
-												</div>
-											</div>
-										</div>
-										<div class="tg-minicartfoot">
-											<a class="tg-btnemptycart" href="javascript:void(0);">
-												<i class="fa fa-trash-o"></i>
-												<span>Clear Your Cart</span>
-											</a>
-											<span class="tg-subtotal">Subtotal: <strong>35.78</strong></span>
-											<div class="tg-btns">
-												<a class="tg-btn tg-active" href="javascript:void(0);">View Cart</a>
-												<a class="tg-btn" href="javascript:void(0);">Checkout</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tg-searchbox">
-								<form class="tg-formtheme tg-formsearch">
-									<fieldset>
-										<input type="text" name="search" class="typeahead form-control" placeholder="Search book by keyword">
-										<button type="submit"><i class="icon-magnifier"></i></button>
-									</fieldset>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tg-navigationarea">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<nav id="tg-nav" class="tg-nav">
-								<div class="navbar-header">
-									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigation" aria-expanded="false">
-										<span class="sr-only">Toggle navigation</span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-								</div>
-								<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
-									<ul>
-										<li class="menu-item-has-children ">
-											<a href="javascript:void(0);">All Categories</a>
-											<div class="mega-menu">
-												<ul class="tg-themetabnav" role="tablist">
-													<li role="presentation" class="active">
-														<a href="#artandphotography" aria-controls="artandphotography" role="tab" data-toggle="tab">Art &amp; Photography</a>
-													</li>
-													<li role="presentation">
-														<a href="#biography" aria-controls="biography" role="tab" data-toggle="tab">Biography</a>
-													</li>
-													<li role="presentation">
-														<a href="#childrensbook" aria-controls="childrensbook" role="tab" data-toggle="tab">Children’s Book</a>
-													</li>
-													<li role="presentation">
-														<a href="#craftandhobbies" aria-controls="craftandhobbies" role="tab" data-toggle="tab">Craft &amp; Hobbies</a>
-													</li>
-													<li role="presentation">
-														<a href="#crimethriller" aria-controls="crimethriller" role="tab" data-toggle="tab">Crime &amp; Thriller</a>
-													</li>
-													<li role="presentation">
-														<a href="#fantasyhorror" aria-controls="fantasyhorror" role="tab" data-toggle="tab">Fantasy &amp; Horror</a>
-													</li>
-													<li role="presentation">
-														<a href="#fiction" aria-controls="fiction" role="tab" data-toggle="tab">Fiction</a>
-													</li>
-													<li role="presentation">
-														<a href="#fooddrink" aria-controls="fooddrink" role="tab" data-toggle="tab">Food &amp; Drink</a>
-													</li><li role="presentation">
-														<a href="#graphicanimemanga" aria-controls="graphicanimemanga" role="tab" data-toggle="tab">Graphic, Anime &amp; Manga</a>
-													</li>
-													<li role="presentation">
-														<a href="#sciencefiction" aria-controls="sciencefiction" role="tab" data-toggle="tab">Science Fiction</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li class="menu-item-has-children current-menu-item">
-											<a href="javascript:void(0);">Home</a>
-										</li>
-										<li class="menu-item-has-children">
-											<a href="javascript:void(0);">Publisher</a>
-											<ul class="sub-menu">
-												<li><a href="/publisher">Publishers</a></li>
-												<li><a href="authordetail.html">Publisher Detail</a></li>
-											</ul>
-										</li>
-										<li><a href="contactus.html">Contact</a></li>
-										<li class="menu-item-has-children current-menu-item">
-											<a href="javascript:void(0);"><i class="icon-menu"></i></a>
-											<ul class="sub-menu">
-												<li class="menu-item-has-children">
-													<a href="aboutus.html">Products</a>
-													<ul class="sub-menu">
-														<li><a href="products.html">Products</a></li>
-														<li><a href="productdetail.html">Product Detail</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>--}}
         @include('CustomerPages.header')
 		<!--************************************
 				Header End
@@ -218,221 +45,35 @@
 						</div>
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<div id="tg-bestsellingbooksslider" class="tg-bestsellingbooksslider tg-bestsellingbooks owl-carousel">
-								<div class="item">
-									<div class="tg-postbook">
-										<figure class="tg-featureimg">
-											<div class="tg-bookimg">
-												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-01.jpg" alt="image description"></div>
-												<div class="tg-backcover"><img src="cus_plugin/images/books/img-01.jpg" alt="image description"></div>
-											</div>
+                                @foreach($purchased_books as $obj)
+                                    <div class="item">
+                                        <div class="tg-postbook">
+                                            <figure class="tg-featureimg">
+                                                <div class="tg-bookimg">
+                                                    <div class="tg-frontcover"><img src="/images/{{$obj->image}}" alt="image description"></div>
+                                                    <div class="tg-backcover"><img src="/images/{{$obj->image}}" alt="image description"></div>
+                                                </div>
 
-										</figure>
-										<div class="tg-postbookcontent">
-											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
-											</ul>
-											<div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-											<div class="tg-booktitle">
-												<h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-											<span class="tg-stars"><span></span></span>
-											<span class="tg-bookprice">
-												<ins>$25.18</ins>
-												<del>$27.20</del>
-											</span>
-											<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-												<i class="fa fa-shopping-basket"></i>
-												<em>Add To Basket</em>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="tg-postbook">
-										<figure class="tg-featureimg">
-											<div class="tg-bookimg">
-												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-02.jpg" alt="image description"></div>
-												<div class="tg-backcover"><img src="cus_plugin/images/books/img-02.jpg" alt="image description"></div>
-											</div>
-
-										</figure>
-										<div class="tg-postbookcontent">
-											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
-											</ul>
-											<div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-											<div class="tg-booktitle">
-												<h3><a href="javascript:void(0);">Drive Safely, No Bumping</a></h3>
-											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-											<span class="tg-stars"><span></span></span>
-											<span class="tg-bookprice">
-												<ins>$25.18</ins>
-												<del>$27.20</del>
-											</span>
-											<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-												<i class="fa fa-shopping-basket"></i>
-												<em>Add To Basket</em>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="tg-postbook tg-notag">
-										<figure class="tg-featureimg">
-											<div class="tg-bookimg">
-												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
-												<div class="tg-backcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
-											</div>
-
-										</figure>
-										<div class="tg-postbookcontent">
-											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
-											</ul>
-											<div class="tg-booktitle">
-												<h3><a href="javascript:void(0);">Let The Good Times Roll Up</a></h3>
-											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-											<span class="tg-stars"><span></span></span>
-											<span class="tg-bookprice">
-												<ins>$25.18</ins>
-												<del>$27.20</del>
-											</span>
-											<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-												<i class="fa fa-shopping-basket"></i>
-												<em>Add To Basket</em>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="tg-postbook">
-										<figure class="tg-featureimg">
-											<div class="tg-bookimg">
-												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-04.jpg" alt="image description"></div>
-												<div class="tg-backcover"><img src="cus_plugin/images/books/img-04.jpg" alt="image description"></div>
-											</div>
-
-										</figure>
-										<div class="tg-postbookcontent">
-											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
-											</ul>
-											<div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-											<div class="tg-booktitle">
-												<h3><a href="javascript:void(0);">Our State Fair Is A Great State Fair</a></h3>
-											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-											<span class="tg-stars"><span></span></span>
-											<span class="tg-bookprice">
-												<ins>$25.18</ins>
-												<del>$27.20</del>
-											</span>
-											<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-												<i class="fa fa-shopping-basket"></i>
-												<em>Add To Basket</em>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="tg-postbook tg-notag">
-										<figure class="tg-featureimg">
-											<div class="tg-bookimg">
-												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-05.jpg" alt="image description"></div>
-												<div class="tg-backcover"><img src="cus_plugin/images/books/img-05.jpg" alt="image description"></div>
-											</div>
-
-										</figure>
-										<div class="tg-postbookcontent">
-											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
-											</ul>
-											<div class="tg-booktitle">
-												<h3><a href="javascript:void(0);">Put The Petal To The Metal</a></h3>
-											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-											<span class="tg-stars"><span></span></span>
-											<span class="tg-bookprice">
-												<ins>$25.18</ins>
-												<del>$27.20</del>
-											</span>
-											<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-												<i class="fa fa-shopping-basket"></i>
-												<em>Add To Basket</em>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="tg-postbook">
-										<figure class="tg-featureimg">
-											<div class="tg-bookimg">
-												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-06.jpg" alt="image description"></div>
-												<div class="tg-backcover"><img src="cus_plugin/images/books/img-06.jpg" alt="image description"></div>
-											</div>
-
-										</figure>
-										<div class="tg-postbookcontent">
-											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
-											</ul>
-											<div class="tg-themetagbox"><span class="tg-themetag">sale</span></div>
-											<div class="tg-booktitle">
-												<h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-											<span class="tg-stars"><span></span></span>
-											<span class="tg-bookprice">
-												<ins>$25.18</ins>
-												<del>$27.20</del>
-											</span>
-											<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-												<i class="fa fa-shopping-basket"></i>
-												<em>Add To Basket</em>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="item">
-									<div class="tg-postbook tg-notag">
-										<figure class="tg-featureimg">
-											<div class="tg-bookimg">
-												<div class="tg-frontcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
-												<div class="tg-backcover"><img src="cus_plugin/images/books/img-03.jpg" alt="image description"></div>
-											</div>
-											<a class="tg-btnaddtowishlist" href="javascript:void(0);">
-                                            </a>
-										</figure>
-										<div class="tg-postbookcontent">
-											<ul class="tg-bookscategories">
-												<li><a href="javascript:void(0);">Adventure</a></li>
-												<li><a href="javascript:void(0);">Fun</a></li>
-											</ul>
-											<div class="tg-booktitle">
-												<h3><a href="javascript:void(0);">Let The Good Times Roll Up</a></h3>
-											</div>
-											<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-											<span class="tg-stars"><span></span></span>
-											<span class="tg-bookprice">
-												<ins>$25.18</ins>
-												<del>$27.20</del>
-											</span>
-											<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-												<i class="fa fa-shopping-basket"></i>
-												<em>Add To Basket</em>
-											</a>
-										</div>
-									</div>
-								</div>
+                                            </figure>
+                                            <div class="tg-postbookcontent">
+                                                <ul class="tg-bookscategories">
+                                                    <li><a href="javascript:void(0);">{{$obj->category_name}}</a></li>
+                                                </ul>
+                                                <div class="tg-booktitle">
+                                                    <h3><a href="javascript:void(0);">{{$obj->title}}</a></h3>
+                                                </div>
+                                                <span class="tg-bookwriter">Publisher: <a href="javascript:void(0);">{{$obj->publisher_name}}</a></span>
+                                                <span class="tg-bookprice">
+												    <ins>{{$obj->price}}VND</ins>
+											    </span>
+                                                <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
+                                                    <i class="fa fa-shopping-basket"></i>
+                                                    <em>Add To Basket</em>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
 							</div>
 						</div>
 					</div>
@@ -457,78 +98,35 @@
 								</div>
 								<div class="tg-btns">
 									<a class="tg-btn tg-active" href="javascript:void(0);">View All</a>
-									<a class="tg-btn" href="javascript:void(0);">Read More</a>
+									<a class="tg-btn" href="/products">Read More</a>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<div class="row">
 									<div class="tg-newreleasebooks">
-										<div class="col-xs-4 col-sm-4 col-md-6 col-lg-4">
-											<div class="tg-postbook">
-												<figure class="tg-featureimg">
-													<div class="tg-bookimg">
-														<div class="tg-frontcover"><img src="cus_plugin/images/books/img-07.jpg" alt="image description"></div>
-														<div class="tg-backcover"><img src="cus_plugin/images/books/img-07.jpg" alt="image description"></div>
-													</div>
+                                        @foreach($new_release_books as $obj)
+                                            <div class="col-xs-4 col-sm-4 col-md-6 col-lg-4">
+                                                <div class="tg-postbook">
+                                                    <figure class="tg-featureimg">
+                                                        <div class="tg-bookimg">
+                                                            <div class="tg-frontcover"><img src="/images/{{$obj->image}}" alt="image description"></div>
+                                                            <div class="tg-backcover"><img src="/images/{{$obj->image}}" alt="image description"></div>
+                                                        </div>
 
-												</figure>
-												<div class="tg-postbookcontent">
-													<ul class="tg-bookscategories">
-														<li><a href="javascript:void(0);">Adventure</a></li>
-														<li><a href="javascript:void(0);">Fun</a></li>
-													</ul>
-													<div class="tg-booktitle">
-														<h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>
-													<span class="tg-stars"><span></span></span>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-4 col-sm-4 col-md-6 col-lg-4">
-											<div class="tg-postbook">
-												<figure class="tg-featureimg">
-													<div class="tg-bookimg">
-														<div class="tg-frontcover"><img src="cus_plugin/images/books/img-08.jpg" alt="image description"></div>
-														<div class="tg-backcover"><img src="cus_plugin/images/books/img-08.jpg" alt="image description"></div>
-													</div>
-
-												</figure>
-												<div class="tg-postbookcontent">
-													<ul class="tg-bookscategories">
-														<li><a href="javascript:void(0);">Adventure</a></li>
-														<li><a href="javascript:void(0);">Fun</a></li>
-													</ul>
-													<div class="tg-booktitle">
-														<h3><a href="javascript:void(0);">Drive Safely, No Bumping</a></h3>
-													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">Sunshine Orlando</a></span>
-													<span class="tg-stars"><span></span></span>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-4 col-sm-4 col-md-3 col-lg-4 hidden-md">
-											<div class="tg-postbook">
-												<figure class="tg-featureimg">
-													<div class="tg-bookimg">
-														<div class="tg-frontcover"><img src="cus_plugin/images/books/img-09.jpg" alt="image description"></div>
-														<div class="tg-backcover"><img src="cus_plugin/images/books/img-09.jpg" alt="image description"></div>
-													</div>
-
-												</figure>
-												<div class="tg-postbookcontent">
-													<ul class="tg-bookscategories">
-														<li><a href="javascript:void(0);">Adventure</a></li>
-														<li><a href="javascript:void(0);">Fun</a></li>
-													</ul>
-													<div class="tg-booktitle">
-														<h3><a href="javascript:void(0);">Let The Good Times Roll Up</a></h3>
-													</div>
-													<span class="tg-bookwriter">By: <a href="javascript:void(0);">Elisabeth Ronning</a></span>
-													<span class="tg-stars"><span></span></span>
-												</div>
-											</div>
-										</div>
+                                                    </figure>
+                                                    <div class="tg-postbookcontent">
+                                                        <ul class="tg-bookscategories">
+                                                            <li><a href="">{{$obj->category_name}}</a></li>
+                                                        </ul>
+                                                        <div class="tg-booktitle">
+                                                            <h3><a href="javascript:void(0);">{{$obj->title}}</a></h3>
+                                                        </div>
+                                                        <span class="tg-bookwriter">Publisher: <a href="">{{$obj->publisher_name}}</a></span>
+                                                        <span class="tg-stars"><span></span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
 									</div>
 								</div>
 							</div>

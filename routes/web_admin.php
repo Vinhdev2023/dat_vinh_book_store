@@ -11,8 +11,12 @@ Route::prefix('/admin')->group(function (){
     Route::get('/', [AdminHomeController::class, 'index']);
 
     Route::get('/products', [AdminProductController::class, 'index']);
+    Route::get('/product/detail/{id}', [AdminProductController::class, 'product_detail']);
     Route::get('/product/add-form', [AdminProductController::class, 'add_form']);
     Route::post('/product/add', [AdminProductController::class, 'add_product']);
+    Route::get('/product/edit-form/{id}', [AdminProductController::class, 'edit_form']);
+    Route::post('/product/update/{id}', [AdminProductController::class, 'edit_product']);
+
 
     Route::get('/categories', [AdminCategoryController::class, 'index']);
     Route::get('/category/add-form', [AdminCategoryController::class, 'add_form']);
