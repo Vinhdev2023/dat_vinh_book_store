@@ -7,7 +7,7 @@
     <title>Book Library</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    @include('IconWeb')
     <link rel="stylesheet" href="cus_plugin/css/bootstrap.min.css">
     <link rel="stylesheet" href="cus_plugin/css/normalize.css">
     <link rel="stylesheet" href="cus_plugin/css/font-awesome.min.css">
@@ -238,18 +238,18 @@
 <!--************************************
         Wrapper End
 *************************************-->
-<script src="cus_plugin/js/vendor/jquery-library.js"></script>
-<script src="cus_plugin/js/vendor/bootstrap.min.js"></script>
+<script src="/cus_plugin/js/vendor/jquery-library.js"></script>
+<script src="/cus_plugin/js/vendor/bootstrap.min.js"></script>
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
-<script src="cus_plugin/js/owl.carousel.min.js"></script>
-<script src="cus_plugin/js/jquery.vide.min.js"></script>
-<script src="cus_plugin/js/countdown.js"></script>
-<script src="cus_plugin/js/jquery-ui.js"></script>
-<script src="cus_plugin/js/parallax.js"></script>
-<script src="cus_plugin/js/countTo.js"></script>
-<script src="cus_plugin/js/appear.js"></script>
-<script src="cus_plugin/js/gmap3.js"></script>
-<script src="cus_plugin/js/main.js"></script>
+<script src="/cus_plugin/js/owl.carousel.min.js"></script>
+<script src="/cus_plugin/js/jquery.vide.min.js"></script>
+<script src="/cus_plugin/js/countdown.js"></script>
+<script src="/cus_plugin/js/jquery-ui.js"></script>
+<script src="/cus_plugin/js/parallax.js"></script>
+<script src="/cus_plugin/js/countTo.js"></script>
+<script src="/cus_plugin/js/appear.js"></script>
+<script src="/cus_plugin/js/gmap3.js"></script>
+<script src="/cus_plugin/js/main.js"></script>
 </body>
 
 </html>

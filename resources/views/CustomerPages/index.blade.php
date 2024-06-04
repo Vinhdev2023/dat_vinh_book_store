@@ -7,18 +7,18 @@
 	 <title>Book Library</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="apple-touch-icon.png">
-	<link rel="stylesheet" href="cus_plugin/css/bootstrap.min.css">
-	<link rel="stylesheet" href="cus_plugin/css/normalize.css">
-	<link rel="stylesheet" href="cus_plugin/css/font-awesome.min.css">
-	<link rel="stylesheet" href="cus_plugin/css/icomoon.css">
-	<link rel="stylesheet" href="cus_plugin/css/jquery-ui.css">
-	<link rel="stylesheet" href="cus_plugin/css/owl.carousel.css">
-	<link rel="stylesheet" href="cus_plugin/css/transitions.css">
-	<link rel="stylesheet" href="cus_plugin/css/main.css">
-	<link rel="stylesheet" href="cus_plugin/css/color.css">
-	<link rel="stylesheet" href="cus_plugin/css/responsive.css">
-	<script src="cus_plugin/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+	<link rel="icon" href="/apple-touch-icon.png">
+	<link rel="stylesheet" href="/cus_plugin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/cus_plugin/css/normalize.css">
+	<link rel="stylesheet" href="/cus_plugin/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/cus_plugin/css/icomoon.css">
+	<link rel="stylesheet" href="/cus_plugin/css/jquery-ui.css">
+	<link rel="stylesheet" href="/cus_plugin/css/owl.carousel.css">
+	<link rel="stylesheet" href="/cus_plugin/css/transitions.css">
+	<link rel="stylesheet" href="/cus_plugin/css/main.css">
+	<link rel="stylesheet" href="/cus_plugin/css/color.css">
+	<link rel="stylesheet" href="/cus_plugin/css/responsive.css">
+	<script src="/cus_plugin/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body class="tg-home tg-homeone">
 
@@ -30,7 +30,7 @@
 		<!--************************************
 				Header End
 		*************************************-->
-
+        <main id="tg-main" class="tg-main tg-haslayout">
 			<!--************************************
 					Best Selling Start
 			*************************************-->
@@ -199,7 +199,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-push-2">
 								<div id="tg-testimonialsslider" class="tg-testimonialsslider tg-testimonials owl-carousel">
 									<div class="item tg-testimonial">
-										<figure><img src="cus_plugin/images/author/vinh.jpg" alt="image description"></figure>
+										<figure><img src="/cus_plugin/images/author/vinh.jpg" alt="image description"></figure>
 										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
 										<div class="tg-testimonialauthor">
 											<h3>Holli Fenstermacher</h3>
@@ -207,7 +207,7 @@
 										</div>
 									</div>
 									<div class="item tg-testimonial">
-										<figure><img src="cus_plugin/images/author/hip.jpg" alt="image description"></figure>
+										<figure><img src="/cus_plugin/images/author/hip.jpg" alt="image description"></figure>
 										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
 										<div class="tg-testimonialauthor">
 											<h3>Holli Fenstermacher</h3>
@@ -252,294 +252,33 @@
 			<!--************************************
 					Call to Action End
 			*************************************-->
-			<!--************************************
-					Latest News Start
-			*************************************-->
-{{--			<section class="tg-sectionspace tg-haslayout">--}}
-{{--				<div class="container">--}}
-{{--					<div class="row">--}}
-{{--						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
-{{--							<div class="tg-sectionhead">--}}
-{{--								<h2><span>Latest News &amp; Articles</span>What's Hot in The News</h2>--}}
-{{--								<a class="tg-btn" href="javascript:void(0);">View All</a>--}}
-{{--							</div>--}}
-{{--						</div>--}}
-{{--						<div id="tg-postslider" class="tg-postslider tg-blogpost owl-carousel">--}}
-{{--							<article class="item tg-post">--}}
-{{--								<figure><a href="javascript:void(0);"><img src="images/blog/img-01.jpg" alt="image description"></a></figure>--}}
-{{--								<div class="tg-postcontent">--}}
-{{--									<ul class="tg-bookscategories">--}}
-{{--										<li><a href="javascript:void(0);">Adventure</a></li>--}}
-{{--										<li><a href="javascript:void(0);">Fun</a></li>--}}
-{{--									</ul>--}}
-{{--									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>--}}
-{{--									<div class="tg-posttitle">--}}
-{{--										<h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>--}}
-{{--									</div>--}}
-{{--									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--									<ul class="tg-postmetadata">--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>--}}
-{{--									</ul>--}}
-{{--								</div>--}}
-{{--							</article>--}}
-{{--							<article class="item tg-post">--}}
-{{--								<figure><a href="javascript:void(0);"><img src="images/blog/img-02.jpg" alt="image description"></a></figure>--}}
-{{--								<div class="tg-postcontent">--}}
-{{--									<ul class="tg-bookscategories">--}}
-{{--										<li><a href="javascript:void(0);">Adventure</a></li>--}}
-{{--										<li><a href="javascript:void(0);">Fun</a></li>--}}
-{{--									</ul>--}}
-{{--									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>--}}
-{{--									<div class="tg-posttitle">--}}
-{{--										<h3><a href="javascript:void(0);">All She Wants To Do Is Dance</a></h3>--}}
-{{--									</div>--}}
-{{--									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--									<ul class="tg-postmetadata">--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>--}}
-{{--									</ul>--}}
-{{--								</div>--}}
-{{--							</article>--}}
-{{--							<article class="item tg-post">--}}
-{{--								<figure><a href="javascript:void(0);"><img src="images/blog/img-03.jpg" alt="image description"></a></figure>--}}
-{{--								<div class="tg-postcontent">--}}
-{{--									<ul class="tg-bookscategories">--}}
-{{--										<li><a href="javascript:void(0);">Adventure</a></li>--}}
-{{--										<li><a href="javascript:void(0);">Fun</a></li>--}}
-{{--									</ul>--}}
-{{--									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>--}}
-{{--									<div class="tg-posttitle">--}}
-{{--										<h3><a href="javascript:void(0);">Why Walk When You Can Climb?</a></h3>--}}
-{{--									</div>--}}
-{{--									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--									<ul class="tg-postmetadata">--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>--}}
-{{--									</ul>--}}
-{{--								</div>--}}
-{{--							</article>--}}
-{{--							<article class="item tg-post">--}}
-{{--								<figure><a href="javascript:void(0);"><img src="images/blog/img-04.jpg" alt="image description"></a></figure>--}}
-{{--								<div class="tg-postcontent">--}}
-{{--									<ul class="tg-bookscategories">--}}
-{{--										<li><a href="javascript:void(0);">Adventure</a></li>--}}
-{{--										<li><a href="javascript:void(0);">Fun</a></li>--}}
-{{--									</ul>--}}
-{{--									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>--}}
-{{--									<div class="tg-posttitle">--}}
-{{--										<h3><a href="javascript:void(0);">Dance Like Nobody’s Watching</a></h3>--}}
-{{--									</div>--}}
-{{--									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--									<ul class="tg-postmetadata">--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>--}}
-{{--									</ul>--}}
-{{--								</div>--}}
-{{--							</article>--}}
-{{--							<article class="item tg-post">--}}
-{{--								<figure><a href="javascript:void(0);"><img src="images/blog/img-02.jpg" alt="image description"></a></figure>--}}
-{{--								<div class="tg-postcontent">--}}
-{{--									<ul class="tg-bookscategories">--}}
-{{--										<li><a href="javascript:void(0);">Adventure</a></li>--}}
-{{--										<li><a href="javascript:void(0);">Fun</a></li>--}}
-{{--									</ul>--}}
-{{--									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>--}}
-{{--									<div class="tg-posttitle">--}}
-{{--										<h3><a href="javascript:void(0);">All She Wants To Do Is Dance</a></h3>--}}
-{{--									</div>--}}
-{{--									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--									<ul class="tg-postmetadata">--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>--}}
-{{--									</ul>--}}
-{{--								</div>--}}
-{{--							</article>--}}
-{{--							<article class="item tg-post">--}}
-{{--								<figure><a href="javascript:void(0);"><img src="images/blog/img-03.jpg" alt="image description"></a></figure>--}}
-{{--								<div class="tg-postcontent">--}}
-{{--									<ul class="tg-bookscategories">--}}
-{{--										<li><a href="javascript:void(0);">Adventure</a></li>--}}
-{{--										<li><a href="javascript:void(0);">Fun</a></li>--}}
-{{--									</ul>--}}
-{{--									<div class="tg-themetagbox"><span class="tg-themetag">featured</span></div>--}}
-{{--									<div class="tg-posttitle">--}}
-{{--										<h3><a href="javascript:void(0);">Why Walk When You Can Climb?</a></h3>--}}
-{{--									</div>--}}
-{{--									<span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--									<ul class="tg-postmetadata">--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-comment-o"></i><i>21,415 Comments</i></a></li>--}}
-{{--										<li><a href="javascript:void(0);"><i class="fa fa-eye"></i><i>24,565 Views</i></a></li>--}}
-{{--									</ul>--}}
-{{--								</div>--}}
-{{--							</article>--}}
-{{--						</div>--}}
-{{--					</div>--}}
-{{--				</div>--}}
-{{--			</section>--}}
-			<!--************************************
-					Latest News End
-			*************************************-->
-{{--		</main>--}}
+		</main>
 		<!--************************************
 				Main End
 		*************************************-->
 		<!--************************************
 				Footer Start
 		*************************************-->
-		<footer id="tg-footer" class="tg-footer tg-haslayout">
-			<div class="tg-footerarea">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<ul class="tg-clientservices">
-								<li class="tg-devlivery">
-									<span class="tg-clientserviceicon"><i class="icon-rocket"></i></span>
-									<div class="tg-titlesubtitle">
-										<h3>Fast Delivery</h3>
-										<p>Shipping Worldwide</p>
-									</div>
-								</li>
-								<li class="tg-discount">
-									<span class="tg-clientserviceicon"><i class="icon-tag"></i></span>
-									<div class="tg-titlesubtitle">
-										<h3>Open Discount</h3>
-										<p>Offering Open Discount</p>
-									</div>
-								</li>
-								<li class="tg-quality">
-									<span class="tg-clientserviceicon"><i class="icon-leaf"></i></span>
-									<div class="tg-titlesubtitle">
-										<h3>Eyes On Quality</h3>
-										<p>Publishing Quality Work</p>
-									</div>
-								</li>
-								<li class="tg-support">
-									<span class="tg-clientserviceicon"><i class="icon-heart"></i></span>
-									<div class="tg-titlesubtitle">
-										<h3>24/7 Support</h3>
-										<p>Serving Every Moments</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="tg-threecolumns">
-							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-								<div class="tg-footercol">
-
-									<strong class="tg-logo"><a ><img src="cus_plugin/images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
-
-									<ul class="tg-contactinfo">
-										<li>
-											<i class="icon-apartment"></i>
-											<address>Suit # 07, Rose world Building, Street # 02, AT246T Manchester</address>
-										</li>
-										<li>
-											<i class="icon-phone-handset"></i>
-											<span>
-												<em>0800 12345 - 678 - 89</em>
-												<em>+4 1234 - 4567 - 67</em>
-											</span>
-										</li>
-										<li>
-											<i class="icon-clock"></i>
-											<span>Serving 7 Days A Week From 9am - 5pm</span>
-										</li>
-										<li>
-											<i class="icon-envelope"></i>
-											<span>
-												<em><a >vinhmoi@gmail.com</a></em>
-												<em><a >datnguyen@gmail.com</a></em>
-											</span>
-										</li>
-									</ul>
-									<ul class="tg-socialicons">
-										<li class="tg-facebook"><a ><i class="fa fa-facebook"></i></a></li>
-										<li class="tg-twitter"><a ><i class="fa fa-twitter"></i></a></li>
-										<li class="tg-linkedin"><a ><i class="fa fa-linkedin"></i></a></li>
-										<li class="tg-googleplus"><a ><i class="fa fa-google-plus"></i></a></li>
-										<li class="tg-rss"><a ><i class="fa fa-rss"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-								<div class="tg-footercol tg-widget tg-widgetnavigation">
-
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<div class="tg-footercol tg-widget tg-widgettopsellingauthors">
-									<div class="tg-widgettitle">
-										<h3>Publisher</h3>
-									</div>
-									<div class="tg-widgetcontent">
-										<ul>
-											<li>
-
-												<figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/vinhmoi.jpg" alt="image description" height="auto" width="100px"></a></figure>
-
-												<div class="tg-authornamebooks">
-													<h4><a href="javascript:void(0);">Vinh moi</a></h4>
-													<p>21,658 Published Books</p>
-												</div>
-											</li>
-											<li>
-
-												<figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/vinh.jpg" alt="image description" height="auto" width="100px"></a></figure>
-
-												<div class="tg-authornamebooks">
-													<h4><a href="javascript:void(0);">Vinh Moi</a></h4>
-													<p>20,257 Published Books</p>
-												</div>
-											</li>
-											<li>
-
-												<figure><a href="javascript:void(0);"><img src="cus_plugin/images/author/vinhmoi.jpg" alt="image description" height="auto" width="100px"></a></figure>
-
-												<div class="tg-authornamebooks">
-													<h4><a href="javascript:void(0);">Moi Moi</a></h4>
-													<p>15,686 Published Books</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tg-footerbar">
-				<a id="tg-btnbacktotop" class="tg-btnbacktotop" href="javascript:void(0);"><i class="icon-chevron-up"></i></a>
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<span class="tg-paymenttype"><img src="cus_plugin/images/paymenticon.png" alt="image description"></span>
-							<span class="tg-copyright">2024 All rights reserved by Vinh Moi & Dat; BookStore</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!--************************************
+        @include('CustomerPages.footer')
+        <!--************************************
 				Footer End
 		*************************************-->
 	</div>
 	<!--************************************
 			Wrapper End
 	*************************************-->
-	<script src="cus_plugin/js/vendor/jquery-library.js"></script>
-	<script src="cus_plugin/js/vendor/bootstrap.min.js"></script>
+	<script src="/cus_plugin/js/vendor/jquery-library.js"></script>
+	<script src="/cus_plugin/js/vendor/bootstrap.min.js"></script>
 	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
-	<script src="cus_plugin/js/owl.carousel.min.js"></script>
-	<script src="cus_plugin/js/jquery.vide.min.js"></script>
-	<script src="cus_plugin/js/countdown.js"></script>
-	<script src="cus_plugin/js/jquery-ui.js"></script>
-	<script src="cus_plugin/js/parallax.js"></script>
-	<script src="cus_plugin/js/countTo.js"></script>
-	<script src="cus_plugin/js/appear.js"></script>
-	<script src="cus_plugin/js/gmap3.js"></script>
-	<script src="cus_plugin/js/main.js"></script>
+	<script src="/cus_plugin/js/owl.carousel.min.js"></script>
+	<script src="/cus_plugin/js/jquery.vide.min.js"></script>
+	<script src="/cus_plugin/js/countdown.js"></script>
+	<script src="/cus_plugin/js/jquery-ui.js"></script>
+	<script src="/cus_plugin/js/parallax.js"></script>
+	<script src="/cus_plugin/js/countTo.js"></script>
+	<script src="/cus_plugin/js/appear.js"></script>
+	<script src="/cus_plugin/js/gmap3.js"></script>
+	<script src="/cus_plugin/js/main.js"></script>
 </body>
 
 </html>

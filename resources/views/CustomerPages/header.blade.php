@@ -107,7 +107,19 @@
                                         <ul class="tg-themetabnav" role="tablist">
                                             @foreach($categories as $obj)
                                                 <li role="presentation" class="active">
-                                                    <a href="#artandphotography" aria-controls="artandphotography" role="tab" data-toggle="tab">{{$obj->name}}</a>
+                                                    <a href="" aria-controls="artandphotography" role="tab" data-toggle="tab">{{$obj->name}}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="javascript:void(0);">All Categories</a>
+                                    <div class="mega-menu">
+                                        <ul class="tg-themetabnav" role="tablist">
+                                            @foreach($categories as $obj)
+                                                <li role="presentation" class="active">
+                                                    <a href="" aria-controls="artandphotography" role="tab" data-toggle="tab">{{$obj->name}}</a>
                                                 </li>
                                             @endforeach
                                         </ul>
