@@ -7,7 +7,7 @@
     <title>Book Library</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    @include('IconWeb')
     <link rel="stylesheet" href="cus_plugin/css/bootstrap.min.css">
     <link rel="stylesheet" href="cus_plugin/css/normalize.css">
     <link rel="stylesheet" href="cus_plugin/css/font-awesome.min.css">
@@ -38,10 +38,10 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-innerbannercontent">
-                        <h1>Contact Us</h1>
+                        <h1>Checkout</h1>
                         <ol class="tg-breadcrumb">
                             <li><a >home</a></li>
-                            <li class="tg-active">Contact Us</li>
+                            <li class="tg-active">Checkout</li>
                         </ol>
                     </div>
                 </div>

@@ -11,6 +11,7 @@
     <!-- web font -->
     <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
     <!-- //web font -->
+    @include('IconWeb')
 </head>
 <body>
 <!-- main -->
@@ -18,13 +19,14 @@
     <h1>Creative SignUp Form</h1>
     <div class="main-agileinfo">
         <div class="agileits-top">
-            <form action="#" method="post">
-                <input class="text" type="text" name="UsernameOrEmail" placeholder="Username Or Email" required="">
+            <form action="/sign-in/post" method="post">
+                @csrf
+                <input class="text" type="email" name="UsernameOrEmail" placeholder="Email" required="">
                 <input class="text email" type="password" name="password" placeholder="Password" required="">
 
                 <input type="submit" value="SIGNUP">
             </form>
-            <p>Don't have an Account? <a href="#"> Sign up Now!</a></p>
+            <p>Don't have an Account? <a href="/sign-up"> Sign up Now!</a></p>
         </div>
     </div>
     <!-- copyright -->

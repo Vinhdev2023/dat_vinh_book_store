@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-userlogin">
-                        <figure><a  href="javascript:void(0);"><img src="/cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
-                        <span>Hi, Vinh Moi</span>
+                        <figure><a  href="/sign-out"><img src="/cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
+                        <span>Hi, {{auth()->check() == true ? auth()->user()->name : 'customer'}}</span>
                     </div>
                 </div>
             </div>
@@ -26,37 +26,36 @@
                             <a href="javascript:void(0);" id="tg-minicart" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="tg-themebadge">{{session()->has('cart') == null ? 0 : count(session()->get('cart'))}}</span>
                                 <i class="icon-cart"></i>
-                                <span>$123.00</span>
+                                <span>{{session()->has('cart_total') != null ? session()->get('cart_total') : 0}} VND</span>
                             </a>
-                            <div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-minicart">
-                                <div class="tg-minicartbody">
-                                    @if (session()->has('cart'))
-                                        @foreach (session()->get('cart') as $obj)
-                                            <div class="tg-minicarproduct">
-                                                <figure>
-                                                    <img src="/images/{{$obj->image}}" alt="image description" width="60px">
-                                                </figure>
-                                                <div class="tg-minicarproductdata">
-                                                    <h5><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h5>
-                                                    <h5><a href="/product/detail/{{$obj->id}}">{{$obj->quantity}}</a></h5>
-                                                    <h6><a href="/product/detail/{{$obj->id}}">{{$obj->price}} VND</a></h6>
+                            @if (session()->has('cart'))
+                                <div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-minicart">
+                                    <div class="tg-minicartbody">
+                                            @foreach (session()->get('cart') as $obj)
+                                                <div class="tg-minicarproduct">
+                                                    <figure>
+                                                        <img src="/images/{{$obj->image}}" alt="image description" width="60px">
+                                                    </figure>
+                                                    <div class="tg-minicarproductdata">
+                                                        <h5><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h5>
+                                                        <h5><a href="/product/detail/{{$obj->id}}">Quantity: {{$obj->quantity}}</a></h5>
+                                                        <h6><a href="/product/detail/{{$obj->id}}">{{$obj->price}} VND</a></h6>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        @endforeach
-                                    @endif
-                                </div>
-                                <div class="tg-minicartfoot">
-                                    <a class="tg-btnemptycart" href="/clear/cart">
-                                        <i class="fa fa-trash-o"></i>
-                                        <span>Clear Your Cart</span>
-                                    </a>
-                                    <span class="tg-subtotal">Subtotal: <strong>35.78</strong></span>
-                                    <div class="tg-btns">
-                                        <a class="tg-btn tg-active" href="javascript:void(0);">View Cart</a>
-                                        <a class="tg-btn" href="javascript:void(0);">Checkout</a>
+                                            @endforeach
+                                    </div>
+                                    <div class="tg-minicartfoot">
+                                        <a class="tg-btnemptycart" href="/clear/cart">
+                                            <i class="fa fa-trash-o"></i>
+                                            <span>Clear Your Cart</span>
+                                        </a>
+                                        <span class="tg-subtotal">Subtotal: <strong>{{session()->has('cart_total') != null ? session()->get('cart_total') : 0}} VND</strong></span>
+                                        <div class="tg-btns">
+                                            <a class="tg-btn" href="/checkout">Checkout</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                         </div>
                     </div>
                     <div class="tg-searchbox">

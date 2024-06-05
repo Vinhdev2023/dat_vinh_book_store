@@ -81,11 +81,10 @@
                                                             @csrf
                                                             <div class="tg-quantityholder">
                                                                 <em class="minus">-</em>
-                                                                <input type="text" class="result" value="0" id="quantity1" name="quantity">
+                                                                <input type="number" class="result" value="0" min="0" max="{{$book->quantity}}" id="quantity1" name="quantity">
                                                                 <em class="plus">+</em>
                                                             </div>
                                                             <button class="tg-btn tg-active tg-btn-lg" type="submit">Add To Basket</button>
-
                                                         </form>
 													</div>
 												</div>

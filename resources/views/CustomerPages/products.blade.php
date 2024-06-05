@@ -66,33 +66,6 @@
                             <div id="tg-content" class="tg-content">
                                 <div class="tg-products">
                                     <div class="tg-productgrid">
-                                        <div class="tg-refinesearch">
-                                            <span>showing 1 to 8 of 20 total</span>
-                                            <form class="tg-formtheme tg-formsortshoitems">
-                                                <fieldset>
-                                                    <div class="form-group">
-                                                        <label>sort by:</label>
-                                                        <span class="tg-select">
-                                                            <select>
-                                                                <option>name</option>
-                                                                <option>name</option>
-                                                                <option>name</option>
-                                                            </select>
-                                                        </span>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label>show:</label>
-                                                        <span class="tg-select">
-                                                            <select>
-                                                                <option>8</option>
-                                                                <option>16</option>
-                                                                <option>20</option>
-                                                            </select>
-                                                        </span>
-                                                    </div>
-                                                </fieldset>
-                                            </form>
-                                        </div>
                                         @foreach($books as $obj)
                                             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                 <div class="tg-postbook">

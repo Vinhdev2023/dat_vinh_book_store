@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 
@@ -34,7 +35,13 @@ class CartController extends Controller
             }else{
                 session()->put('cart', $cart);
             }
-            return redirect()->back();
+            $total = 0;
+            $cart = session()->get('cart');
+            foreach ($cart as $obj) {
+                $total += $obj->price * $obj->quantity;
+            }
+            session()->put('cart_total', $total);
+            return redirect('/products');
         }
         return redirect()->back();
     }
@@ -43,5 +50,16 @@ class CartController extends Controller
         session()->flush();
         session()->save();
         return redirect()->back();
+    }
+    public function checkout(){
+        if (!Auth::check()){
+            return redirect('/sign-in');
+        }
+        return redirect('/checkout-form');
+    }
+
+    public function checkout_form(){
+        $categories = DB::table('categories')->get();
+        return view('CustomerPages.checkout', compact('categories'));
     }
 }
