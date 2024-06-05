@@ -57,14 +57,14 @@
                                             </figure>
                                             <div class="tg-postbookcontent">
                                                 <ul class="tg-bookscategories">
-                                                    <li><a href="javascript:void(0);">{{$obj->category_name}}</a></li>
+                                                    <li><a href="">{{$obj->category_name}}</a></li>
                                                 </ul>
                                                 <div class="tg-booktitle">
-                                                    <h3><a href="javascript:void(0);">{{$obj->title}}</a></h3>
+                                                    <h3><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h3>
                                                 </div>
                                                 <span class="tg-bookwriter">Publisher: <a href="javascript:void(0);">{{$obj->publisher_name}}</a></span>
                                                 <span class="tg-bookprice">
-												    <ins>{{$obj->price}}VND</ins>
+												    <ins>{{number_format($obj->price)}}VND</ins>
 											    </span>
                                                 <a class="tg-btn tg-btnstyletwo" href="/product/detail/{{$obj->id}}">
                                                     <i class="fa fa-shopping-basket"></i>

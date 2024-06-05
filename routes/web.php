@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthCusController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientIndexController;
 use App\Http\Controllers\ProductController;
@@ -13,9 +14,11 @@ Route::get('/product/detail/{id}', [ProductController::class, 'product_detail'])
 
 Route::post('/product-to-cart/{id}', [CartController::class, 'add_cart']);
 Route::get('/clear/cart', [CartController::class, 'clear_cart']);
-Route::get('/checkout', [CartController::class, 'checkout']);
 
+Route::get('/checkout', [CartController::class, 'checkout']);
 Route::get('/checkout-form', [CartController::class, 'checkout_form']);
+
+Route::get('/orders', [OrderController::class, 'orders']);
 
 Route::get('/sign-up', function () {
     return view('CustomerPages.SignInAndSignUp.SignUp');

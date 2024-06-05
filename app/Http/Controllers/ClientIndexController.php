@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 class ClientIndexController extends Controller {
     public function clientIndex() {
         $categories = DB::table('categories')->get();
+        $publishers = DB::table('publishers')->get();
         $purchased_books = DB::table('books')
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
             ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
@@ -20,7 +21,7 @@ class ClientIndexController extends Controller {
             ->limit(3)
             ->orderBy('books.created_at', 'DESC')
             ->get();
-        return view("CustomerPages.index", compact('categories', 'purchased_books', 'new_release_books'));
+        return view("CustomerPages.index", compact('categories', 'purchased_books', 'new_release_books', 'publishers'));
     }
 
 }

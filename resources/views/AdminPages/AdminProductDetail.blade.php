@@ -34,12 +34,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>E-commerce</h1>
+                        <h1>{{$book->title}} Detail</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">E-commerce</li>
+                            <li class="breadcrumb-item active">{{$book->title}} Detail</li>
                         </ol>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
 
                             <div class="bg-gray py-2 px-3 mt-4">
                                 <h2 class="mb-0">
-                                    {{$book->price}}VND
+                                    {{number_format($book->price)}}VND
                                 </h2>
                             </div>
 

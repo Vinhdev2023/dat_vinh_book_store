@@ -13,7 +13,7 @@
                 <img src="/admin_plugin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="/admin/logout" class="d-block">{{auth()->user()->name}}</a>
             </div>
         </div>
 
@@ -77,7 +77,7 @@
                                 </li>
                             @endif
                             <li class="nav-item @if($path == '/admin/products' || $path == '/admin/product/detail') {{'menu-open'}} @endif">
-                                <a href="@if($path == '/admin/product/detail'){{'/admin/product/detail'}}@else{{'/admin/products'}}@endif" class="nav-link @if($path == '/admin/products' || $path == '/admin/product/detail') {{'active'}} @endif">
+                                <a href="@if($path == '/admin/product/detail'){{'/admin/product/detail/'.$book->id}}@else{{'/admin/products'}}@endif" class="nav-link @if($path == '/admin/products' || $path == '/admin/product/detail') {{'active'}} @endif">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>@if($path == '/admin/product/detail'){{'Book detail'}}@else{{'Books'}}@endif</p>
                                 </a>

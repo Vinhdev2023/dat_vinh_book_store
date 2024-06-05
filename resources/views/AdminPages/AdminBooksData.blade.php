@@ -73,8 +73,8 @@
                                     @foreach($books as $obj)
                                         <tr>
                                             <td>{{$obj->title}}</td>
-                                            <td>{{$obj->price}}</td>
-                                            <td>{{$obj->quantity}}</td>
+                                            <td>{{number_format($obj->price)}}</td>
+                                            <td>{{number_format($obj->quantity)}}</td>
                                             <td>{{$obj->status}}</td>
                                             <td>
                                                 <a href="/admin/product/detail/{{$obj->id}}" class="btn btn-primary">detail</a>

@@ -47,9 +47,9 @@ class CartController extends Controller
     }
     public function clear_cart(){
         session()->forget('cart');
-        session()->flush();
+        session()->forget('cart_total');
         session()->save();
-        return redirect()->back();
+        return redirect('/products');
     }
     public function checkout(){
         if (!Auth::check()){
@@ -59,7 +59,11 @@ class CartController extends Controller
     }
 
     public function checkout_form(){
+        if (!Auth::check()){
+            return redirect('/sign-in');
+        }
         $categories = DB::table('categories')->get();
-        return view('CustomerPages.checkout', compact('categories'));
+        $publishers = DB::table('publishers')->get();
+        return view('CustomerPages.checkout', compact('categories', 'publishers'));
     }
 }

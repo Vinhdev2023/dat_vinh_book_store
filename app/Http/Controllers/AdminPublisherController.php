@@ -4,11 +4,16 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AdminPublisherController extends Controller
 {
     public function index(){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $path = '/admin/publishers';
         $publishers = DB::table('publishers')
             ->get();
@@ -16,11 +21,19 @@ class AdminPublisherController extends Controller
     }
 
     public function add_form(){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $path = '/admin/publisher/add-form';
         return view('AdminPages.AdminFormPublishers', compact('path'));
     }
 
     public function add_publisher(Request $request){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $PublisherName = $request->PublisherName;
         if($PublisherName == null){
             return redirect('admin/publisher/add-form');
@@ -41,6 +54,10 @@ class AdminPublisherController extends Controller
     }
 
     public function edit_form($id){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $path = '/admin/publisher/edit-form';
         $publisher = DB::table('publishers')
             ->where('id', $id)
@@ -49,6 +66,10 @@ class AdminPublisherController extends Controller
     }
 
     public function edit_publisher(Request $request, $id){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         if ($request->PublisherName == null){
             return redirect('/admin/publisher/edit-form/'.$id);
         } else {

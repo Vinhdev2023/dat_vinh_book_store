@@ -4,17 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AdminProductController extends Controller
 {
     public function index(){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $path = '/admin/products';
         $books = DB::table('books')->get();
         return view('AdminPages.AdminBooksData', compact('path', 'books'));
     }
 
     public function product_detail($id){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $path = '/admin/product/detail';
         $book = DB::table('books')
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
@@ -27,6 +36,10 @@ class AdminProductController extends Controller
     }
 
     public function add_form(){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $path = '/admin/product/add-form';
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
@@ -34,6 +47,10 @@ class AdminProductController extends Controller
     }
 
     public function add_product(Request $request){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         if($request->Image == null){
             return redirect('/admin/product/add-form');
         }
@@ -66,6 +83,10 @@ class AdminProductController extends Controller
     }
 
     public function edit_form($id){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         $path = '/admin/product/edit-form';
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
@@ -79,6 +100,10 @@ class AdminProductController extends Controller
     }
 
     public function edit_product(Request $request, $id){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
         if ($request->BookTitle == null && $request->Price == null && $request->Quantity == null
             && $request->PublisherID == null && $request->CategoriesId == null ){
 
@@ -100,7 +125,7 @@ class AdminProductController extends Controller
                 $Image = $request->Image->getClientOriginalName();
                 $request->Image->move(public_path('images'), $Image);
             }
-            $id = DB::table('books')->where('id', $id)
+            DB::table('books')->where('id', $id)
                 ->update([
                 'title' => $BookTitle,
                 'image' => $Image,
@@ -110,7 +135,7 @@ class AdminProductController extends Controller
                 'publisher_id' => $PublisherID,
                 'category_id' => $CategoryID,
                 'status' => 'are selling',
-                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ]);
             return redirect('/admin/product/detail/'.$id);
         }

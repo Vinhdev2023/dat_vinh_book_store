@@ -14,6 +14,7 @@ class ProductController extends Controller
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
             ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
             ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
+            ->where('books.status', '=', 'are selling')
             ->get();
         return view("CustomerPages.products", compact('categories', 'publishers', 'books'));
     }

@@ -16,7 +16,7 @@
 <body>
 <!-- main -->
 <div class="main-w3layouts wrapper">
-    <h1>Creative SignUp Form</h1>
+    <h1>Creative SignIn Form</h1>
     <div class="main-agileinfo">
         <div class="agileits-top">
             <form action="/sign-in/post" method="post">
@@ -24,7 +24,7 @@
                 <input class="text" type="email" name="UsernameOrEmail" placeholder="Email" required="">
                 <input class="text email" type="password" name="password" placeholder="Password" required="">
 
-                <input type="submit" value="SIGNUP">
+                <input type="submit" value="SIGNIN">
             </form>
             <p>Don't have an Account? <a href="/sign-up"> Sign up Now!</a></p>
         </div>

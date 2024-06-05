@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/admin')->group(function (){
     Route::get('/', [AdminHomeController::class, 'index']);
+    Route::get('/login', [AdminHomeController::class, 'login_form']);
+    Route::post('/login/post', [AdminHomeController::class, 'login']);
+    Route::get('/logout', [AdminHomeController::class, 'logout']);
 
     Route::get('/products', [AdminProductController::class, 'index']);
     Route::get('/product/detail/{id}', [AdminProductController::class, 'product_detail']);

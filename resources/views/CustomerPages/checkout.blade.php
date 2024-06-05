@@ -77,14 +77,8 @@
                                     <div class="form-group">
                                         <input type="text" name="phone-number" class="form-control" placeholder="Phone Mumber*">
                                     </div>
-                                    <div class="form-group">
-                                        <input type="email" name="Email" class="form-control" placeholder="Email*">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" name="address" class="form-control" placeholder="Address*">
-                                    </div>
                                     <div class="form-group tg-hastextarea">
-                                        <textarea placeholder="Comment"></textarea>
+                                        <textarea placeholder="Address*"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="tg-btn tg-active">Submit</button>
@@ -101,9 +95,9 @@
                                     <li>
                                         <i class="icon-phone-handset"></i>
                                         <span>
-												<em>0800 12345 - 678 - 89</em>
-												<em>+4 1234 - 4567 - 67</em>
-											</span>
+                                            <em>0800 12345 - 678 - 89</em>
+                                            <em>+4 1234 - 4567 - 67</em>
+                                        </span>
                                     </li>
                                     <li>
                                         <i class="icon-clock"></i>
@@ -112,17 +106,10 @@
                                     <li>
                                         <i class="icon-envelope"></i>
                                         <span>
-												<em><a href="mailto:support@domain.com">support@domain.com</a></em>
-												<em><a href="mailto:info@domain.com">info@domain.com</a></em>
-											</span>
+                                            <em><a href="mailto:support@domain.com">support@domain.com</a></em>
+                                            <em><a href="mailto:info@domain.com">info@domain.com</a></em>
+                                        </span>
                                     </li>
-                                </ul>
-                                <ul class="tg-socialicons">
-                                    <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-                                    <li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
-                                    <li class="tg-googleplus"><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
-                                    <li class="tg-rss"><a href="javascript:void(0);"><i class="fa fa-rss"></i></a></li>
                                 </ul>
                             </div>
                         </div>
