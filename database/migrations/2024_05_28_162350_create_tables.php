@@ -64,19 +64,6 @@ return new class extends Migration
             $table->string('avatar')->nullable(false)->after('level');
         });
 
-        Schema::create('customers', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->nullable(false);
-            $table->string('full_name')->nullable(true);
-            $table->string('password')->nullable(false);
-            $table->string('email')->nullable(false);
-            $table->string('phone')->nullable(false);
-            $table->bigInteger('address')->nullable(false);
-            $table->string('avatar')->nullable(false);
-            $table->string('status')->nullable(false);
-            $table->timestamps();
-        });
-
         Schema::table('books', function (Blueprint $table) {
             $table->foreign('publisher_id')->references('id')->on('publishers');
             $table->foreign('category_id')->references('id')->on('categories');
@@ -88,7 +75,7 @@ return new class extends Migration
         });
 
         Schema::table('orders', function (Blueprint $table) {
-            $table->foreign('customer_id')->references('id')->on('customers');
+            $table->foreign('customer_id')->references('id')->on('users');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

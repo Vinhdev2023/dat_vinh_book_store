@@ -24,44 +24,29 @@
                         </div>
                         <div class="dropdown tg-themedropdown tg-minicartdropdown">
                             <a href="javascript:void(0);" id="tg-minicart" class="tg-btnthemedropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="tg-themebadge">3</span>
+                                <span class="tg-themebadge">{{session()->has('cart') == null ? 0 : count(session()->get('cart'))}}</span>
                                 <i class="icon-cart"></i>
                                 <span>$123.00</span>
                             </a>
                             <div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-minicart">
                                 <div class="tg-minicartbody">
-                                    <div class="tg-minicarproduct">
-                                        <figure>
-                                            <img src="/cus_plugin/images/products/img-01.jpg" alt="image description">
-                                        </figure>
-                                        <div class="tg-minicarproductdata">
-                                            <h5><a href="javascript:void(0);">Our State Fair Is A Great Function</a></h5>
-                                            <h6><a href="javascript:void(0);">$ 12.15</a></h6>
-                                        </div>
-                                    </div>
-                                    <div class="tg-minicarproduct">
-                                        <figure>
-                                            <img src="/cus_plugin/images/products/img-02.jpg" alt="image description">
-
-                                        </figure>
-                                        <div class="tg-minicarproductdata">
-                                            <h5><a href="javascript:void(0);">Bring Me To Light</a></h5>
-                                            <h6><a href="javascript:void(0);">$ 12.15</a></h6>
-                                        </div>
-                                    </div>
-                                    <div class="tg-minicarproduct">
-                                        <figure>
-                                            <img src="/cus_plugin/images/products/img-03.jpg" alt="image description">
-
-                                        </figure>
-                                        <div class="tg-minicarproductdata">
-                                            <h5><a href="javascript:void(0);">Have Faith In Your Soul</a></h5>
-                                            <h6><a href="javascript:void(0);">$ 12.15</a></h6>
-                                        </div>
-                                    </div>
+                                    @if (session()->has('cart'))
+                                        @foreach (session()->get('cart') as $obj)
+                                            <div class="tg-minicarproduct">
+                                                <figure>
+                                                    <img src="/images/{{$obj->image}}" alt="image description" width="60px">
+                                                </figure>
+                                                <div class="tg-minicarproductdata">
+                                                    <h5><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h5>
+                                                    <h5><a href="/product/detail/{{$obj->id}}">{{$obj->quantity}}</a></h5>
+                                                    <h6><a href="/product/detail/{{$obj->id}}">{{$obj->price}} VND</a></h6>
+                                                </div>
+                                            </div>
+                                        @endforeach
+                                    @endif
                                 </div>
                                 <div class="tg-minicartfoot">
-                                    <a class="tg-btnemptycart" href="javascript:void(0);">
+                                    <a class="tg-btnemptycart" href="/clear/cart">
                                         <i class="fa fa-trash-o"></i>
                                         <span>Clear Your Cart</span>
                                     </a>

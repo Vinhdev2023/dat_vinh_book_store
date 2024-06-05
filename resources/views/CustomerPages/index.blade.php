@@ -66,7 +66,7 @@
                                                 <span class="tg-bookprice">
 												    <ins>{{$obj->price}}VND</ins>
 											    </span>
-                                                <a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
+                                                <a class="tg-btn tg-btnstyletwo" href="/product/detail/{{$obj->id}}">
                                                     <i class="fa fa-shopping-basket"></i>
                                                     <em>Add To Basket</em>
                                                 </a>

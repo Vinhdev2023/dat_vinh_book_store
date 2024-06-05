@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('customers', function (Blueprint $table) {
-            $table->string('phone')->nullable(true)->change();
-            $table->string('address')->nullable(true)->change();
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('level')->nullable(true)->after('remember_token')->change();
+            $table->string('avatar')->nullable(true)->after('level')->change();
+            $table->string('user_type')->nullable(false)->after('avatar');
         });
     }
 
