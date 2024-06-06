@@ -42,8 +42,8 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item @if($path == '/admin/orders' || $path == '/admin/order/detail') {{'menu-open'}} @endif">
+                    <a href="/admin/orders" class="nav-link @if($path == '/admin/orders' || $path == '/admin/order/detail') {{'active'}} @endif">
                         <i class="nav-icon fas fa-shopping-cart"></i>
                         <p>
                             Orders

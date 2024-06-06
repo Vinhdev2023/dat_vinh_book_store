@@ -33,15 +33,15 @@
     <!--************************************
             Inner Banner Start
     *************************************-->
-    <div class="tg-innerbanner tg-haslayout tg-parallax tg-bginnerbanner" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-07.jpg">
+    <div class="tg-innerbanner tg-haslayout tg-parallax tg-bginnerbanner" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="/cus_plugin/images/parallax/bgparallax-07.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-innerbannercontent">
-                        <h1>All Products</h1>
+                        <h1>All Products In Order</h1>
                         <ol class="tg-breadcrumb">
                             <li><a >home</a></li>
-                            <li class="tg-active">Products</li>
+                            <li class="tg-active">All Products In Order</li>
                         </ol>
                     </div>
                 </div>
@@ -61,19 +61,48 @@
         <div class="tg-sectionspace tg-haslayout">
             <div class="container">
                 <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="tg-sectionhead">
+                            <h2><span>Name:</span>{{$order->cus_name}}</h2>
+                        </div>
+                        <div class="tg-sectionhead">
+                            <h2><span>Phone:</span>{{$order->cus_phone}}</h2>
+                        </div>
+                        <div class="tg-sectionhead">
+                            <h2><span>Address:</span>{{$order->ship_to_address}}</h2>
+                        </div>
+                        <div class="tg-sectionhead">
+                            <h2><span>Total:</span>{{number_format($order->total)}}</h2>
+                        </div>
+                    </div>
                     <div id="tg-twocolumns" class="tg-twocolumns">
-                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
                             <div id="tg-content" class="tg-content">
                                 <div class="tg-products">
                                     <div class="tg-productgrid">
-                                        @foreach($orders as $obj)
+                                        @foreach($order_detail as $obj)
                                             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
                                                 <div class="tg-postbook">
+                                                    <figure class="tg-featureimg">
+                                                        <div class="tg-bookimg">
+                                                            <div class="tg-frontcover"><img src="/images/{{$obj->book_image}}" alt="image description"></div>
+                                                            <div class="tg-backcover"><img src="/images/{{$obj->book_image}}" alt="image description"></div>
+                                                        </div>
+                                                    </figure>
                                                     <div class="tg-postbookcontent">
-                                                        <span class="tg-bookwriter">Name: <a href="">{{$obj->cus_name}}</a></span>
-                                                        <a class="tg-btn tg-btnstyletwo" href="/order/detail/{{$obj->id}} ">
+                                                        <ul class="tg-bookscategories">
+{{--                                                            <li><a href="javascript:void(0);">{{$obj->category_name}}</a></li>--}}
+                                                        </ul>
+                                                        <div class="tg-booktitle">
+                                                            <h3><a href="javascript:void(0);">{{$obj->book_title}}</a></h3>
+                                                        </div>
+{{--                                                        <span class="tg-bookwriter">Publisher: <a href="">{{$obj->publisher_name}}</a></span>--}}
+                                                        <span class="tg-bookprice">
+                                                        <ins>{{$obj->book_price}}VND</ins>
+                                                    </span>
+                                                        <a class="tg-btn tg-btnstyletwo" href="/product/detail/{{$obj->book_id}}">
                                                             <i class="fa fa-shopping-basket"></i>
-                                                            <em>Order detail</em>
+                                                            <em>Book detail</em>
                                                         </a>
                                                     </div>
                                                 </div>

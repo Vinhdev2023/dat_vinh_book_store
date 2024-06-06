@@ -8,17 +8,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @include('IconWeb')
-    <link rel="stylesheet" href="cus_plugin/css/bootstrap.min.css">
-    <link rel="stylesheet" href="cus_plugin/css/normalize.css">
-    <link rel="stylesheet" href="cus_plugin/css/font-awesome.min.css">
-    <link rel="stylesheet" href="cus_plugin/css/icomoon.css">
-    <link rel="stylesheet" href="cus_plugin/css/jquery-ui.css">
-    <link rel="stylesheet" href="cus_plugin/css/owl.carousel.css">
-    <link rel="stylesheet" href="cus_plugin/css/transitions.css">
-    <link rel="stylesheet" href="cus_plugin/css/main.css">
-    <link rel="stylesheet" href="cus_plugin/css/color.css">
-    <link rel="stylesheet" href="cus_plugin/css/responsive.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="/cus_plugin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/cus_plugin/css/normalize.css">
+    <link rel="stylesheet" href="/cus_plugin/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cus_plugin/css/icomoon.css">
+    <link rel="stylesheet" href="/cus_plugin/css/jquery-ui.css">
+    <link rel="stylesheet" href="/cus_plugin/css/owl.carousel.css">
+    <link rel="stylesheet" href="/cus_plugin/css/transitions.css">
+    <link rel="stylesheet" href="/cus_plugin/css/main.css">
+    <link rel="stylesheet" href="/cus_plugin/css/color.css">
+    <link rel="stylesheet" href="/cus_plugin/css/responsive.css">
+    <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
 

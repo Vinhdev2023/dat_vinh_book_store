@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminHomeController;
+use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AdminPublisherController;
 use App\Http\Middleware\AdminMiddleware;
@@ -12,6 +13,9 @@ Route::prefix('/admin')->group(function (){
     Route::get('/login', [AdminHomeController::class, 'login_form']);
     Route::post('/login/post', [AdminHomeController::class, 'login']);
     Route::get('/logout', [AdminHomeController::class, 'logout']);
+
+    Route::get('/orders', [AdminOrderController::class, 'index']);
+    Route::get('/order/detail/{id}', [AdminOrderController::class, 'order_detail']);
 
     Route::get('/products', [AdminProductController::class, 'index']);
     Route::get('/product/detail/{id}', [AdminProductController::class, 'product_detail']);

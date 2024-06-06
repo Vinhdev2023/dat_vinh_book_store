@@ -17,8 +17,10 @@ Route::get('/clear/cart', [CartController::class, 'clear_cart']);
 
 Route::get('/checkout', [CartController::class, 'checkout']);
 Route::get('/checkout-form', [CartController::class, 'checkout_form']);
+Route::post('/checkout/post', [CartController::class, 'checkout_post']);
 
 Route::get('/orders', [OrderController::class, 'orders']);
+Route::get('/order/detail/{id}', [OrderController::class, 'order_detail']);
 
 Route::get('/sign-up', function () {
     return view('CustomerPages.SignInAndSignUp.SignUp');

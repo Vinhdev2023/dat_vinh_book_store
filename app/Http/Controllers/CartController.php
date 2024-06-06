@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
@@ -65,5 +66,44 @@ class CartController extends Controller
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
         return view('CustomerPages.checkout', compact('categories', 'publishers'));
+    }
+
+    public function checkout_post(Request $request){
+        if (!Auth::check()){
+            return redirect('/sign-in');
+        }
+        $name = $request->full_name;
+        $phone = $request->phone_number;
+        $address = $request->address;
+        if (Auth::user()->user_type == 'customer'){
+            $type = 'online';
+        }else{
+            $type = 'offline';
+        }
+        $id_order = DB::table('orders')->insertGetId([
+            'customer_id' => Auth::user()->id,
+            'cus_name' => $name,
+            'cus_phone' => $phone,
+            'ship_to_address' => $address,
+            'total' => session()->get('cart_total'),
+            'payment_method' => 'cash payments',
+            'type' => $type,
+            'status' => 'PENDING',
+            'created_at' => Carbon::now(),
+        ]);
+        $cart = session()->get('cart');
+        foreach ($cart as $obj){
+            DB::table('order_detail')
+                ->insert([
+                    'order_id' => $id_order,
+                    'book_id' => $obj->id,
+                    'quantity' => $obj->quantity,
+                    'price' => $obj->price,
+                ]);
+        }
+        session()->forget('cart');
+        session()->forget('cart_total');
+        session()->save();
+        return redirect('/orders');
     }
 }

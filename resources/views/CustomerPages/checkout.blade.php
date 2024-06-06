@@ -69,16 +69,17 @@
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <form class="tg-formtheme tg-formcontactus">
+                            <form class="tg-formtheme tg-formcontactus" action="/checkout/post" method="post">
+                                @csrf
                                 <fieldset>
                                     <div class="form-group">
-                                        <input type="text" name="full-name" class="form-control" placeholder="Full Name*">
+                                        <input type="text" name="full_name" class="form-control" placeholder="Full Name*">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="phone-number" class="form-control" placeholder="Phone Mumber*">
+                                        <input type="text" name="phone_number" class="form-control" placeholder="Phone Mumber*">
                                     </div>
                                     <div class="form-group tg-hastextarea">
-                                        <textarea placeholder="Address*"></textarea>
+                                        <textarea name="address" placeholder="Address*"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="tg-btn tg-active">Submit</button>
