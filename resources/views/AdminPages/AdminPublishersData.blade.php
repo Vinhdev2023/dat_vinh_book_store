@@ -71,7 +71,7 @@
                                             <td>{{$obj->name}}</td>
                                             <td>
                                                 <a href="/admin/publisher/edit-form/{{$obj->id}}" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
+                                                <a href="/admin/publisher/delete/{{$obj->id}}" onclick="return confirm('You want to delete?')" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach

@@ -82,4 +82,14 @@ class AdminPublisherController extends Controller
             return redirect('admin/publishers');
         }
     }
+    public function delete_publisher($id){
+        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        DB::table('publishers')
+            ->where('id', $id)
+            ->delete();
+        return redirect('admin/publishers');
+    }
 }

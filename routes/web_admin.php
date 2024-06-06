@@ -30,11 +30,13 @@ Route::prefix('/admin')->group(function (){
     Route::post('/category/add', [AdminCategoryController::class, 'add_category']);
     Route::get('/category/edit-form/{id}', [AdminCategoryController::class, 'edit_form']);
     Route::post('/category/update/{id}', [AdminCategoryController::class, 'edit_category']);
+    Route::get('/category/delete/{id}', [AdminCategoryController::class, 'delete_category']);
 
     Route::get('/publishers', [AdminPublisherController::class, 'index']);
     Route::get('/publisher/add-form', [AdminPublisherController::class, 'add_form']);
     Route::post('/publisher/add', [AdminPublisherController::class, 'add_publisher']);
     Route::get('/publisher/edit-form/{id}', [AdminPublisherController::class, 'edit_form']);
     Route::post('/publisher/update/{id}', [AdminPublisherController::class, 'edit_publisher']);
+    Route::get('/publisher/delete/{id}', [AdminPublisherController::class, 'delete_publisher']);
 });
 
