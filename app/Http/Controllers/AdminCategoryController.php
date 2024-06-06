@@ -82,4 +82,14 @@ class AdminCategoryController extends Controller
             return redirect('admin/categories');
         }
     }
+    public function delete_category($id){
+        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        DB::table('categories')
+            ->where('id', $id)
+            ->delete();
+        return redirect('admin/categories');
+    }
 }
