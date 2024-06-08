@@ -20,7 +20,11 @@ Route::get('/checkout-form', [CartController::class, 'checkout_form']);
 Route::post('/checkout/post', [CartController::class, 'checkout_post']);
 
 Route::get('/orders', [OrderController::class, 'orders']);
+Route::get('/orders/filter/{status}', [OrderController::class, 'orders_filter']);
 Route::get('/order/detail/{id}', [OrderController::class, 'order_detail']);
+Route::get('/order/status/{status}/{id}', [OrderController::class, 'order_status']);
+Route::get('/order/update-form/{id}', [OrderController::class, 'order_update_form']);
+Route::post('/order/update/{id}', [OrderController::class, 'order_update']);
 
 Route::get('/sign-up', function () {
     return view('CustomerPages.SignInAndSignUp.SignUp');

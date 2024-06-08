@@ -53,7 +53,7 @@
             </form>
 
             <p class="mb-1">
-                <a href="forgot-password.html">I forgot my password</a>
+                <a href="/">go to my web</a>
             </p>
         </div>
         <!-- /.login-card-body -->

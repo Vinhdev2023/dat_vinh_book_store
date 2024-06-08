@@ -19,6 +19,18 @@ class AdminOrderController extends Controller
         return view('AdminPages.AdminOrderData', compact('path', 'orders'));
     }
 
+    public function orders_filter($status){
+        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        $path = '/admin/orders';
+        $orders = DB::table('orders')
+            ->where('status', $status)
+            ->get();
+        return view('AdminPages.AdminOrderData', compact('path', 'orders'));
+    }
+
     public function order_detail($id){
         if (!Auth::check() || Auth::user()->user_type!= 'admin') {
             Auth::logout();
@@ -50,7 +62,14 @@ class AdminOrderController extends Controller
                 'status' => $status
             ]);
         if ($status == 'COMPLETED') {
-
+            $order_detail = DB::table('order_detail')
+                ->where('order_id', $id)
+                ->get();
+            foreach ($order_detail as $item) {
+                DB::table('books')
+                    ->where('id', $item->book_id)
+                    ->decrement('quantity', $item->quantity);
+            }
         }
         return redirect('/admin/order/detail/'.$id);
 

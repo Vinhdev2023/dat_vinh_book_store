@@ -94,10 +94,10 @@
                                     <table class="table table-striped">
                                         <thead>
                                         <tr>
-                                            <th>Qty</th>
                                             <th>Product</th>
                                             <th>Serial #</th>
                                             <th>Description</th>
+                                            <th>Qty</th>
                                             <th>Price</th>
                                             <th>Subtotal</th>
                                         </tr>
@@ -105,10 +105,11 @@
                                         <tbody>
                                         @foreach($order_detail as $obj)
                                         <tr>
-                                            <td>{{$obj->quantity}}</td>
+
                                             <td>{{$obj->book_title}}</td>
                                             <td>{{$obj->book_id}}</td>
                                             <td><a href="/admin/product/detail/{{$obj->book_id}}">Description</a></td>
+                                            <td>{{$obj->quantity}}</td>
                                             <td>{{number_format($obj->book_price)}}</td>
                                             <td>{{number_format($obj->book_price*$obj->quantity)}}</td>
                                         </tr>

@@ -39,10 +39,10 @@ class AuthCusController extends Controller
     public function sign_in(Request $request) {
         $email = $request->UsernameOrEmail;
         $password = $request->password;
-        $check = Auth::attempt(['email' => $email, 'password' => $password]);
+        $check = Auth::attempt(['email' => $email, 'password' => $password, 'user_type' => 'customer']);
 //        dd($check);
-        if ($check){
-            return redirect('/');
+        if ($check && session()->has('cart')){
+            return redirect('/checkout-form');
         }
         return redirect()->back();
     }

@@ -66,19 +66,34 @@
                             <div id="tg-content" class="tg-content">
                                 <div class="tg-products">
                                     <div class="tg-productgrid">
-                                        @foreach($orders as $obj)
-                                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="tg-postbook">
-                                                    <div class="tg-postbookcontent">
-                                                        <span class="tg-bookwriter">Name: <a href="">{{$obj->cus_name}}</a></span>
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Phone</th>
+                                                <th>Address</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($orders as $obj)
+                                                <tr>
+                                                    <td>{{$obj->cus_name}}</td>
+                                                    <td>{{$obj->cus_phone}}</td>
+                                                    <td>{{$obj->ship_to_address}}</td>
+                                                    <td>{{$obj->total}}</td>
+                                                    <td>{{$obj->status}}</td>
+                                                    <td>
                                                         <a class="tg-btn tg-btnstyletwo" href="/order/detail/{{$obj->id}} ">
-                                                            <i class="fa fa-shopping-basket"></i>
-                                                            <em>Order detail</em>
+                                                            Detail
                                                         </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

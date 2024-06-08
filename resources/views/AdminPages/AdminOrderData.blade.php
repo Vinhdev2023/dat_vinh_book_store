@@ -97,6 +97,13 @@
                                 </table>
                             </div>
                             <!-- /.card-body -->
+                            <div class="card-footer">
+                                <a href="/admin/orders/filter/PENDING" class="btn btn-primary">Pending</a>
+                                <a href="/admin/orders/filter/CANCELED" class="btn btn-primary">Canceled</a>
+                                <a href="/admin/orders/filter/CONFIRMED" class="btn btn-primary">Confirm</a>
+                                <a href="/admin/orders/filter/SHIPPING" class="btn btn-primary">Shipping</a>
+                                <a href="/admin/orders/filter/COMPLETED" class="btn btn-primary">Completed</a>
+                            </div>
                         </div>
                         <!-- /.card -->
                     </div>

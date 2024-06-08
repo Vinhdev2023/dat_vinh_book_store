@@ -81,11 +81,7 @@ class CartController extends Controller
         $name = $request->full_name;
         $phone = $request->phone_number;
         $address = $request->address;
-        if (Auth::user()->user_type == 'customer'){
-            $type = 'online';
-        }else{
-            $type = 'offline';
-        }
+        $type = 'online';
         $cart = session()->get('cart');
         if(isset($cart)){
             $id_order = DB::table('orders')->insertGetId([
