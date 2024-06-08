@@ -84,7 +84,7 @@
                                                         </div>
                                                         <span class="tg-bookwriter">Publisher: <a href="">{{$obj->publisher_name}}</a></span>
                                                         <span class="tg-bookprice">
-                                                        <ins>{{$obj->price}}VND</ins>
+                                                        <ins>{{number_format($obj->price)}}VND</ins>
                                                     </span>
                                                         <a class="tg-btn tg-btnstyletwo" href="/product/detail/{{$obj->id}}">
                                                             <i class="fa fa-shopping-basket"></i>

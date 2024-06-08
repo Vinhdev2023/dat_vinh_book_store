@@ -72,7 +72,7 @@
 													<figure class="tg-featureimg"><img src="/images/{{$book->image}}" alt="image description"></figure>
 													<div class="tg-postbookcontent">
 														<span class="tg-bookprice">
-															<ins>{{$book->price}} VND</ins>
+															<ins>{{number_format($book->price)}} VND</ins>
 														</span>
 														<ul class="tg-delevrystock">
 															<li><i class="icon-store"></i><span>Status: <em>{{$book->status}}</em></span></li>
@@ -81,7 +81,7 @@
                                                             @csrf
                                                             <div class="tg-quantityholder">
                                                                 <em class="minus">-</em>
-                                                                <input type="number" class="result" value="0" min="0" max="{{$book->quantity}}" id="quantity1" name="quantity">
+                                                                <input type="number" class="result" value="1" min="1" max="{{$book->quantity}}" id="quantity1" name="quantity">
                                                                 <em class="plus">+</em>
                                                             </div>
                                                             <button class="tg-btn tg-active tg-btn-lg" type="submit">Add To Basket</button>
@@ -104,45 +104,45 @@
 												</div>
 											</div>
 
-											<div class="tg-relatedproducts">
-												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-													<div class="tg-sectionhead">
-														<h2><span>Related Products</span>You May Also Like</h2>
-														<a class="tg-btn" href="javascript:void(0);">View All</a>
-													</div>
-												</div>
-												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-													<div id="tg-relatedproductslider" class="tg-relatedproductslider tg-relatedbooks owl-carousel">
-														<div class="item">
-															<div class="tg-postbook">
-																<figure class="tg-featureimg">
-																	<div class="tg-bookimg">
-																		<div class="tg-frontcover"><img src="/cus_plugin/images/books/img-01.jpg" alt="image description"></div>
-																		<div class="tg-backcover"><img src="/cus_plugin/images/books/img-01.jpg" alt="image description"></div>
-																	</div>
-																</figure>
-																<div class="tg-postbookcontent">
-																	<ul class="tg-bookscategories">
-																		<li><a href="javascript:void(0);">Adventure</a></li>
-																		<li><a href="javascript:void(0);">Fun</a></li>
-																	</ul>
-																	<div class="tg-booktitle">
-																		<h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>
-																	</div>
-																	<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>
-																	<span class="tg-bookprice">
-																		<ins>$25.18</ins>
-																	</span>
-																	<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">
-																		<i class="fa fa-shopping-basket"></i>
-																		<em>Add To Basket</em>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+{{--											<div class="tg-relatedproducts">--}}
+{{--												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+{{--													<div class="tg-sectionhead">--}}
+{{--														<h2><span>Related Products</span>You May Also Like</h2>--}}
+{{--														<a class="tg-btn" href="javascript:void(0);">View All</a>--}}
+{{--													</div>--}}
+{{--												</div>--}}
+{{--												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+{{--													<div id="tg-relatedproductslider" class="tg-relatedproductslider tg-relatedbooks owl-carousel">--}}
+{{--														<div class="item">--}}
+{{--															<div class="tg-postbook">--}}
+{{--																<figure class="tg-featureimg">--}}
+{{--																	<div class="tg-bookimg">--}}
+{{--																		<div class="tg-frontcover"><img src="/cus_plugin/images/books/img-01.jpg" alt="image description"></div>--}}
+{{--																		<div class="tg-backcover"><img src="/cus_plugin/images/books/img-01.jpg" alt="image description"></div>--}}
+{{--																	</div>--}}
+{{--																</figure>--}}
+{{--																<div class="tg-postbookcontent">--}}
+{{--																	<ul class="tg-bookscategories">--}}
+{{--																		<li><a href="javascript:void(0);">Adventure</a></li>--}}
+{{--																		<li><a href="javascript:void(0);">Fun</a></li>--}}
+{{--																	</ul>--}}
+{{--																	<div class="tg-booktitle">--}}
+{{--																		<h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>--}}
+{{--																	</div>--}}
+{{--																	<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>--}}
+{{--																	<span class="tg-bookprice">--}}
+{{--																		<ins>$25.18</ins>--}}
+{{--																	</span>--}}
+{{--																	<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">--}}
+{{--																		<i class="fa fa-shopping-basket"></i>--}}
+{{--																		<em>Add To Basket</em>--}}
+{{--																	</a>--}}
+{{--																</div>--}}
+{{--															</div>--}}
+{{--														</div>--}}
+{{--													</div>--}}
+{{--												</div>--}}
+{{--											</div>--}}
 										</div>
 									</div>
 								</div>

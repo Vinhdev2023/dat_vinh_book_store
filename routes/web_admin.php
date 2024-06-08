@@ -16,6 +16,7 @@ Route::prefix('/admin')->group(function (){
 
     Route::get('/orders', [AdminOrderController::class, 'index']);
     Route::get('/order/detail/{id}', [AdminOrderController::class, 'order_detail']);
+    Route::get('/order/update/{status}/{id}', [AdminOrderController::class, 'update_order']);
 
     Route::get('/products', [AdminProductController::class, 'index']);
     Route::get('/product/detail/{id}', [AdminProductController::class, 'product_detail']);

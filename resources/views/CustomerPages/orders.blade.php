@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="row">
                     <div id="tg-twocolumns" class="tg-twocolumns">
-                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
                             <div id="tg-content" class="tg-content">
                                 <div class="tg-products">
                                     <div class="tg-productgrid">

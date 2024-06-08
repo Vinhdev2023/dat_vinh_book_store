@@ -60,7 +60,7 @@
                                 <div class="col-12">
                                     <h4>
                                         <i class="fas fa-globe"></i> AdminLTE, Inc.
-                                        <small class="float-right">Date: {{date_format(date_create($order->created_at), "d/m/Y")}}</small>
+                                        <small class="float-right">Date: {{$order->created_at}}</small>
                                     </h4>
                                 </div>
                                 <!-- /.col -->
@@ -149,12 +149,22 @@
                             <!-- this row will not appear when printing -->
                             <div class="row no-print">
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-danger float-right">
-                                        Cancel
-                                    </button>
-                                    <button type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
-                                        Confirm
-                                    </button>
+                                    @if ($order->status == 'PENDING')
+                                        <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">
+                                            Cancel
+                                        </a>
+                                        <a href="/admin/order/update/CONFIRMED/{{$order->id}}" type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
+                                            Confirm
+                                        </a>
+                                    @elseif($order->status == 'CONFIRMED' && $order->type == 'online')
+                                        <a href="/admin/order/update/SHIPPING/{{$order->id}}" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
+                                            SHIPPING
+                                        </a>
+                                    @elseif($order->status == 'CONFIRMED' && $order->type == 'offline' || $order->status == 'SHIPPING')
+                                        <a href="/admin/order/update/COMPLETED/{{$order->id}}" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
+                                            Complete
+                                        </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

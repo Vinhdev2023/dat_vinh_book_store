@@ -74,6 +74,12 @@
                         <div class="tg-sectionhead">
                             <h2><span>Total:</span>{{number_format($order->total)}}</h2>
                         </div>
+                        <div class="tg-sectionhead">
+                            <h2><span>Status:</span>{{$order->status}}</h2>
+                        </div>
+                        <div class="tg-sectionhead">
+                            <h2><span>Products:</span>In Order</h2>
+                        </div>
                     </div>
                     <div id="tg-twocolumns" class="tg-twocolumns">
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
@@ -98,7 +104,7 @@
                                                         </div>
 {{--                                                        <span class="tg-bookwriter">Publisher: <a href="">{{$obj->publisher_name}}</a></span>--}}
                                                         <span class="tg-bookprice">
-                                                        <ins>{{$obj->book_price}}VND</ins>
+                                                        <ins>{{number_format($obj->book_price)}}VND</ins>
                                                     </span>
                                                         <a class="tg-btn tg-btnstyletwo" href="/product/detail/{{$obj->book_id}}">
                                                             <i class="fa fa-shopping-basket"></i>

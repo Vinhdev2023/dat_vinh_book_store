@@ -66,6 +66,7 @@
                                             <th>Phone</th>
                                             <th>Total</th>
                                             <th>Status</th>
+                                            <th>Type</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -73,9 +74,10 @@
                                     @foreach($orders as $obj)
                                         <tr>
                                             <td>{{$obj->cus_name}}</td>
-                                            <td>{{number_format($obj->cus_phone)}}</td>
+                                            <td>{{$obj->cus_phone}}</td>
                                             <td>{{number_format($obj->total)}}</td>
                                             <td>{{$obj->status}}</td>
+                                            <td>{{$obj->type}}</td>
                                             <td>
                                                 <a href="/admin/order/detail/{{$obj->id}}" class="btn btn-primary">detail</a>
                                             </td>
@@ -87,7 +89,8 @@
                                             <th>Name</th>
                                             <th>Total</th>
                                             <th>Status</th>
-                                            <th>Date</th>
+                                            <th>Status</th>
+                                            <th>Type</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
@@ -138,7 +141,7 @@
             "paging": true,
             "lengthChange": false,
             "searching": true,
-            "ordering": true,
+            "ordering": false,
             "info": true,
             "autoWidth": false,
             "responsive": true,

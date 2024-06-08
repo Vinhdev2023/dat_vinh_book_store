@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -35,5 +36,23 @@ class AdminOrderController extends Controller
             ->get();
 //        dd($order);
         return view('AdminPages.AdminOrderDetail', compact('path', 'order', 'order_detail'));
+    }
+
+    public function update_order($status, $id){
+        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        DB::table('orders')->where('id', $id)
+            ->update([
+                'user_id' => Auth::user()->id,
+                'updated_at' => Carbon::now(),
+                'status' => $status
+            ]);
+        if ($status == 'COMPLETED') {
+
+        }
+        return redirect('/admin/order/detail/'.$id);
+
     }
 }

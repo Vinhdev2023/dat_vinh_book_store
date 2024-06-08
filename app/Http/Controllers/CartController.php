@@ -49,8 +49,13 @@ class CartController extends Controller
     public function clear_cart(){
         session()->forget('cart');
         session()->forget('cart_total');
+        if (session()->get('cart_in_checkout')){
+            session()->forget('cart_in_checkout');
+            session()->save();
+            return redirect('/products');
+        }
         session()->save();
-        return redirect('/products');
+        return redirect()->back();
     }
     public function checkout(){
         if (!Auth::check()){
@@ -63,6 +68,7 @@ class CartController extends Controller
         if (!Auth::check()){
             return redirect('/sign-in');
         }
+        session()->put('cart_in_checkout', true);
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
         return view('CustomerPages.checkout', compact('categories', 'publishers'));
@@ -80,30 +86,33 @@ class CartController extends Controller
         }else{
             $type = 'offline';
         }
-        $id_order = DB::table('orders')->insertGetId([
-            'customer_id' => Auth::user()->id,
-            'cus_name' => $name,
-            'cus_phone' => $phone,
-            'ship_to_address' => $address,
-            'total' => session()->get('cart_total'),
-            'payment_method' => 'cash payments',
-            'type' => $type,
-            'status' => 'PENDING',
-            'created_at' => Carbon::now(),
-        ]);
         $cart = session()->get('cart');
-        foreach ($cart as $obj){
-            DB::table('order_detail')
-                ->insert([
-                    'order_id' => $id_order,
-                    'book_id' => $obj->id,
-                    'quantity' => $obj->quantity,
-                    'price' => $obj->price,
-                ]);
+        if(isset($cart)){
+            $id_order = DB::table('orders')->insertGetId([
+                'customer_id' => Auth::user()->id,
+                'cus_name' => $name,
+                'cus_phone' => $phone,
+                'ship_to_address' => $address,
+                'total' => session()->get('cart_total'),
+                'payment_method' => 'cash payments',
+                'type' => $type,
+                'status' => 'PENDING',
+                'created_at' => Carbon::now(),
+            ]);
+            foreach ($cart as $obj){
+                DB::table('order_detail')
+                    ->insert([
+                        'order_id' => $id_order,
+                        'book_id' => $obj->id,
+                        'quantity' => $obj->quantity,
+                        'price' => $obj->price,
+                    ]);
+            }
+            session()->forget('cart');
+            session()->forget('cart_total');
+            session()->save();
+            return redirect('/orders');
         }
-        session()->forget('cart');
-        session()->forget('cart_total');
-        session()->save();
-        return redirect('/orders');
+        return redirect('/products');
     }
 }

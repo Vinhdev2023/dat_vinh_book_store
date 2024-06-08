@@ -29,4 +29,8 @@ class OrderController extends Controller
             ->get();
         return view('CustomerPages.orderdetail', compact('categories', 'publishers', 'order', 'order_detail'));
     }
+
+    public function order_update($status, $id){
+
+    }
 }
