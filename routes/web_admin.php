@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AdminPublisherController;
+use App\Http\Controllers\StatisticController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,8 @@ Route::prefix('/admin')->group(function (){
     Route::get('/login', [AdminHomeController::class, 'login_form']);
     Route::post('/login/post', [AdminHomeController::class, 'login']);
     Route::get('/logout', [AdminHomeController::class, 'logout']);
+
+    Route::get('/statistics', [StatisticController::class, 'statistic_view']);
 
     Route::get('/orders', [AdminOrderController::class, 'index']);
     Route::get('/orders/filter/{status}', [AdminOrderController::class, 'orders_filter']);

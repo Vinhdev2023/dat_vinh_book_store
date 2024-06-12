@@ -173,8 +173,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item @if($path == '/admin/statistics'){{'open-menu'}}@endif">
+                    <a href="/admin/statistics" class="nav-link @if($path == '/admin/statistics'){{'active'}}@endif">
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p>
                             Statistics
