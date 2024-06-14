@@ -16,6 +16,7 @@ Route::prefix('/admin')->group(function (){
     Route::get('/logout', [AdminHomeController::class, 'logout']);
 
     Route::get('/statistics', [StatisticController::class, 'statistic_view']);
+    Route::post('/statistics/get-data', [StatisticController::class, 'statistic_get_data']);
 
     Route::get('/orders', [AdminOrderController::class, 'index']);
     Route::get('/orders/filter/{status}', [AdminOrderController::class, 'orders_filter']);

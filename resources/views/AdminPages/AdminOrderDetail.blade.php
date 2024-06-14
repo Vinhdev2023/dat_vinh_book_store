@@ -158,7 +158,10 @@
                                             Confirm
                                         </a>
                                     @elseif($order->status == 'CONFIRMED' && $order->type == 'online')
-                                        <a href="/admin/order/update/SHIPPING/{{$order->id}}" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
+                                        <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">
+                                            Cancel
+                                        </a>
+                                        <a href="/admin/order/update/SHIPPING/{{$order->id}}" type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
                                             SHIPPING
                                         </a>
                                     @elseif($order->status == 'CONFIRMED' && $order->type == 'offline' || $order->status == 'SHIPPING')

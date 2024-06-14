@@ -55,7 +55,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">Date picker</h3>
                             </div>
-                            <form action="/admin/" method="post">
+                            <form action="/admin/statistics/get-data" method="post">
                                 @csrf
                                 <div class="card-body">
                                     <!-- Date range -->
@@ -90,8 +90,7 @@
                         <div class="card card-primary card-outline">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    <i class="far fa-chart-bar"></i>
-                                    Bar Chart
+                                    Total: {{number_format($sumTotal)}}
                                 </h3>
 
                                 <div class="card-tools">
@@ -104,9 +103,14 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div id="bar-chart" style="height: 300px;"></div>
+                                <div id="bar-chart" style="height: 420px;"></div>
                             </div>
                             <!-- /.card-body-->
+                            <div class="card-footer">
+                                <h3 class="card-title">
+                                    Total: {{number_format($sumTotal)}}
+                                </h3>
+                            </div>
                         </div>
                         <!-- /.card -->
                     </div>
@@ -146,23 +150,32 @@
         //Date range picker
         $('#reservation').daterangepicker({
             locale: {
-                format: 'DD/MM/YYYY'
+                format: 'DD-MM-YYYY'
             }
         })
         /*
          * BAR CHART
          * ---------
          */
-
+        var total = @json($dataTotal);
+        var date = @json($dataDate);
+        console.log(total)
+        console.log(date)
         var bar_data = {
-            data : [[1,10], [2,8], [3,4], [4,13], [5,17], [6,9]],
+            data : total,
             bars: { show: true }
         }
         $.plot('#bar-chart', [bar_data], {
             grid  : {
                 borderWidth: 1,
                 borderColor: '#f3f3f3',
-                tickColor  : '#f3f3f3'
+                tickColor  : '#f3f3f3',
+                margin: {
+                    top: 0,
+                    bottom: 20,
+                    left: 0,
+                    right: 0
+                }
             },
             series: {
                 bars: {
@@ -171,55 +184,10 @@
             },
             colors: ['#3c8dbc'],
             xaxis : {
-                ticks: [[1,'January'], [2,'February'], [3,'March'], [4,'April'], [5,'May'], [6,'June']]
+                ticks: date
             }
         })
         /* END BAR CHART */
-
-        /*
-         * DONUT CHART
-         * -----------
-         */
-
-        var donutData = [
-            {
-                label: 'Series2',
-                data : 30,
-                color: '#3c8dbc'
-            },
-            {
-                label: 'Series3',
-                data : 20,
-                color: '#0073b7'
-            },
-            {
-                label: 'Series4',
-                data : 50,
-                color: '#00c0ef'
-            }
-        ]
-        $.plot('#donut-chart', donutData, {
-            series: {
-                pie: {
-                    show       : true,
-                    radius     : 1,
-                    innerRadius: 0.5,
-                    label      : {
-                        show     : true,
-                        radius   : 2 / 3,
-                        formatter: labelFormatter,
-                        threshold: 0.1
-                    }
-
-                }
-            },
-            legend: {
-                show: false
-            }
-        })
-        /*
-         * END DONUT CHART
-         */
 
     })
 
