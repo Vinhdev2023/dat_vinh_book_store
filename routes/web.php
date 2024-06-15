@@ -14,6 +14,8 @@ Route::get('/product/detail/{id}', [ProductController::class, 'product_detail'])
 
 Route::post('/product-to-cart/{id}', [CartController::class, 'add_cart']);
 Route::get('/clear/cart', [CartController::class, 'clear_cart']);
+Route::get('/cart/product/detail/{id}', [CartController::class, 'repair_cart']);
+Route::post('/cart/product/update/{id}', [CartController::class, 'update_cart']);
 
 Route::get('/checkout', [CartController::class, 'checkout']);
 Route::get('/checkout-form', [CartController::class, 'checkout_form']);

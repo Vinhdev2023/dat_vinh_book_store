@@ -96,6 +96,12 @@
                                         Delete
                                     </div>
                                 </a>
+                                <a href="/">
+                                    <div class="btn btn-primary btn-lg btn-flat">
+                                        <i class="nav-icon fas fa-shopping-cart"></i>
+                                        Add to cart
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>

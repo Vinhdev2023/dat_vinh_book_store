@@ -77,11 +77,11 @@
 														<ul class="tg-delevrystock">
 															<li><i class="icon-store"></i><span>Status: <em>{{$book->status}}</em></span></li>
 														</ul>
-                                                        <form action="/product-to-cart/{{$book->id}}" method="post">
+                                                        <form action="@if(@isset($cart_quantity))/cart/product/update/{{$book->id}}@else/product-to-cart/{{$book->id}}@endif" method="post">
                                                             @csrf
                                                             <div class="tg-quantityholder">
                                                                 <em class="minus">-</em>
-                                                                <input type="number" class="result" value="1" min="1" max="{{$book->quantity}}" id="quantity1" name="quantity">
+                                                                <input type="number" class="result" value="@if(@isset($cart_quantity)){{$cart_quantity}}@else{{'1'}}@endif" min="1" max="{{$book->quantity}}" id="quantity1" name="quantity">
                                                                 <em class="plus">+</em>
                                                             </div>
                                                             <button class="tg-btn tg-active tg-btn-lg" type="submit">Add To Basket</button>

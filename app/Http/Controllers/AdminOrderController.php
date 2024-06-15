@@ -14,7 +14,7 @@ class AdminOrderController extends Controller
             Auth::logout();
             return redirect('/admin/login');
         }
-        $orders = DB::table('orders')->get();
+        $orders = DB::table('orders')->orderBy('created_at', 'DESC')->get();
         $path = '/admin/orders';
         return view('AdminPages.AdminOrderData', compact('path', 'orders'));
     }
@@ -26,7 +26,7 @@ class AdminOrderController extends Controller
         }
         $path = '/admin/orders';
         $orders = DB::table('orders')
-            ->where('status', $status)
+            ->where('status', $status)->orderBy('created_at', 'DESC')
             ->get();
         return view('AdminPages.AdminOrderData', compact('path', 'orders'));
     }

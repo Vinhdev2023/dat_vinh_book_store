@@ -16,7 +16,6 @@ class CartController extends Controller
             ->where('id', $id)
             ->first();
         $quantity = number_format($quantity);
-//        dd($quantity);
         if ($quantity > 0 && $quantity < $book->quantity) {
             $cart = session()->get('cart');
             $flag = 0;
@@ -109,6 +108,42 @@ class CartController extends Controller
             session()->save();
             return redirect('/orders');
         }
+        return redirect('/products');
+    }
+
+    public function repair_cart($id){
+        $cart = session()->get('cart');
+        $cart_quantity = 0;
+        foreach ($cart as $obj){
+            if ($obj->id == $id){
+                $cart_quantity = $obj->quantity;
+            }
+        }
+        $categories = DB::table('categories')->get();
+        $publishers = DB::table('publishers')->get();
+        $book = DB::table('books')
+            ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
+            ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
+            ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
+            ->where('books.id', $id)
+            ->first();
+        return view('CustomerPages.productdetail', compact('cart_quantity', 'categories', 'publishers', 'book'));
+    }
+    public function update_cart(Request $request, $id){
+        $quantity = $request->quantity;
+        $cart = session()->get('cart');
+        foreach ($cart as $obj) {
+            if ($obj->id == $id) {
+                $obj->quantity = $quantity;
+            }
+        }
+        session()->put('cart', $cart);
+        $total = 0;
+        $cart = session()->get('cart');
+        foreach ($cart as $obj) {
+            $total += $obj->price * $obj->quantity;
+        }
+        session()->put('cart_total', $total);
         return redirect('/products');
     }
 }

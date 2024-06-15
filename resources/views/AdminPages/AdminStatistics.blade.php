@@ -67,7 +67,7 @@
                                                     <i class="far fa-calendar-alt"></i>
                                                 </span>
                                             </div>
-                                            <input type="text" name="FromDateToDate" class="form-control float-right" id="reservation">
+                                            <input type="text" name="FromDateToDate" @if(@isset($date))value="{{$date}}"@endif class="form-control float-right" id="reservation">
                                         </div>
                                         <!-- /.input group -->
                                     </div>
@@ -90,7 +90,7 @@
                         <div class="card card-primary card-outline">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    Total: {{number_format($sumTotal)}}
+                                    Total: {{number_format($sumTotal)}} VND
                                 </h3>
 
                                 <div class="card-tools">
@@ -108,7 +108,7 @@
                             <!-- /.card-body-->
                             <div class="card-footer">
                                 <h3 class="card-title">
-                                    Total: {{number_format($sumTotal)}}
+                                    Total: {{number_format($sumTotal)}} VND
                                 </h3>
                             </div>
                         </div>

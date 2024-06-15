@@ -31,18 +31,18 @@
                             @if (session()->has('cart'))
                                 <div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-minicart">
                                     <div class="tg-minicartbody">
-                                            @foreach (session()->get('cart') as $obj)
-                                                <div class="tg-minicarproduct">
-                                                    <figure>
-                                                        <img src="/images/{{$obj->image}}" alt="image description" width="60px">
-                                                    </figure>
-                                                    <div class="tg-minicarproductdata">
-                                                        <h5><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h5>
-                                                        <h5><a href="/product/detail/{{$obj->id}}">Quantity: {{number_format($obj->quantity)}}</a></h5>
-                                                        <h6><a href="/product/detail/{{$obj->id}}">{{number_format($obj->price)}} VND</a></h6>
-                                                    </div>
+                                        @foreach (session()->get('cart') as $obj)
+                                            <div class="tg-minicarproduct">
+                                                <figure>
+                                                    <img src="/images/{{$obj->image}}" alt="image description" width="60px">
+                                                </figure>
+                                                <div class="tg-minicarproductdata">
+                                                    <h5><a href="/cart/product/detail/{{$obj->id}}">{{$obj->title}}</a></h5>
+                                                    <h5><a href="/cart/product/detail/{{$obj->id}}">Quantity: {{number_format($obj->quantity)}}</a></h5>
+                                                    <h6><a href="/cart/product/detail/{{$obj->id}}">{{number_format($obj->price)}} VND</a></h6>
                                                 </div>
-                                            @endforeach
+                                            </div>
+                                        @endforeach
                                     </div>
                                     <div class="tg-minicartfoot">
                                         <a class="tg-btnemptycart" href="/clear/cart">

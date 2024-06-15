@@ -49,6 +49,6 @@ class StatisticController extends Controller
             $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y')];
         }
 //        dd($dataTotal, $dataDate);
-        return view('AdminPages.AdminStatistics', compact('dataTotal', 'dataDate', 'path', 'sumTotal'));
+        return view('AdminPages.AdminStatistics', compact('dataTotal', 'dataDate', 'path', 'sumTotal', 'date'));
     }
 }

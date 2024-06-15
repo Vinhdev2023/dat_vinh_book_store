@@ -47,24 +47,9 @@
                         <i class="nav-icon fas fa-shopping-cart"></i>
                         <p>
                             Orders
-                            <i class="fas fa-angle-left right"></i>
                             <span class="right badge badge-danger">6 News</span>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item @if($path == '/admin/orders') {{'menu-open'}} @endif">
-                            <a href="/admin/orders" class="nav-link @if($path == '/admin/orders') {{'active'}} @endif">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Orders</p>
-                            </a>
-                        </li>
-                        <li class="nav-item @if($path == '/admin/order/add-form') {{'menu-open'}} @endif">
-                            <a href="/admin/order/add-form" class="nav-link @if($path == '/admin/order/add-form') {{'active'}} @endif">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add Order</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="nav-item @if($path == '/admin/products' || $path == '/admin/product/add-form' || $path == '/admin/product/detail' || $path == '/admin/product/edit-form') {{'menu-open'}} @endif">
                     <a href="/admin/products" class="nav-link @if($path == '/admin/products' || $path == '/admin/product/add-form' || $path == '/admin/product/detail' || $path == '/admin/product/edit-form') {{'active'}} @endif">
