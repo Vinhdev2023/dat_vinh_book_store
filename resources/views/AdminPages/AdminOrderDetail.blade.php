@@ -97,7 +97,7 @@
                                             <th>Product</th>
                                             <th>Serial #</th>
                                             <th>Description</th>
-                                            <th>Qty</th>
+                                            <th>Quantity</th>
                                             <th>Price</th>
                                             <th>Subtotal</th>
                                         </tr>

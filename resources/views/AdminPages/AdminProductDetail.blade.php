@@ -79,6 +79,14 @@
                                 </label>
                             </div>
 
+                            <h4 class="mt-3">Quantity</h4>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-default text-center">
+                                    <input type="radio" name="color_option" id="color_option_c1" autocomplete="off">
+                                    {{$book->quantity}}
+                                </label>
+                            </div>
+
                             <div class="bg-gray py-2 px-3 mt-4">
                                 <h2 class="mb-0">
                                     {{number_format($book->price)}}VND
@@ -86,22 +94,35 @@
                             </div>
 
                             <div class="mt-4">
-                                <a href="/admin/product/edit-form/{{$book->id}}">
-                                    <div class="btn btn-primary btn-lg btn-flat">
-                                        Edit
-                                    </div>
-                                </a>
-                                <a href="#" onclick="return confirm('are you sure')">
-                                    <div class="btn btn-danger btn-lg btn-flat">
-                                        Delete
-                                    </div>
-                                </a>
-                                <a href="/">
-                                    <div class="btn btn-primary btn-lg btn-flat">
-                                        <i class="nav-icon fas fa-shopping-cart"></i>
-                                        Add to cart
-                                    </div>
-                                </a>
+                                @if($path == '/admin/product-to-cart/' || $path == '/admin/product-in-cart/')
+                                    <form action="@if($path == '/admin/product-in-cart/')/admin/update-cart/{{$book->id}}@else/admin/add-to-cart/{{$book->id}}@endif" method="post">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label>Quantity</label>
+                                            <input type="number" id="quantity"  min="1" value="@if(@isset($cart_quantity)){{$cart_quantity}}@else{{'1'}}@endif" name="quantity" class="form-control" placeholder="Quantity ...">
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">@if($path == '/admin/product-in-cart/'){{'Update cart'}}@else{{'Add Cart'}}@endif</button>
+                                        </div>
+                                    </form>
+                                @else
+                                    <a href="/admin/product/edit-form/{{$book->id}}">
+                                        <div class="btn btn-primary btn-lg btn-flat">
+                                            Edit
+                                        </div>
+                                    </a>
+                                    <a href="#" onclick="return confirm('are you sure')">
+                                        <div class="btn btn-danger btn-lg btn-flat">
+                                            Delete
+                                        </div>
+                                    </a>
+                                    <a href="/admin/product-to-cart/{{$book->id}}">
+                                        <div class="btn btn-default btn-lg btn-flat">
+                                            <i class="nav-icon fas fa-shopping-cart"></i>
+                                            Add to cart
+                                        </div>
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -140,6 +161,11 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/admin_plugin/dist/js/demo.js"></script>
 <script>
+    $(function () {
+        $('#quantity').on('input', function() {
+            $(this).val($(this).val().replace(/[e\+\-]/gi, ''));
+        })
+    })
     $(document).ready(function() {
         $('.product-image-thumb').on('click', function () {
             var $image_element = $(this).find('img')

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCartController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\AdminOrderController;
@@ -17,6 +18,14 @@ Route::prefix('/admin')->group(function (){
 
     Route::get('/statistics', [StatisticController::class, 'statistic_view']);
     Route::post('/statistics/get-data', [StatisticController::class, 'statistic_get_data']);
+
+    Route::get('/product-to-cart/{id}', [AdminCartController::class, 'index']);
+    Route::post('/add-to-cart/{id}', [AdminCartController::class, 'add_to_cart']);
+    Route::get('/product-in-cart/{id}', [AdminCartController::class, 'product_in_cart']);
+    Route::post('/update-cart/{id}', [AdminCartController::class, 'update_cart']);
+    Route::get('/clear-cart/', [AdminCartController::class, 'clear_cart']);
+    Route::get('/add-order/', [AdminCartController::class, 'add_order_form']);
+    Route::post('/add-order-post/', [AdminCartController::class, 'add_order_post']);
 
     Route::get('/orders', [AdminOrderController::class, 'index']);
     Route::get('/orders/filter/{status}', [AdminOrderController::class, 'orders_filter']);

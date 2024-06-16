@@ -11,21 +11,29 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-        <!-- Navbar Search -->
-        <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="nav-icon fas fa-shopping-cart"></i>
-                <span class="badge badge-warning navbar-badge">15</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span class="dropdown-item dropdown-header">15 Cart</span>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fas fa-envelope mr-2"></i> 4 new messages
+        @if(session()->has('admin_cart'))
+            <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="nav-icon fas fa-shopping-cart"></i>
+                    <span class="badge badge-warning navbar-badge">{{count(session()->get('admin_cart'))}}</span>
                 </a>
-            </div>
-        </li>
-        <!-- Messages Dropdown Menu -->
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <span class="dropdown-item dropdown-header">{{count(session()->get('admin_cart'))}} Cart</span>
+                    @foreach(session()->get('admin_cart') as $cart)
+                        <div class="dropdown-divider"></div>
+                        <a href="/admin/product-in-cart/{{$cart->id}}" class="dropdown-item">
+                            Book: {{$cart->title}}  Quantity: {{number_format($cart->quantity)}}  Price: {{number_format($cart->price)}}
+                        </a>
+                    @endforeach
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item dropdown-footer">Total: {{number_format(session()->get('admin_cart_total'))}}</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="/admin/clear-cart" class="dropdown-item dropdown-footer">Clear All</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="/admin/add-order" class="dropdown-item dropdown-footer">Add order</a>
+                </div>
+            </li>
+        @endif
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
