@@ -41,13 +41,14 @@ class AdminOrderController extends Controller
             ->select('orders.*')->selectRaw('DATE(orders.created_at) AS created_at')
             ->where('id', $id)
             ->first();
+        $user_check_order = DB::table('users')->where('id', DB::table('orders')->where('id', $id)->select('orders.user_id'))->first();
         $order_detail = DB::table('order_detail')
             ->select('order_detail.*', 'books.title AS book_title', 'order_detail.price AS book_price', 'order_detail.quantity AS book_quantity')
             ->leftJoin('books', 'order_detail.book_id', '=', 'books.id')
             ->where('order_detail.order_id', $id)
             ->get();
 //        dd($order);
-        return view('AdminPages.AdminOrderDetail', compact('path', 'order', 'order_detail'));
+        return view('AdminPages.AdminOrderDetail', compact('path', 'order', 'order_detail', 'user_check_order'));
     }
 
     public function update_order($status, $id){
@@ -69,6 +70,16 @@ class AdminOrderController extends Controller
                 DB::table('books')
                     ->where('id', $item->book_id)
                     ->decrement('quantity', $item->quantity);
+            }
+        }elseif ($status == 'CONFIRMED'){
+            $order_detail = DB::table('order_detail')
+                ->where('order_id', $id)
+                ->get();
+            foreach ($order_detail as $item) {
+                $book_quantity = DB::table('books')->where('id', $item->book_id)->first()->quantity;
+                if ($book_quantity <= $item->quantity){
+                    return redirect('/admin/order/detail/'.$id);
+                }
             }
         }
         return redirect('/admin/order/detail/'.$id);

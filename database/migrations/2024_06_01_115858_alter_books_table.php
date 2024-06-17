@@ -15,6 +15,7 @@ return new class extends Migration
             $table->text('description')->nullable(true)->change();
             $table->unsignedBigInteger('publisher_id')->nullable(true)->change();
             $table->unsignedBigInteger('category_id')->nullable(true)->change();
+            $table->integer('status')->after('category_id')->change();
             $table->unsignedBigInteger('quantity')->change();
         });
     }

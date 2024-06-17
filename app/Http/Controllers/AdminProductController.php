@@ -75,7 +75,7 @@ class AdminProductController extends Controller
                 'quantity' => $Quantity,
                 'publisher_id' => $PublisherID,
                 'category_id' => $CategoryID,
-                'status' => 'are selling',
+                'status' => 0,
                 'created_at' => Carbon::now(),
             ]);
             return redirect('/admin/product/detail/'.$id);
@@ -134,7 +134,7 @@ class AdminProductController extends Controller
                 'quantity' => $Quantity,
                 'publisher_id' => $PublisherID,
                 'category_id' => $CategoryID,
-                'status' => 'are selling',
+                'status' => 0,
                 'updated_at' => Carbon::now(),
             ]);
             return redirect('/admin/product/detail/'.$id);

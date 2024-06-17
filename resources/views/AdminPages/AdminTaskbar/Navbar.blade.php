@@ -13,20 +13,20 @@
     <ul class="navbar-nav ml-auto">
         @if(session()->has('admin_cart'))
             <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#">
+                <a class="nav-link" data-toggle="dropdown" href="">
                     <i class="nav-icon fas fa-shopping-cart"></i>
                     <span class="badge badge-warning navbar-badge">{{count(session()->get('admin_cart'))}}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                    <span class="dropdown-item dropdown-header">{{count(session()->get('admin_cart'))}} Cart</span>
+                    <a href="/admin/products" class="dropdown-item dropdown-header">More Product</a>
                     @foreach(session()->get('admin_cart') as $cart)
                         <div class="dropdown-divider"></div>
-                        <a href="/admin/product-in-cart/{{$cart->id}}" class="dropdown-item">
-                            Book: {{$cart->title}}  Quantity: {{number_format($cart->quantity)}}  Price: {{number_format($cart->price)}}
+                        <a href="/admin/product-in-cart/{{$cart->id}}" class="dropdown-item dropdown-footer">
+                            Book: {{$cart->title}}  Quantity: {{number_format($cart->quantity)}}  Price: {{number_format($cart->price)}} VND
                         </a>
                     @endforeach
                     <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item dropdown-footer">Total: {{number_format(session()->get('admin_cart_total'))}}</a>
+                    <div class="dropdown-item dropdown-footer">Total: {{number_format(session()->get('admin_cart_total'))}} VND</div>
                     <div class="dropdown-divider"></div>
                     <a href="/admin/clear-cart" class="dropdown-item dropdown-footer">Clear All</a>
                     <div class="dropdown-divider"></div>

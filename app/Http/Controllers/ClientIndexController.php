@@ -8,13 +8,13 @@ class ClientIndexController extends Controller {
     public function clientIndex() {
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
-        $purchased_books = DB::table('books')
+        $purchased_books = DB::table('books')->where('books.status', '=', 0)
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
             ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
             ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
             ->limit(7)
             ->get();
-        $new_release_books = DB::table('books')
+        $new_release_books = DB::table('books')->where('books.status', '=', 0)
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
             ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
             ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')

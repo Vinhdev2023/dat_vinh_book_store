@@ -46,7 +46,7 @@ class StatisticController extends Controller
         foreach ($b as $obj) {
             $num++;
             $dataTotal[] = [$num, $obj->total];
-            $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y')];
+            $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y').' '.number_format($obj->total).' VND'];
         }
 //        dd($dataTotal, $dataDate);
         return view('AdminPages.AdminStatistics', compact('dataTotal', 'dataDate', 'path', 'sumTotal', 'date'));

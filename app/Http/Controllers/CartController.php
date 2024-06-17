@@ -16,7 +16,7 @@ class CartController extends Controller
             ->where('id', $id)
             ->first();
         $quantity = number_format($quantity);
-        if ($quantity > 0 && $quantity < $book->quantity) {
+        if ($quantity > 0 && $quantity <= $book->quantity) {
             $cart = session()->get('cart');
             $flag = 0;
             if (isset($cart)){

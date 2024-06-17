@@ -47,12 +47,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="callout callout-info">
-                            <h5><i class="fas fa-info"></i> Note:</h5>
-                            This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
-                        </div>
-
-
                         <!-- Main content -->
                         <div class="invoice p-3 mb-3">
                             <!-- title row -->
@@ -150,6 +144,9 @@
                             <!-- this row will not appear when printing -->
                             <div class="row no-print">
                                 <div class="col-12">
+                                    @if (@isset($user_check_order))
+                                        <p class="left m-0">Checked by: {{$user_check_order->name}}</p>
+                                    @endif
                                     @if ($order->status == 'PENDING')
                                         <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">
                                             Cancel
@@ -157,6 +154,11 @@
                                         <a href="/admin/order/update/CONFIRMED/{{$order->id}}" type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
                                             Confirm
                                         </a>
+                                        @if($order->type == 'offline')
+                                            <a href="/admin/order/repair/{{$order->id}}" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
+                                                Repair
+                                            </a>
+                                        @endif
                                     @elseif($order->status == 'CONFIRMED' && $order->type == 'online')
                                         <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">
                                             Cancel

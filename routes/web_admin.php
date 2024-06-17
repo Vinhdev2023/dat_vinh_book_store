@@ -26,6 +26,8 @@ Route::prefix('/admin')->group(function (){
     Route::get('/clear-cart/', [AdminCartController::class, 'clear_cart']);
     Route::get('/add-order/', [AdminCartController::class, 'add_order_form']);
     Route::post('/add-order-post/', [AdminCartController::class, 'add_order_post']);
+    Route::get('/order/repair/{id}', [AdminCartController::class, 'order_repair_form']);
+    Route::post('/order/repair-post/{id}', [AdminCartController::class, 'order_repair_post']);
 
     Route::get('/orders', [AdminOrderController::class, 'index']);
     Route::get('/orders/filter/{status}', [AdminOrderController::class, 'orders_filter']);

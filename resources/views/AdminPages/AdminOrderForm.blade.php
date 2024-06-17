@@ -73,29 +73,31 @@
                         <h3 class="card-title">Form add new order</h3>
                     </div>
                     <!-- /.card-header -->
-                    <form action="/admin/add-order-post/" method="post">
+                    <form action="@if($path == '/admin/order/repair')/admin/order/repair-post/{{$order->id}}@else/admin/add-order-post/@endif" method="post">
                         @csrf
                         <div class="card-body">
                             <div class="row">
                                 <div class="col form-group">
                                     <label>Name</label>
-                                    <input type="text" name="Name" class="form-control" placeholder="Enter name">
+                                    <input type="text" name="Name" @if(@isset($order))value="{{$order->cus_name}}" @endif class="form-control" placeholder="Enter name">
                                 </div>
                                 <div class="col form-group">
                                     <label>Phone</label>
-                                    <input type="text" name="Phone" class="form-control" placeholder="Enter phone">
+                                    <input type="text" name="Phone" @if(@isset($order))value="{{$order->cus_phone}}" @endif class="form-control" placeholder="Enter phone">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label>Address</label>
-                                <textarea class="form-control" rows="3" name="address">Tại cửa hàng</textarea>
+                                <textarea class="form-control" rows="3" name="address">@if(@isset($order)){{$order->ship_to_address}}@else Tại cửa hàng @endif </textarea>
                             </div>
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Submit</button>
-                            <a href="/admin/products" class="btn btn-danger">Cancel</a>
+                            @if(@isset($order))
+                            <a href="/admin/order/detail/{{$order->id}}" class="btn btn-danger">Cancel</a>
+                            @endif
                         </div>
                     </form>
                 </div>

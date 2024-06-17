@@ -41,8 +41,11 @@ class AuthCusController extends Controller
         $password = $request->password;
         $check = Auth::attempt(['email' => $email, 'password' => $password, 'user_type' => 'customer']);
 //        dd($check);
+
         if ($check && session()->has('cart')){
             return redirect('/checkout-form');
+        }elseif ($check){
+            return redirect('/');
         }
         return redirect()->back();
     }

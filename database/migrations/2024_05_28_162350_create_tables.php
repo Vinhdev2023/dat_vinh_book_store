@@ -32,7 +32,7 @@ return new class extends Migration
             $table->bigInteger('quantity')->default(0);
             $table->unsignedBigInteger('publisher_id');
             $table->unsignedBigInteger('category_id');
-            $table->string('status');
+            $table->integer('status');
             $table->timestamps();
         });
 

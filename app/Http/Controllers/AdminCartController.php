@@ -35,7 +35,7 @@ class AdminCartController extends Controller
             ->first();
         $quantity = number_format($quantity);
 //        dd($book, $quantity);
-        if ($quantity > 0 && $quantity < $book->quantity) {
+        if ($quantity > 0 && $quantity <= $book->quantity) {
             $cart = session()->get('admin_cart');
             $flag = 0;
             if (isset($cart)){
@@ -128,7 +128,7 @@ class AdminCartController extends Controller
         }
         $path = '/admin/add-order';
         session()->put('admin_cart_in_checkout', true);
-        return view('AdminPages.AdminAddOrderForm', compact('path'));
+        return view('AdminPages.AdminOrderForm', compact('path'));
     }
 
     public function add_order_post(Request $request){
@@ -137,8 +137,17 @@ class AdminCartController extends Controller
             return redirect('/admin/login');
         }
         $name = $request->Name;
+        if ($name == '' || $name == null){
+            return redirect()->back();
+        }
         $phone = $request->Phone;
+        if ($phone == '' || $phone == null){
+            return redirect()->back();
+        }
         $address = $request->address;
+        if ($address == '' || $address == null){
+            return redirect()->back();
+        }
         $type = 'offline';
         $cart = session()->get('admin_cart');
         if(isset($cart)){
@@ -168,5 +177,32 @@ class AdminCartController extends Controller
             return redirect('/admin/order/detail/'.$id_order);
         }
         return redirect('/admin/products');
+    }
+
+    public function order_repair_form($id) {
+        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        $path = '/admin/order/repair';
+        $order = DB::table('orders')
+            ->select('orders.*')
+            ->where('id', $id)
+            ->first();
+        return view('AdminPages.AdminOrderForm', compact('path', 'order'));
+    }
+
+    public function order_repair_post(Request $request, $id){
+        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        DB::table('orders')->where('id', $id)
+            ->update([
+                'cus_name' => $request->Name,
+                'cus_phone' => $request->Phone,
+               'ship_to_address' => $request->address,
+            ]);
+        return redirect('/admin/order/detail/'.$id);
     }
 }
