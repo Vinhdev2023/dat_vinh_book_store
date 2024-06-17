@@ -77,8 +77,8 @@ class AdminOrderController extends Controller
                 ->get();
             foreach ($order_detail as $item) {
                 $book_quantity = DB::table('books')->where('id', $item->book_id)->first()->quantity;
-                if ($book_quantity <= $item->quantity){
-                    return redirect('/admin/order/detail/'.$id);
+                if ($book_quantity >= $item->quantity){
+                    return redirect('/admin/order/update/PENDING/'.$id)->with('message', 'check product quantity again please');
                 }
             }
         }

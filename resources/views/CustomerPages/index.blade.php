@@ -57,7 +57,7 @@
                                             </figure>
                                             <div class="tg-postbookcontent">
                                                 <ul class="tg-bookscategories">
-                                                    <li><a href="">{{$obj->category_name}}</a></li>
+                                                    <li><a href="/products/category/{{$obj->category_id}}">{{$obj->category_name}}</a></li>
                                                 </ul>
                                                 <div class="tg-booktitle">
                                                     <h3><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h3>
@@ -116,10 +116,10 @@
                                                     </figure>
                                                     <div class="tg-postbookcontent">
                                                         <ul class="tg-bookscategories">
-                                                            <li><a href="">{{$obj->category_name}}</a></li>
+                                                            <li><a href="/products/category/{{$obj->category_id}}">{{$obj->category_name}}</a></li>
                                                         </ul>
                                                         <div class="tg-booktitle">
-                                                            <h3><a href="javascript:void(0);">{{$obj->title}}</a></h3>
+                                                            <h3><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h3>
                                                         </div>
                                                         <span class="tg-bookwriter">Publisher: <a href="">{{$obj->publisher_name}}</a></span>
                                                         <span class="tg-stars"><span></span></span>

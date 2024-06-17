@@ -146,6 +146,8 @@
                                 <div class="col-12">
                                     @if (@isset($user_check_order))
                                         <p class="left m-0">Checked by: {{$user_check_order->name}}</p>
+                                    @else
+                                        <p class="left m-0">Checked by: Customer</p>
                                     @endif
                                     @if ($order->status == 'PENDING')
                                         <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">

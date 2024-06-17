@@ -33,7 +33,7 @@
     <!--************************************
             Inner Banner Start
     *************************************-->
-    <div class="tg-innerbanner tg-haslayout tg-parallax tg-bginnerbanner" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-07.jpg">
+    <div class="tg-innerbanner tg-haslayout tg-parallax tg-bginnerbanner" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="/cus_plugin/images/parallax/bgparallax-07.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -77,10 +77,10 @@
                                                     </figure>
                                                     <div class="tg-postbookcontent">
                                                         <ul class="tg-bookscategories">
-                                                            <li><a href="javascript:void(0);">{{$obj->category_name}}</a></li>
+                                                            <li><a href="/products/category/{{$obj->category_id}}">{{$obj->category_name}}</a></li>
                                                         </ul>
                                                         <div class="tg-booktitle">
-                                                            <h3><a href="javascript:void(0);">{{$obj->title}}</a></h3>
+                                                            <h3><a href="/product/detail/{{$obj->id}}">{{$obj->title}}</a></h3>
                                                         </div>
                                                         <span class="tg-bookwriter">Publisher: <a href="">{{$obj->publisher_name}}</a></span>
                                                         <span class="tg-bookprice">
@@ -115,65 +115,12 @@
                                     <div class="tg-widgetcontent">
                                         <ul>
                                             @foreach($categories as $obj)
-                                                <li><a href="javascript:void(0);"><span>{{$obj->name}}</span><em>0</em></a></li>
+                                                <li><a href="/products/category/{{$obj->id}}"><span>{{$obj->name}}</span><em>{{$obj->num_books}}</em></a></li>
                                             @endforeach
                                             <li><a href="javascript:void(0);"><span>View All</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
-{{--                                <div class="tg-widget tg-widgettrending">--}}
-{{--                                    <div class="tg-widgettitle">--}}
-{{--                                        <h3>Trending Products</h3>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="tg-widgetcontent">--}}
-{{--                                        <ul>--}}
-{{--                                            <li>--}}
-{{--                                                <article class="tg-post">--}}
-{{--                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-04.jpg" alt="image description"></a></figure>--}}
-{{--                                                    <div class="tg-postcontent">--}}
-{{--                                                        <div class="tg-posttitle">--}}
-{{--                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>--}}
-{{--                                                        </div>--}}
-{{--                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--                                                    </div>--}}
-{{--                                                </article>--}}
-{{--                                            </li>--}}
-{{--                                            <li>--}}
-{{--                                                <article class="tg-post">--}}
-{{--                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-05.jpg" alt="image description"></a></figure>--}}
-{{--                                                    <div class="tg-postcontent">--}}
-{{--                                                        <div class="tg-posttitle">--}}
-{{--                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>--}}
-{{--                                                        </div>--}}
-{{--                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--                                                    </div>--}}
-{{--                                                </article>--}}
-{{--                                            </li>--}}
-{{--                                            <li>--}}
-{{--                                                <article class="tg-post">--}}
-{{--                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-06.jpg" alt="image description"></a></figure>--}}
-{{--                                                    <div class="tg-postcontent">--}}
-{{--                                                        <div class="tg-posttitle">--}}
-{{--                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>--}}
-{{--                                                        </div>--}}
-{{--                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--                                                    </div>--}}
-{{--                                                </article>--}}
-{{--                                            </li>--}}
-{{--                                            <li>--}}
-{{--                                                <article class="tg-post">--}}
-{{--                                                    <figure><a href="javascript:void(0);"><img src="cus_plugin/images/products/img-07.jpg" alt="image description"></a></figure>--}}
-{{--                                                    <div class="tg-postcontent">--}}
-{{--                                                        <div class="tg-posttitle">--}}
-{{--                                                            <h3><a href="javascript:void(0);">Where The Wild Things Are</a></h3>--}}
-{{--                                                        </div>--}}
-{{--                                                        <span class="tg-bookwriter">By: <a href="javascript:void(0);">Kathrine Culbertson</a></span>--}}
-{{--                                                    </div>--}}
-{{--                                                </article>--}}
-{{--                                            </li>--}}
-{{--                                        </ul>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
                                 <div class="tg-widget tg-catagories">
                                     <div class="tg-widgettitle">
                                         <h3>Publisher</h3>
@@ -181,7 +128,7 @@
                                     <div class="tg-widgetcontent">
                                         <ul>
                                             @foreach($publishers as $obj)
-                                                <li><a href="javascript:void(0);"><span>{{$obj->name}}</span><em>0</em></a></li>
+                                                <li><a href="/products/publisher/{{$obj->id}}"><span>{{$obj->name}}</span><em>{{$obj->num_books}}</em></a></li>
                                             @endforeach
                                             <li><a href="javascript:void(0);"><span>View All</span></a></li>
                                         </ul>
@@ -213,7 +160,6 @@
 *************************************-->
 <script src="/cus_plugin/js/vendor/jquery-library.js"></script>
 <script src="/cus_plugin/js/vendor/bootstrap.min.js"></script>
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&amp;language=en"></script>
 <script src="/cus_plugin/js/owl.carousel.min.js"></script>
 <script src="/cus_plugin/js/jquery.vide.min.js"></script>
 <script src="/cus_plugin/js/countdown.js"></script>

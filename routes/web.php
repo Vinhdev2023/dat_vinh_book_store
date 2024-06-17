@@ -10,6 +10,8 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', [ClientIndexController::class, 'clientIndex']);
 Route::get('/products', [ProductController::class, 'products']);
+Route::get('/products/category/{id}', [ProductController::class, 'category_filter']);
+Route::get('/products/publisher/{id}', [ProductController::class, 'publisher_filter']);
 Route::get('/product/detail/{id}', [ProductController::class, 'product_detail']);
 
 Route::post('/product-to-cart/{id}', [CartController::class, 'add_cart']);

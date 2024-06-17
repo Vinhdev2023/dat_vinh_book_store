@@ -75,7 +75,7 @@
 															<ins>{{number_format($book->price)}} VND</ins>
 														</span>
 														<ul class="tg-delevrystock">
-															<li><i class="icon-store"></i><span>Status: <em>{{$book->status}}</em></span></li>
+															<li><i class="icon-store"></i><span>Status: <em>@if($book->status == 0){{number_format($book->quantity)}} In stock @endif</em></span></li>
 														</ul>
                                                         <form action="@if(@isset($cart_quantity))/cart/product/update/{{$book->id}}@else/product-to-cart/{{$book->id}}@endif" method="post">
                                                             @csrf

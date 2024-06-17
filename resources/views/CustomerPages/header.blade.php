@@ -85,31 +85,7 @@
                         </div>
                         <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
                             <ul>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0);">All Categories</a>
-                                    <div class="mega-menu">
-                                        <ul class="tg-themetabnav" role="tablist">
-                                            @foreach($categories as $obj)
-                                                <li role="presentation" class="active">
-                                                    <a href="" aria-controls="artandphotography" role="tab" data-toggle="tab">{{$obj->name}}</a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0);">All Publishers</a>
-                                    <div class="mega-menu">
-                                        <ul class="tg-themetabnav" role="tablist">
-                                            @foreach($publishers as $obj)
-                                                <li role="presentation" class="active">
-                                                    <a href="" aria-controls="artandphotography" role="tab" data-toggle="tab">{{$obj->name}}</a>
-                                                </li>
-                                            @endforeach
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li >
+                                <li>
                                     <a href="/">Home</a>
                                 </li>
                                 <li class="">
