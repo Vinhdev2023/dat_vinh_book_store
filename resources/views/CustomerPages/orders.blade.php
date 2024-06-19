@@ -71,6 +71,7 @@
                                         <a href="/orders/filter/CONFIRMED" class="btn btn-success mb-3">CONFIRMED</a>
                                         <a href="/orders/filter/SHIPPING" class="btn btn-success mb-3">SHIPPING</a>
                                         <a href="/orders/filter/COMPLETED" class="btn btn-success mb-3">COMPLETED</a>
+                                        <a href="/orders/" class="btn btn-success mb-3">View All</a>
                                         <table class="table table-hover mt-3">
                                             <thead>
                                             <tr>

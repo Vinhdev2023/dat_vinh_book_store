@@ -77,6 +77,10 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-group">
+                                <label>ISBN code of Book</label>
+                                <input type="text" name="ISBNBook" class="form-control" @if(@isset($book))value="{{$book->isbn_code}}"@endif placeholder="Enter book title">
+                            </div>
+                            <div class="form-group">
                                 <label>Book title</label>
                                 <input type="text" name="BookTitle" class="form-control" @if(@isset($book))value="{{$book->title}}"@endif placeholder="Enter book title">
                             </div>

@@ -59,6 +59,7 @@ class AdminProductController extends Controller
 
             return redirect('/admin/product/add-form');
         } else {
+            $ISBNBook = $request->ISBNBook;
             $BookTitle = $request->BookTitle;
             $Description = $request->Description;
             $Price = $request->Price;
@@ -68,6 +69,7 @@ class AdminProductController extends Controller
             $Image = $request->Image->getClientOriginalName();
             $request->Image->move(public_path('images'), $Image);
             $id = DB::table('books')->insertGetId([
+                'isbn_code' => $ISBNBook,
                 'title' => $BookTitle,
                 'image' => $Image,
                 'description' => $Description,
@@ -109,6 +111,7 @@ class AdminProductController extends Controller
 
             return redirect('/admin/product/add-form');
         } else {
+            $ISBNBook = $request->ISBNBook;
             $BookTitle = $request->BookTitle;
             $Description = $request->Description;
             $Price = $request->Price;
@@ -127,6 +130,7 @@ class AdminProductController extends Controller
             }
             DB::table('books')->where('id', $id)
                 ->update([
+                    'isbn_code' => $ISBNBook,
                 'title' => $BookTitle,
                 'image' => $Image,
                 'description' => $Description,
@@ -139,5 +143,25 @@ class AdminProductController extends Controller
             ]);
             return redirect('/admin/product/detail/'.$id);
         }
+    }
+
+    public function delete_product($id){
+        if (!Auth::check() || Auth::user()->user_type != 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        $check_order_detail = DB::table('order_detail')->where('book_id', $id)->count();
+        if ($check_order_detail > 0) {
+            DB::table('books')->where('id', $id)
+                ->update([
+                    'status' => 1,
+                    'updated_at' => Carbon::now(),
+                ]);
+            return redirect('/admin/products');
+        }
+        DB::table('books')
+            ->where('id', $id)
+            ->delete();
+        return redirect('/admin/products');
     }
 }

@@ -87,6 +87,13 @@ class AdminCategoryController extends Controller
             Auth::logout();
             return redirect('/admin/login');
         }
+        $check_category = DB::table('books')->where('category_id', $id)->count();
+        if ($check_category > 0){
+            DB::table('books')->where('category_id', $id)->update([
+                'category_id' => null,
+                'updated_at' => Carbon::now()
+            ]);
+        }
         DB::table('categories')
             ->where('id', $id)
             ->delete();

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('publisher_id')->nullable(true)->change();
             $table->unsignedBigInteger('category_id')->nullable(true)->change();
             $table->integer('status')->after('category_id')->change();
+            $table->string('isbn_code')->after('id');
             $table->unsignedBigInteger('quantity')->change();
         });
     }

@@ -76,7 +76,7 @@
                                             <td>{{$obj->title}}</td>
                                             <td>{{number_format($obj->price)}}</td>
                                             <td>{{number_format($obj->quantity)}}</td>
-                                            <td>@if($obj->status === 0) are selling @endif</td>
+                                            <td>@if($obj->status === 0) are selling @else not sell @endif</td>
                                             <td>
                                                 <a href="/admin/product/detail/{{$obj->id}}" class="btn btn-primary">detail</a>
                                             </td>

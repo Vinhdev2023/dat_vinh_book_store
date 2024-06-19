@@ -87,6 +87,14 @@
                                 </label>
                             </div>
 
+                            <h4 class="mt-3">ISBN CODE</h4>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-default text-center">
+                                    <input type="radio" name="color_option" id="color_option_c1" autocomplete="off">
+                                    {{$book->isbn_code}}
+                                </label>
+                            </div>
+
                             <div class="bg-gray py-2 px-3 mt-4">
                                 <h2 class="mb-0">
                                     {{number_format($book->price)}}VND
@@ -111,7 +119,7 @@
                                             Edit
                                         </div>
                                     </a>
-                                    <a href="#" onclick="return confirm('are you sure')">
+                                    <a href="/admin/product/delete/{{$book->id}}" onclick="return confirm('are you sure')">
                                         <div class="btn btn-danger btn-lg btn-flat">
                                             Delete
                                         </div>

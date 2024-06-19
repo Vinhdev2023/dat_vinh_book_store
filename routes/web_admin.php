@@ -40,6 +40,7 @@ Route::prefix('/admin')->group(function (){
     Route::post('/product/add', [AdminProductController::class, 'add_product']);
     Route::get('/product/edit-form/{id}', [AdminProductController::class, 'edit_form']);
     Route::post('/product/update/{id}', [AdminProductController::class, 'edit_product']);
+    Route::get('/product/delete/{id}', [AdminProductController::class, 'delete_product']);
 
 
     Route::get('/categories', [AdminCategoryController::class, 'index']);

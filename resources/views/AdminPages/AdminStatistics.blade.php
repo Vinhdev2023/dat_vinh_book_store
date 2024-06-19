@@ -90,7 +90,7 @@
                         <div class="card card-primary card-outline">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    Total: {{number_format($sumTotal)}} VND
+                                    Thống Kê Theo Ngày
                                 </h3>
 
                                 <div class="card-tools">
