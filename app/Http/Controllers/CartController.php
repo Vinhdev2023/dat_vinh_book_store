@@ -59,6 +59,13 @@ class CartController extends Controller
     public function checkout(){
         if (!Auth::check()){
             return redirect('/sign-in');
+        }elseif (Auth::user()->user_type == 'admin'){
+            session()->put('admin_cart', session()->get('cart'));
+            session()->forget('cart');
+            session()->put('admin_cart_total', session()->get('cart_total'));
+            session()->forget('cart');
+            session()->save();
+            return redirect('/admin/add-order/');
         }
         return redirect('/checkout-form');
     }
@@ -66,6 +73,13 @@ class CartController extends Controller
     public function checkout_form(){
         if (!Auth::check()){
             return redirect('/sign-in');
+        }elseif (Auth::user()->user_type == 'admin'){
+            session()->put('admin_cart', session()->get('cart'));
+            session()->forget('cart');
+            session()->put('admin_cart_total', session()->get('cart_total'));
+            session()->forget('cart');
+            session()->save();
+            return redirect('/admin/add-order/');
         }
         session()->put('cart_in_checkout', true);
         $categories = DB::table('categories')->get();
@@ -76,6 +90,13 @@ class CartController extends Controller
     public function checkout_post(Request $request){
         if (!Auth::check()){
             return redirect('/sign-in');
+        }elseif (Auth::user()->user_type == 'admin'){
+            session()->put('admin_cart', session()->get('cart'));
+            session()->forget('cart');
+            session()->put('admin_cart_total', session()->get('cart_total'));
+            session()->forget('cart');
+            session()->save();
+            return redirect('/admin/add-order/');
         }
         $name = $request->full_name;
         $phone = $request->phone_number;
@@ -120,7 +141,25 @@ class CartController extends Controller
             }
         }
         $categories = DB::table('categories')->get();
+        foreach ($categories as $category) {
+            $category->num_books = DB::table('books')
+                ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
+                ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
+                ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
+                ->where('books.status', '=', 0)
+                ->where('books.category_id', $category->id)
+                ->count();
+        }
         $publishers = DB::table('publishers')->get();
+        foreach ($publishers as $publisher) {
+            $publisher->num_books = DB::table('books')
+                ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
+                ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
+                ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
+                ->where('books.status', '=', 0)
+                ->where('books.publisher_id', $publisher->id)
+                ->count();
+        }
         $book = DB::table('books')
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
             ->leftJoin('categories', 'books.category_id', '=', 'categories.id')

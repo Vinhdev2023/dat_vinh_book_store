@@ -33,7 +33,7 @@
     <!--************************************
             Inner Banner Start
     *************************************-->
-    <div class="tg-innerbanner tg-haslayout tg-parallax tg-bginnerbanner" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-07.jpg">
+    <div class="tg-innerbanner tg-haslayout tg-parallax tg-bginnerbanner" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="/cus_plugin/images/parallax/bgparallax-07.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -66,7 +66,12 @@
                             <div id="tg-content" class="tg-content">
                                 <div class="tg-products">
                                     <div class="tg-productgrid">
-                                        <table class="table table-hover">
+                                        <a href="/orders/filter/PENDING" class="btn btn-success mb-3">PENDING</a>
+                                        <a href="/orders/filter/CANCELED" class="btn btn-success mb-3">CANCELED</a>
+                                        <a href="/orders/filter/CONFIRMED" class="btn btn-success mb-3">CONFIRMED</a>
+                                        <a href="/orders/filter/SHIPPING" class="btn btn-success mb-3">SHIPPING</a>
+                                        <a href="/orders/filter/COMPLETED" class="btn btn-success mb-3">COMPLETED</a>
+                                        <table class="table table-hover mt-3">
                                             <thead>
                                             <tr>
                                                 <th>Name</th>
@@ -74,6 +79,7 @@
                                                 <th>Address</th>
                                                 <th>Total</th>
                                                 <th>Status</th>
+                                                <th>Order At</th>
                                                 <th>Action</th>
                                             </tr>
                                             </thead>
@@ -85,6 +91,7 @@
                                                     <td>{{$obj->ship_to_address}}</td>
                                                     <td>{{$obj->total}}</td>
                                                     <td>{{$obj->status}}</td>
+                                                    <td>{{$obj->created_at_format}}</td>
                                                     <td>
                                                         <a class="tg-btn tg-btnstyletwo" href="/order/detail/{{$obj->id}} ">
                                                             Detail

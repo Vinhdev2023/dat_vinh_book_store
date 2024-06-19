@@ -47,7 +47,6 @@ class AdminOrderController extends Controller
             ->leftJoin('books', 'order_detail.book_id', '=', 'books.id')
             ->where('order_detail.order_id', $id)
             ->get();
-//        dd($order);
         return view('AdminPages.AdminOrderDetail', compact('path', 'order', 'order_detail', 'user_check_order'));
     }
 
@@ -70,16 +69,6 @@ class AdminOrderController extends Controller
                 DB::table('books')
                     ->where('id', $item->book_id)
                     ->decrement('quantity', $item->quantity);
-            }
-        }elseif ($status == 'CONFIRMED'){
-            $order_detail = DB::table('order_detail')
-                ->where('order_id', $id)
-                ->get();
-            foreach ($order_detail as $item) {
-                $book_quantity = DB::table('books')->where('id', $item->book_id)->first()->quantity;
-                if ($book_quantity >= $item->quantity){
-                    return redirect('/admin/order/update/PENDING/'.$id)->with('message', 'check product quantity again please');
-                }
             }
         }
         return redirect('/admin/order/detail/'.$id);

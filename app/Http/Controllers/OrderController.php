@@ -11,8 +11,16 @@ class OrderController extends Controller
     public function orders(){
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
-        $orders = DB::table('orders')->where('customer_id',Auth::user()->id)->get();
+        $orders = DB::table('orders')
+            ->select('orders.*')
+            ->selectRaw('DATE_FORMAT(created_at, "%d/%m/%Y %H:%i:%s") AS created_at_format')
+            ->where('customer_id',Auth::user()->id)
+            ->orderBy('created_at', 'DESC')->get();
         return view('CustomerPages.orders', compact('categories', 'publishers', 'orders'));
+    }
+
+    public function orders_filter(){
+
     }
 
     public function order_detail($id){

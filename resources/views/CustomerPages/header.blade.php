@@ -93,7 +93,7 @@
                                 </li>
                                 @if(auth()->check())
                                     <li class="">
-                                        <a href="/orders">Order</a>
+                                        <a href="@if(auth()->user()->user_type == 'admin') /admin/orders @else /orders @endif">Orders</a>
                                     </li>
                                 @endif
                             </ul>

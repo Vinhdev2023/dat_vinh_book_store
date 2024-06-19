@@ -101,10 +101,10 @@
                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-left">
                             <aside id="tg-sidebar" class="tg-sidebar">
                                 <div class="tg-widget tg-widgetsearch">
-                                    <form class="tg-formtheme tg-formsearch">
+                                    <form class="tg-formtheme tg-formsearch" >
                                         <div class="form-group">
                                             <button type="submit"><i class="icon-magnifier"></i></button>
-                                            <input type="search" name="search" class="form-group" placeholder="Search by title, author, key...">
+                                            <input type="search" name="search" class="form-group" placeholder="Search by title, key...">
                                         </div>
                                     </form>
                                 </div>

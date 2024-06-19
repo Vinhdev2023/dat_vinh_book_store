@@ -103,46 +103,6 @@
 													</div>
 												</div>
 											</div>
-
-{{--											<div class="tg-relatedproducts">--}}
-{{--												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
-{{--													<div class="tg-sectionhead">--}}
-{{--														<h2><span>Related Products</span>You May Also Like</h2>--}}
-{{--														<a class="tg-btn" href="javascript:void(0);">View All</a>--}}
-{{--													</div>--}}
-{{--												</div>--}}
-{{--												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
-{{--													<div id="tg-relatedproductslider" class="tg-relatedproductslider tg-relatedbooks owl-carousel">--}}
-{{--														<div class="item">--}}
-{{--															<div class="tg-postbook">--}}
-{{--																<figure class="tg-featureimg">--}}
-{{--																	<div class="tg-bookimg">--}}
-{{--																		<div class="tg-frontcover"><img src="/cus_plugin/images/books/img-01.jpg" alt="image description"></div>--}}
-{{--																		<div class="tg-backcover"><img src="/cus_plugin/images/books/img-01.jpg" alt="image description"></div>--}}
-{{--																	</div>--}}
-{{--																</figure>--}}
-{{--																<div class="tg-postbookcontent">--}}
-{{--																	<ul class="tg-bookscategories">--}}
-{{--																		<li><a href="javascript:void(0);">Adventure</a></li>--}}
-{{--																		<li><a href="javascript:void(0);">Fun</a></li>--}}
-{{--																	</ul>--}}
-{{--																	<div class="tg-booktitle">--}}
-{{--																		<h3><a href="javascript:void(0);">Help Me Find My Stomach</a></h3>--}}
-{{--																	</div>--}}
-{{--																	<span class="tg-bookwriter">By: <a href="javascript:void(0);">Angela Gunning</a></span>--}}
-{{--																	<span class="tg-bookprice">--}}
-{{--																		<ins>$25.18</ins>--}}
-{{--																	</span>--}}
-{{--																	<a class="tg-btn tg-btnstyletwo" href="javascript:void(0);">--}}
-{{--																		<i class="fa fa-shopping-basket"></i>--}}
-{{--																		<em>Add To Basket</em>--}}
-{{--																	</a>--}}
-{{--																</div>--}}
-{{--															</div>--}}
-{{--														</div>--}}
-{{--													</div>--}}
-{{--												</div>--}}
-{{--											</div>--}}
 										</div>
 									</div>
 								</div>
@@ -164,7 +124,7 @@
 										<div class="tg-widgetcontent">
 											<ul>
                                                 @foreach($categories as $obj)
-                                                    <li><a href="javascript:void(0);"><span>{{$obj->name}}</span><em>0</em></a></li>
+                                                    <li><a href="/products/category/{{$obj->id}}"><span>{{$obj->name}}</span><em>{{number_format($obj->num_books)}}</em></a></li>
                                                 @endforeach
 												<li><a href="javascript:void(0);"><span>View All</span></a></li>
 											</ul>
@@ -177,7 +137,7 @@
                                         <div class="tg-widgetcontent">
                                             <ul>
                                                 @foreach($publishers as $obj)
-                                                    <li><a href="javascript:void(0);"><span>{{$obj->name}}</span><em>0</em></a></li>
+                                                    <li><a href="/products/publisher/{{$obj->id}}"><span>{{$obj->name}}</span><em>{{number_format($obj->num_books)}}</em></a></li>
                                                 @endforeach
                                                 <li><a href="javascript:void(0);"><span>View All</span></a></li>
                                             </ul>
