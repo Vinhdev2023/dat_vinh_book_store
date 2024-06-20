@@ -117,7 +117,7 @@
                                             @foreach($categories as $obj)
                                                 <li><a href="/products/category/{{$obj->id}}"><span>{{$obj->name}}</span><em>{{$obj->num_books}}</em></a></li>
                                             @endforeach
-                                            <li><a href="javascript:void(0);"><span>View All</span></a></li>
+                                            <li><a href="/products"><span>View All</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
                                             @foreach($publishers as $obj)
                                                 <li><a href="/products/publisher/{{$obj->id}}"><span>{{$obj->name}}</span><em>{{$obj->num_books}}</em></a></li>
                                             @endforeach
-                                            <li><a href="javascript:void(0);"><span>View All</span></a></li>
+                                            <li><a href="/products"><span>View All</span></a></li>
                                         </ul>
                                     </div>
                                 </div>

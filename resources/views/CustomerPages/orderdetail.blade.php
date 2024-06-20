@@ -75,7 +75,7 @@
                             <h2><span>Total:</span>{{number_format($order->total)}}</h2>
                         </div>
                         <div class="tg-sectionhead">
-                            '<h2><span>Status:</span>{{$order->status}} @if($order->status == 'PENDING' || $order->status == 'SHIPPING')<a href="/order/status/CANCELED/{{$order->id}}" class="btn btn-danger">Cancel</a>  <a href="/order/update-form/{{$order->id}}" class="btn btn-warning">Repair</a>@endif</h2>
+                            '<h2><span>Status:</span>{{$order->status}} @if($order->status == 'PENDING' || $order->status == 'SHIPPING')<a href="/order/status/CANCELED/{{$order->id}}" class="btn btn-danger">Cancel</a>@endif  @if($order->status != 'SHIPPING')<a href="/order/update-form/{{$order->id}}" class="btn btn-warning">Repair</a>@endif</h2>
                         </div>
                         <div class="tg-sectionhead">
                             <h2><span>Products:</span>In Order</h2>

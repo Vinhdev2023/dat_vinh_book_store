@@ -99,8 +99,17 @@ class CartController extends Controller
             return redirect('/admin/add-order/');
         }
         $name = $request->full_name;
+        if($name == null || $name == ''){
+            return redirect()->back();
+        }
         $phone = $request->phone_number;
+        if($phone == null || $phone == ''){
+            return redirect()->back();
+        }
         $address = $request->address;
+        if($address == null || $address == ''){
+            return redirect()->back();
+        }
         $type = 'online';
         $cart = session()->get('cart');
         if(isset($cart)){

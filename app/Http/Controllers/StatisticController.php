@@ -15,10 +15,32 @@ class StatisticController extends Controller
             return redirect('/admin/login');
         }
         $path = '/admin/statistics';
-        $sumTotal = 0;
-        $dataTotal = [];
+        $a = DB::table('orders')
+            ->where('orders.status', '=', 'COMPLETED');
+        $date = DB::table($a)
+            ->selectRaw('SUM(total) AS total, date(created_at) AS date')
+            ->groupBy('date')->get();
+        $month = DB::table($a)
+            ->selectRaw('SUM(total) AS total, date(created_at) AS month, month(created_at) AS month_grouped')
+            ->groupBy('month_grouped')->get();
+        $sumTotal = $a->selectRaw('SUM(total) AS total')->first()->total;
+        $num = 0;
+        $dataDateTotal = [];
         $dataDate = [];
-        return view('AdminPages.AdminStatistics', compact('path', 'dataTotal', 'dataDate', 'sumTotal'));
+        foreach ($date as $obj) {
+            $num++;
+            $dataDateTotal[] = [$num, $obj->total];
+            $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y').' '.number_format($obj->total).' VND'];
+        }
+        $num = 0;
+        $dataMonthTotal = [];
+        $dataMonth = [];
+        foreach ($month as $obj){
+            $num++;
+            $dataMonthTotal[] = [$num, $obj->total];
+            $dataMonth[] = [$num, date_format(date_create($obj->month), 'm-Y').' '.number_format($obj->total).' VND'];
+        }
+        return view('AdminPages.AdminStatistics', compact('path', 'dataMonthTotal', 'dataMonth', 'dataDateTotal', 'dataDate', 'sumTotal'));
     }
 
     public function statistic_get_data(Request $request){
@@ -27,28 +49,39 @@ class StatisticController extends Controller
             return redirect('/admin/login');
         }
         $path = '/admin/statistics';
-        $date = $request->FromDateToDate;
-        $EndDate = substr($date, strpos($date,' - ') + 3, strlen($date));
+        $dateInput = $request->FromDateToDate;
+        $EndDate = substr($dateInput, strpos($dateInput,' - ') + 3, strlen($dateInput));
         $EndDate = date_format(date_create($EndDate), 'Y-m-d');
-        $StartDate = substr($date, 0 , strpos($date,' - '));
+        $StartDate = substr($dateInput, 0 , strpos($dateInput,' - '));
         $StartDate = date_format(date_create($StartDate), 'Y-m-d');
         $a = DB::table('orders')
             ->whereDate('orders.created_at', '>=', $StartDate)
             ->whereDate('orders.created_at', '<=', $EndDate)
             ->where('orders.status', '=', 'COMPLETED');
-        $b = DB::table($a)
+        $date = DB::table($a)
             ->selectRaw('SUM(total) AS total, date(created_at) AS date')
             ->groupBy('date')->get();
+        $month = DB::table($a)
+            ->selectRaw('SUM(total) AS total, date(created_at) AS month, month(created_at) AS month_grouped')
+            ->groupBy('month_grouped')->get();
         $sumTotal = $a->selectRaw('SUM(total) AS total')->first()->total;
         $num = 0;
-        $dataTotal = [];
+        $dataDateTotal = [];
         $dataDate = [];
-        foreach ($b as $obj) {
+        foreach ($date as $obj) {
             $num++;
-            $dataTotal[] = [$num, $obj->total];
+            $dataDateTotal[] = [$num, $obj->total];
             $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y').' '.number_format($obj->total).' VND'];
         }
+        $num = 0;
+        $dataMonthTotal = [];
+        $dataMonth = [];
+        foreach ($month as $obj){
+            $num++;
+            $dataMonthTotal[] = [$num, $obj->total];
+            $dataMonth[] = [$num, date_format(date_create($obj->month), 'm-Y').' '.number_format($obj->total).' VND'];
+        }
 //        dd($dataTotal, $dataDate);
-        return view('AdminPages.AdminStatistics', compact('dataTotal', 'dataDate', 'path', 'sumTotal', 'date'));
+        return view('AdminPages.AdminStatistics', compact('path', 'dataMonthTotal', 'dataMonth', 'dataDateTotal', 'dataDate', 'sumTotal', 'dateInput'));
     }
 }

@@ -161,10 +161,7 @@
                                                 Repair
                                             </a>
                                         @endif
-                                    @elseif($order->status == 'CONFIRMED' && $order->type == 'online')
-                                        <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">
-                                            Cancel
-                                        </a>
+                                    @elseif($order->status == 'CONFIRMED' && $order->type == 'online')n
                                         <a href="/admin/order/update/SHIPPING/{{$order->id}}" type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
                                             SHIPPING
                                         </a>
@@ -172,6 +169,11 @@
                                         <a href="/admin/order/update/COMPLETED/{{$order->id}}" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
                                             Complete
                                         </a>
+                                        @if($order->status == 'SHIPPING')
+                                            <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">
+                                                Cancel
+                                            </a>
+                                        @endif
                                     @endif
                                 </div>
                             </div>

@@ -42,9 +42,9 @@ class OrderController extends Controller
         $order_detail = DB::table('order_detail')
             ->select('order_detail.*', 'books.title AS book_title', 'books.image AS book_image', 'books.price AS book_price'
             , 'categories.name AS book_category_name', 'publishers.name AS book_publisher_name')
-            ->Join('books', 'order_detail.book_id', '=', 'books.id')
-            ->join('categories', 'categories.id', '=', 'books.category_id')
-            ->join('publishers', 'publishers.id', '=', 'books.publisher_id')
+            ->join('books', 'order_detail.book_id', '=', 'books.id')
+            ->leftJoin('categories', 'categories.id', '=', 'books.category_id')
+            ->leftJoin('publishers', 'publishers.id', '=', 'books.publisher_id')
             ->where('order_detail.order_id', $id)
             ->get();
         return view('CustomerPages.orderdetail', compact('categories', 'publishers', 'order', 'order_detail'));
@@ -81,8 +81,17 @@ class OrderController extends Controller
             return redirect('/login');
         }
         $name = $request->full_name;
+        if($name == null || $name == ''){
+            return redirect()->back();
+        }
         $phone = $request->phone_number;
+        if($phone == null || $phone == ''){
+            return redirect()->back();
+        }
         $address = $request->address;
+        if($address == null || $address == ''){
+            return redirect()->back();
+        }
         DB::table('orders')
             ->where('id', $id)
             ->update(['cus_name' => $name, 'cus_phone' => $phone, 'ship_to_address' => $address]);

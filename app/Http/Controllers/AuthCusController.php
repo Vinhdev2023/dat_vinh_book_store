@@ -45,6 +45,9 @@ class AuthCusController extends Controller
         if ($check && session()->has('cart')){
             return redirect('/checkout-form');
         }elseif ($check){
+            if(Auth::user()->user_type == 'admin'){
+                return redirect('/admin');
+            }
             return redirect('/');
         }
         return redirect()->back();
