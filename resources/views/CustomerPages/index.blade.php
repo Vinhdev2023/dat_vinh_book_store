@@ -96,10 +96,10 @@
 								<div class="tg-description">
 									<p>Consectetur adipisicing elit sed do eiusmod tempor incididunt labore toloregna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoiars nisiuip commodo consequat aute irure dolor in aprehenderit aveli esseati cillum dolor fugiat nulla pariatur cepteur sint occaecat cupidatat.</p>
 								</div>
-								<div class="tg-btns">
-									<a class="tg-btn tg-active" href="javascript:void(0);">View All</a>
-									<a class="tg-btn" href="/products">Read More</a>
-								</div>
+    {{--								<div class="tg-btns">--}}
+    {{--									<a class="tg-btn tg-active" href="javascript:void(0);">View All</a>--}}
+    {{--									<a class="tg-btn" href="/products">Read More</a>--}}
+    {{--								</div>--}}
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 								<div class="row">
@@ -199,28 +199,28 @@
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-push-2">
 								<div id="tg-testimonialsslider" class="tg-testimonialsslider tg-testimonials owl-carousel">
 									<div class="item tg-testimonial">
-										<figure><img src="/cus_plugin/images/author/vinh.jpg" alt="image description"></figure>
+										<figure><img src="/cus_plugin/images/author/image-book.jpg" alt="image description"></figure>
 										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
-										<div class="tg-testimonialauthor">
-											<h3>Holli Fenstermacher</h3>
-											<span>Manager @ CIFP</span>
-										</div>
+{{--										<div class="tg-testimonialauthor">--}}
+{{--											<h3>Holli Fenstermacher</h3>--}}
+{{--											<span>Manager @ CIFP</span>--}}
+{{--										</div>--}}
 									</div>
 									<div class="item tg-testimonial">
-										<figure><img src="/cus_plugin/images/author/hip.jpg" alt="image description"></figure>
+										<figure><img src="/cus_plugin/images/author/image-book-2.jpg" alt="image description"></figure>
 										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
-										<div class="tg-testimonialauthor">
-											<h3>Holli Fenstermacher</h3>
-											<span>Manager @ CIFP</span>
-										</div>
+{{--										<div class="tg-testimonialauthor">--}}
+{{--											<h3>Holli Fenstermacher</h3>--}}
+{{--											<span>Manager @ CIFP</span>--}}
+{{--										</div>--}}
 									</div>
 									<div class="item tg-testimonial">
 										<figure><img src="cus_plugin/images/author/vinh.jpg" alt="image description"></figure>
 										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
-										<div class="tg-testimonialauthor">
-											<h3>Holli Fenstermacher</h3>
-											<span>Manager @ CIFP</span>
-										</div>
+{{--										<div class="tg-testimonialauthor">--}}
+{{--											<h3>Holli Fenstermacher</h3>--}}
+{{--											<span>Manager @ CIFP</span>--}}
+{{--										</div>--}}
 									</div>
 								</div>
 							</div>
@@ -239,11 +239,11 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<div class="tg-calltoaction">
-									<h2>Open Discount For All</h2>
-									<h3>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</h3>
-									<a class="tg-btn tg-active" href="javascript:void(0);">Read More</a>
-								</div>
+{{--								<div class="tg-calltoaction">--}}
+{{--									<h2>Open Discount For All</h2>--}}
+{{--									<h3>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</h3>--}}
+{{--									<a class="tg-btn tg-active" href="javascript:void(0);">Read More</a>--}}
+{{--								</div>--}}
 							</div>
 						</div>
 					</div>

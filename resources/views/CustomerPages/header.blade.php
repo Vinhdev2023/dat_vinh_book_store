@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <strong class="tg-logo"><a href="#"><img src="/cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
+                    <strong class="tg-logo"><a ><img src="/cus_plugin/images/book.png" alt="company name here" style="height: 150px; width: 250px"></a></strong>
                     <div class="tg-wishlistandcart">
                         <div class="dropdown  tg-wishlistdropdown">
                             <div class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-wishlisst">
@@ -58,14 +58,14 @@
                             @endif
                         </div>
                     </div>
-                    <div class="tg-searchbox">
-                        <form class="tg-formtheme tg-formsearch">
-                            <fieldset>
-                                <input type="text" name="search" class="typeahead form-control" placeholder="Search book by keyword">
-                                <button type="submit"><i class="icon-magnifier"></i></button>
-                            </fieldset>
-                        </form>
-                    </div>
+{{--                    <div class="tg-searchbox">--}}
+{{--                        <form class="tg-formtheme tg-formsearch">--}}
+{{--                            <fieldset>--}}
+{{--                                <input type="text" name="search" class="typeahead form-control" placeholder="Search book by keyword">--}}
+{{--                                <button type="submit"><i class="icon-magnifier"></i></button>--}}
+{{--                            </fieldset>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
