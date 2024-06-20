@@ -53,12 +53,15 @@ class OrderController extends Controller
     public function order_status($status, $id){
         if (!Auth::check() || Auth::user()->user_type!= 'customer') {
             Auth::logout();
-            return redirect('/login');
+            return redirect('/sign-in');
+        }
+        $check_status = DB::table('orders')->where('id', $id)->first()->status;
+        if ($check_status != 'PENDING') {
+            return redirect('/order/detail/'.$id);
         }
         DB::table('orders')
             ->where('id', $id)
             ->update([
-                'user_id' => null,
                 'status' => $status
             ]);
         return redirect('/order/detail/'.$id);

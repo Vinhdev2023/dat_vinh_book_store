@@ -194,4 +194,27 @@ class CartController extends Controller
         session()->put('cart_total', $total);
         return redirect('/products');
     }
+
+    public function delete_product_in_cart($id){
+        $cart = session()->get('cart');
+        foreach ($cart as $key => $obj) {
+            if ($obj->id == $id) {
+                unset($cart[$key]);
+            }
+        }
+        if ($cart == null || $cart == []){
+            session()->forget('cart');
+            session()->forget('cart_total');
+            session()->save();
+            return redirect('/products');
+        }
+        session()->put('cart', $cart);
+        $total = 0;
+        $cart = session()->get('cart');
+        foreach ($cart as $obj) {
+            $total += $obj->price * $obj->quantity;
+        }
+        session()->put('cart_total', $total);
+        return redirect('/products');
+    }
 }

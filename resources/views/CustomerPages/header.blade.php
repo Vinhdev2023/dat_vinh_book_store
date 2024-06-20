@@ -1,16 +1,18 @@
 <header id="tg-header" class="tg-header tg-haslayout">
+    @if(auth()->check() == true)
     <div class="tg-topbar">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-userlogin">
-                        <figure><a  href="{{auth()->check() == true ? '/sign-out' : '/sign-in'}}"><img src="/cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
-                        <span>Hi, {{auth()->check() == true ? auth()->user()->name : 'customer'}}</span>
+                        <figure><a  href="{{auth()->check() ? '/sign-out' : '/sign-in'}}"><img src="/cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
+                        <span>Hi, {{auth()->check() ? auth()->user()->name : 'customer'}}</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @endif
     <div class="tg-middlecontainer">
         <div class="container">
             <div class="row">
@@ -40,6 +42,7 @@
                                                     <h5><a href="/cart/product/detail/{{$obj->id}}">{{$obj->title}}</a></h5>
                                                     <h5><a href="/cart/product/detail/{{$obj->id}}">Quantity: {{number_format($obj->quantity)}}</a></h5>
                                                     <h6><a href="/cart/product/detail/{{$obj->id}}">{{number_format($obj->price)}} VND</a></h6>
+                                                    <h6><a href="/cart/product/delete/{{$obj->id}}" class="btn btn-danger">DELETE</a></h6>
                                                 </div>
                                             </div>
                                         @endforeach
@@ -58,14 +61,15 @@
                             @endif
                         </div>
                     </div>
-{{--                    <div class="tg-searchbox">--}}
-{{--                        <form class="tg-formtheme tg-formsearch">--}}
-{{--                            <fieldset>--}}
-{{--                                <input type="text" name="search" class="typeahead form-control" placeholder="Search book by keyword">--}}
-{{--                                <button type="submit"><i class="icon-magnifier"></i></button>--}}
-{{--                            </fieldset>--}}
-{{--                        </form>--}}
-{{--                    </div>--}}
+                    <div class="tg-searchbox">
+                        <form class="tg-formtheme tg-formsearch" action="/products/search" method="post">
+                            @csrf
+                            <fieldset>
+                                <input type="text" name="search" class="typeahead form-control" placeholder="Search book by keyword">
+                                <button type="submit"><i class="icon-magnifier"></i></button>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

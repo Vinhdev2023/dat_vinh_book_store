@@ -13,11 +13,13 @@ Route::get('/products', [ProductController::class, 'products']);
 Route::get('/products/category/{id}', [ProductController::class, 'category_filter']);
 Route::get('/products/publisher/{id}', [ProductController::class, 'publisher_filter']);
 Route::get('/product/detail/{id}', [ProductController::class, 'product_detail']);
+Route::post('/products/search', [ProductController::class, 'product_search']);
 
 Route::post('/product-to-cart/{id}', [CartController::class, 'add_cart']);
 Route::get('/clear/cart', [CartController::class, 'clear_cart']);
 Route::get('/cart/product/detail/{id}', [CartController::class, 'repair_cart']);
 Route::post('/cart/product/update/{id}', [CartController::class, 'update_cart']);
+Route::get('/cart/product/delete/{id}', [CartController::class, 'delete_product_in_cart']);
 
 Route::get('/checkout', [CartController::class, 'checkout']);
 Route::get('/checkout-form', [CartController::class, 'checkout_form']);

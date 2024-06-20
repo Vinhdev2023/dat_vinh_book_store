@@ -65,7 +65,7 @@
                                 <div class="col-sm-4 invoice-col">
                                     To
                                     <address>
-                                        <strong>{{$order->cus_name}}</strong><br>
+                                        <strong>Customer's Name: {{$order->cus_name}}</strong><br>
                                         Address: {{$order->ship_to_address}}<br>
                                         Phone: {{$order->cus_phone}}<br>
 {{--                                        Email: john.doe@example.com--}}
@@ -74,9 +74,7 @@
                                 <!-- /.col -->
                                 <div class="col-sm-4 invoice-col">
                                     <br>
-                                    <b>Order ID:</b> {{$order->id}}<br>
-                                    <b>Status:</b> {{$order->status}}<br>
-                                    <b>Account:</b> {{$order->customer_id}}
+                                    <b>Status:</b> {{$order->status}}
                                 </div>
                                 <!-- /.col -->
                             </div>

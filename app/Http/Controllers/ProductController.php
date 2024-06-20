@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
@@ -123,6 +124,41 @@ class ProductController extends Controller
             ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
             ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
             ->where('books.status', '=', 0)->where('books.publisher_id', $id)
+            ->get();
+        return view("CustomerPages.products", compact('categories', 'publishers', 'books'));
+    }
+
+    public function product_search(Request $request){
+        $categories = DB::table('categories')->get();
+        foreach ($categories as $category) {
+            $category->num_books = DB::table('books')
+                ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
+                ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
+                ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
+                ->where('books.status', '=', 0)
+                ->where('books.category_id', $category->id)
+                ->count();
+        }
+        $publishers = DB::table('publishers')->get();
+        foreach ($publishers as $publisher) {
+            $publisher->num_books = DB::table('books')
+                ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
+                ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
+                ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
+                ->where('books.status', '=', 0)
+                ->where('books.publisher_id', $publisher->id)
+                ->count();
+        }
+        $books = DB::table('books')
+            ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
+            ->leftJoin('categories', 'books.category_id', '=', 'categories.id')
+            ->leftJoin('publishers', 'books.publisher_id', '=', 'publishers.id')
+            ->where('books.status', '=', 0);
+        $books = DB::table($books)
+            ->orWhere('title', 'LIKE', '%'.$request->search.'%')
+            ->orWhere('description', 'LIKE', '%'.$request->search.'%')
+            ->orWhere('category_name', 'LIKE', '%'.$request->search.'%')
+            ->orWhere('publisher_name', 'LIKE', '%'.$request->search.'%')
             ->get();
         return view("CustomerPages.products", compact('categories', 'publishers', 'books'));
     }

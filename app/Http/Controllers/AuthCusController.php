@@ -55,6 +55,8 @@ class AuthCusController extends Controller
 
     public function sign_out() {
         Auth::logout();
+        session()->flush();
+        session()->save();
         return redirect('/sign-in');
     }
 }
