@@ -156,11 +156,6 @@
                                         <a href="/admin/order/update/CONFIRMED/{{$order->id}}" type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
                                             Confirm
                                         </a>
-                                        @if($order->type == 'offline')
-                                            <a href="/admin/order/repair/{{$order->id}}" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
-                                                Repair
-                                            </a>
-                                        @endif
                                     @elseif($order->status == 'CONFIRMED' && $order->type == 'online')
                                         <a href="/admin/order/update/SHIPPING/{{$order->id}}" type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
                                             SHIPPING
