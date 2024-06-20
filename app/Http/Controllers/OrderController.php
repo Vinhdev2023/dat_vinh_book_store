@@ -57,7 +57,10 @@ class OrderController extends Controller
         }
         DB::table('orders')
             ->where('id', $id)
-            ->update(['status' => $status]);
+            ->update([
+                'user_id' => null,
+                'status' => $status
+            ]);
         return redirect('/order/detail/'.$id);
     }
 

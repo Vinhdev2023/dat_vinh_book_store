@@ -146,7 +146,7 @@
                                 <div class="col-12">
                                     @if (@isset($user_check_order))
                                         <p class="left m-0">Checked by: {{$user_check_order->name}}</p>
-                                    @else
+                                    @elseif($order->status != 'PENDING')
                                         <p class="left m-0">Checked by: Customer</p>
                                     @endif
                                     @if ($order->status == 'PENDING')
@@ -161,7 +161,7 @@
                                                 Repair
                                             </a>
                                         @endif
-                                    @elseif($order->status == 'CONFIRMED' && $order->type == 'online')n
+                                    @elseif($order->status == 'CONFIRMED' && $order->type == 'online')
                                         <a href="/admin/order/update/SHIPPING/{{$order->id}}" type="button" class="btn btn-warning float-right" style="margin-right: 5px;">
                                             SHIPPING
                                         </a>
