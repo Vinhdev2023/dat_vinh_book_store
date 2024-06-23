@@ -73,13 +73,13 @@
                                 @csrf
                                 <fieldset>
                                     <div class="form-group">
-                                        <input type="text" name="full_name" class="form-control" @if(@isset($order))value="{{$order->cus_name}}" @endif placeholder="Full Name*">
+                                        <input type="text" name="full_name" class="form-control" @if(@isset($customer))value="{{$customer->full_name}}" @endif placeholder="Full Name*">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="phone_number" class="form-control" @if(@isset($order))value="{{$order->cus_phone}}" @endif placeholder="Phone Mumber*">
+                                        <input type="text" name="phone_number" class="form-control" @if(@isset($customer))value="{{$customer->phone}}" @endif placeholder="Phone Mumber*">
                                     </div>
                                     <div class="form-group tg-hastextarea">
-                                        <textarea name="address" placeholder="Address*">@if(@isset($order)){{$order->ship_to_address}}@endif</textarea>
+                                        <textarea name="address" placeholder="Address*">@if(@isset($customer)){{$customer->address}}@endif</textarea>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="tg-btn tg-active">Submit</button>
@@ -113,6 +113,44 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            <table class="table table-hover mt-3">
+                                <thead>
+                                <tr>
+                                    <th>Book cover</th>
+                                    <th>Title</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>sum</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach(session()->get('cart') as $obj)
+                                    <tr>
+                                        <td><img src="/images/{{$obj->image}}" width="100px"></td>
+                                        <td>{{$obj->title}}</td>
+                                        <td>{{$obj->quantity}}</td>
+                                        <td>{{number_format($obj->price)}}</td>
+                                        <td>{{number_format($obj->price*$obj->quantity)}}</td>
+                                        <td>
+                                            <a class="btn btn-primary" href="/cart/product/detail/{{$obj->id}} ">
+                                                Update quantity
+                                            </a><br><br>
+                                            <a class="btn btn-danger" href="/cart/product/delete/{{$obj->id}} ">
+                                                Delete
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                <tr>
+                                    <td colspan="6">
+                                        <b>Total</b>: {{number_format(session()->get('cart_total'))}}
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

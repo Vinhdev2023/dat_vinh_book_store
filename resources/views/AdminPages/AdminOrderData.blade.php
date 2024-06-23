@@ -66,7 +66,7 @@
                                             <th>Phone</th>
                                             <th>Total</th>
                                             <th>Status</th>
-                                            <th>Type</th>
+                                            <th>Time</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -77,7 +77,7 @@
                                             <td>{{$obj->cus_phone}}</td>
                                             <td>{{number_format($obj->total)}}</td>
                                             <td>{{$obj->status}}</td>
-                                            <td>{{$obj->type}}</td>
+                                            <td>{{$obj->created_at}}</td>
                                             <td>
                                                 <a href="/admin/order/detail/{{$obj->id}}" class="btn btn-primary">detail</a>
                                             </td>

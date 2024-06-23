@@ -75,7 +75,6 @@
                                 </div>
                                 <div class="card-footer">
                                     <button class="btn btn-primary">Submit</button>
-                                    <a href="/admin/statistics" class="btn btn-primary">View All</a>
                                 </div>
                             <!-- /.card-body -->
                             </form>
@@ -87,6 +86,7 @@
                 <div class="row">
 
                     <div class="col">
+                        @if($path == '/admin/statistics/data')
                         <!-- Bar chart -->
                         <div class="card card-primary card-outline">
                             <div class="card-header">
@@ -114,41 +114,7 @@
                             </div>
                         </div>
                         <!-- /.card -->
-                    </div>
-                    <!-- /.col -->
-
-                </div>
-                <!-- /.row -->
-                <div class="row">
-
-                    <div class="col">
-                        <!-- Bar chart -->
-                        <div class="card card-primary card-outline">
-                            <div class="card-header">
-                                <h3 class="card-title">
-                                    Thống Kê Theo Tháng
-                                </h3>
-
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="bar-chart-2" style="height: 420px;"></div>
-                            </div>
-                            <!-- /.card-body-->
-                            <div class="card-footer">
-                                <h3 class="card-title">
-                                    Total: {{number_format($sumTotal)}} VND
-                                </h3>
-                            </div>
-                        </div>
-                        <!-- /.card -->
+                        @endif
                     </div>
                     <!-- /.col -->
 
@@ -220,41 +186,6 @@
             colors: ['#3c8dbc'],
             xaxis : {
                 ticks: date
-            }
-        })
-        /* END BAR CHART */
-        /*
-         * BAR CHART
-         * ---------
-         */
-        var total_month = @json($dataMonthTotal);
-        var month = @json($dataMonth);
-        console.log(total_month)
-        console.log(month)
-        var bar_data_month = {
-            data : total_month,
-            bars: { show: true }
-        }
-        $.plot('#bar-chart-2', [bar_data_month], {
-            grid  : {
-                borderWidth: 1,
-                borderColor: '#f3f3f3',
-                tickColor  : '#f3f3f3',
-                margin: {
-                    top: 0,
-                    bottom: 20,
-                    left: 0,
-                    right: 0
-                }
-            },
-            series: {
-                bars: {
-                    show: true, barWidth: 0.5, align: 'center',
-                },
-            },
-            colors: ['#3c8dbc'],
-            xaxis : {
-                ticks: month
             }
         })
         /* END BAR CHART */

@@ -1,18 +1,18 @@
 <header id="tg-header" class="tg-header tg-haslayout">
-    @if(auth()->check() == true)
+{{--    @if(auth()->check() == true)--}}
     <div class="tg-topbar">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="tg-userlogin">
-                        <figure><a  href="{{auth()->check() ? '/sign-out' : '/sign-in'}}"><img src="/cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
-                        <span>Hi, {{auth()->check() ? auth()->user()->name : 'customer'}}</span>
+                        <figure><a  href="{{auth()->guard('customers')->check() ? '/sign-out' : '/sign-in'}}"><img src="/cus_plugin/images/users/vinhmoi.jpg" alt="image description"></a></figure>
+                        <span><a  href="{{auth()->guard('customers')->check() ? '/sign-out' : '/sign-in'}}">Hi, {{auth()->guard('customers')->check() ? auth()->guard('customers')->user()->name : 'customer let to sign in'}}</a></span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @endif
+{{--    @endif--}}
     <div class="tg-middlecontainer">
         <div class="container">
             <div class="row">
@@ -39,9 +39,12 @@
                                                     <img src="/images/{{$obj->image}}" alt="image description" width="60px">
                                                 </figure>
                                                 <div class="tg-minicarproductdata">
-                                                    <h5><a href="/cart/product/detail/{{$obj->id}}">{{$obj->title}}</a></h5>
-                                                    <h5><a href="/cart/product/detail/{{$obj->id}}">Quantity: {{number_format($obj->quantity)}}</a></h5>
-                                                    <h6><a href="/cart/product/detail/{{$obj->id}}">{{number_format($obj->price)}} VND</a></h6>
+                                                    <h5>{{$obj->title}}</h5>
+                                                    <h5>Quantity: {{number_format($obj->quantity)}}</h5>
+                                                    <h6>{{number_format($obj->price)}} VND</h6>
+                                                    <h6><a class="btn btn-primary" href="/cart/product/detail/{{$obj->id}} ">
+                                                            Update quantity
+                                                        </a></h6>
                                                     <h6><a href="/cart/product/delete/{{$obj->id}}" class="btn btn-danger">DELETE</a></h6>
                                                 </div>
                                             </div>
@@ -95,9 +98,9 @@
                                 <li class="">
                                     <a href="/products">Products</a>
                                 </li>
-                                @if(auth()->check())
+                                @if(auth()->guard('customers')->check())
                                     <li class="">
-                                        <a href="@if(auth()->user()->user_type == 'admin') /admin/orders @else /orders @endif">Orders</a>
+                                        <a href="/orders">Orders</a>
                                     </li>
                                 @endif
                             </ul>

@@ -158,8 +158,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if($path == '/admin/statistics'){{'open-menu'}}@endif">
-                    <a href="/admin/statistics" class="nav-link @if($path == '/admin/statistics'){{'active'}}@endif">
+                <li class="nav-item @if($path == '/admin/statistics' || $path == '/admin/statistics/data'){{'open-menu'}}@endif">
+                    <a href="/admin/statistics" class="nav-link @if($path == '/admin/statistics' || $path == '/admin/statistics/data'){{'active'}}@endif">
                         <i class="nav-icon fas fa-chart-pie"></i>
                         <p>
                             Statistics

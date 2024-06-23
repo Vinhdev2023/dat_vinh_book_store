@@ -15,32 +15,9 @@ class StatisticController extends Controller
             return redirect('/admin/login');
         }
         $path = '/admin/statistics';
-        $a = DB::table('orders')
-            ->where('orders.status', '=', 'COMPLETED');
-        $date = DB::table($a)
-            ->selectRaw('SUM(total) AS total, date(created_at) AS date')
-            ->groupBy('date')->get();
-        $month = DB::table($a)
-            ->selectRaw('SUM(total) AS total, date(created_at) AS month, month(created_at) AS month_grouped')
-            ->groupBy('month_grouped')->get();
-        $sumTotal = $a->selectRaw('SUM(total) AS total')->first()->total;
-        $num = 0;
         $dataDateTotal = [];
         $dataDate = [];
-        foreach ($date as $obj) {
-            $num++;
-            $dataDateTotal[] = [$num, $obj->total];
-            $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y').' '.number_format($obj->total).' VND'];
-        }
-        $num = 0;
-        $dataMonthTotal = [];
-        $dataMonth = [];
-        foreach ($month as $obj){
-            $num++;
-            $dataMonthTotal[] = [$num, $obj->total];
-            $dataMonth[] = [$num, date_format(date_create($obj->month), 'm-Y').' '.number_format($obj->total).' VND'];
-        }
-        return view('AdminPages.AdminStatistics', compact('path', 'dataMonthTotal', 'dataMonth', 'dataDateTotal', 'dataDate', 'sumTotal'));
+        return view('AdminPages.AdminStatistics', compact('path', 'dataDateTotal', 'dataDate'));
     }
 
     public function statistic_get_data(Request $request){
@@ -48,7 +25,7 @@ class StatisticController extends Controller
             Auth::logout();
             return redirect('/admin/login');
         }
-        $path = '/admin/statistics';
+        $path = '/admin/statistics/data';
         $dateInput = $request->FromDateToDate;
         $EndDate = substr($dateInput, strpos($dateInput,' - ') + 3, strlen($dateInput));
         $EndDate = date_format(date_create($EndDate), 'Y-m-d');
@@ -58,30 +35,38 @@ class StatisticController extends Controller
             ->whereDate('orders.created_at', '>=', $StartDate)
             ->whereDate('orders.created_at', '<=', $EndDate)
             ->where('orders.status', '=', 'COMPLETED');
-        $date = DB::table($a)
+        $data = DB::table($a)
             ->selectRaw('SUM(total) AS total, date(created_at) AS date')
             ->groupBy('date')->get();
-        $month = DB::table($a)
-            ->selectRaw('SUM(total) AS total, date(created_at) AS month, month(created_at) AS month_grouped')
-            ->groupBy('month_grouped')->get();
+//        dd($date);
         $sumTotal = $a->selectRaw('SUM(total) AS total')->first()->total;
         $num = 0;
         $dataDateTotal = [];
         $dataDate = [];
-        foreach ($date as $obj) {
+        $date = date_create($StartDate);
+        while (date_format($date, 'Y-m-d') <= $EndDate) {
             $num++;
-            $dataDateTotal[] = [$num, $obj->total];
-            $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y').' '.number_format($obj->total).' VND'];
+            $total = DB::table(
+                DB::table(
+                    DB::table('orders')
+                        ->selectRaw('*, DATE(`orders`.`created_at`) AS orderDate')
+                        ->where('orders.status', '=', 'COMPLETED'), 'a')
+                    ->where('a.orderDate', '=', date_format($date, 'Y-m-d')), 'b')
+                ->selectRaw('SUM(total) AS total')->first()->total;
+            if($total == null){
+                $total = 0;
+            }
+            $dataDateTotal[] = [$num, $total];
+            $dataDate[] = [$num, date_format($date, 'd-m-Y')];
+            $date = date_add($date, date_interval_create_from_date_string('1 day'));
         }
-        $num = 0;
-        $dataMonthTotal = [];
-        $dataMonth = [];
-        foreach ($month as $obj){
-            $num++;
-            $dataMonthTotal[] = [$num, $obj->total];
-            $dataMonth[] = [$num, date_format(date_create($obj->month), 'm-Y').' '.number_format($obj->total).' VND'];
-        }
-//        dd($dataTotal, $dataDate);
-        return view('AdminPages.AdminStatistics', compact('path', 'dataMonthTotal', 'dataMonth', 'dataDateTotal', 'dataDate', 'sumTotal', 'dateInput'));
+//        dd($dataDate, $dataDateTotal);
+//        dd($data);
+//        foreach ($data as $obj) {
+//            $num++;
+//            $dataDateTotal[] = [$num, $obj->total];
+//            $dataDate[] = [$num, date_format(date_create($obj->date), 'd-m-Y')];
+//        }
+        return view('AdminPages.AdminStatistics', compact('path', 'dataDateTotal', 'dataDate', 'sumTotal', 'dateInput'));
     }
 }

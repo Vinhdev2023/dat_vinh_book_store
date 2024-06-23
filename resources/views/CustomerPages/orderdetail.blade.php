@@ -75,7 +75,7 @@
                             <h2><span>Total:</span>{{number_format($order->total)}}</h2>
                         </div>
                         <div class="tg-sectionhead">
-                            '<h2><span>Status:</span>{{$order->status}} @if($order->status == 'PENDING' || $order->status == 'SHIPPING' || $order->status == 'CONFIRMED')<a href="/order/status/CANCELED/{{$order->id}}" class="btn btn-danger">Cancel</a>@endif</h2>
+                            <h2><span>Status:</span>{{$order->status}} @if($order->status == 'PENDING' || $order->status == 'SHIPPING' || $order->status == 'CONFIRMED')<a href="/order/status/CANCELED/{{$order->id}}" class="btn btn-danger">Cancel</a>@endif</h2>
                         </div>
                         <div class="tg-sectionhead">
                             <h2><span>Products:</span>In Order</h2>
@@ -86,34 +86,40 @@
                             <div id="tg-content" class="tg-content">
                                 <div class="tg-products">
                                     <div class="tg-productgrid">
-                                        @foreach($order_detail as $obj)
-                                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
-                                                <div class="tg-postbook">
-                                                    <figure class="tg-featureimg">
-                                                        <div class="tg-bookimg">
-                                                            <div class="tg-frontcover"><img src="/images/{{$obj->book_image}}" alt="image description"></div>
-                                                            <div class="tg-backcover"><img src="/images/{{$obj->book_image}}" alt="image description"></div>
-                                                        </div>
-                                                    </figure>
-                                                    <div class="tg-postbookcontent">
-                                                        <ul class="tg-bookscategories">
-                                                            <li><a href="">{{$obj->book_category_name}}</a></li>
-                                                        </ul>
-                                                        <div class="tg-booktitle">
-                                                            <h3><a href="javascript:void(0);">{{$obj->book_title}}</a></h3>
-                                                        </div>
-                                                        <span class="tg-bookwriter">Publisher: <a href="">{{$obj->book_publisher_name}}</a></span>
-                                                        <span class="tg-bookprice">
-                                                        <ins>{{number_format($obj->book_price)}}VND</ins>
-                                                    </span>
-                                                        <a class="tg-btn tg-btnstyletwo" href="/product/detail/{{$obj->book_id}}">
-                                                            <i class="fa fa-shopping-basket"></i>
-                                                            <em>Book detail</em>
+                                        <table class="table table-hover mt-3">
+                                            <thead>
+                                            <tr>
+                                                <th>Book cover</th>
+                                                <th>Title</th>
+                                                <th>Quantity</th>
+                                                <th>Price</th>
+                                                <th>sum</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+{{--                                            @dd($order_detail)--}}
+                                            @foreach($order_detail as $obj)
+                                                <tr>
+                                                    <td><img src="/images/{{$obj->book_image}}" width="100px"></td>
+                                                    <td>{{$obj->book_title}}</td>
+                                                    <td>{{$obj->quantity}}</td>
+                                                    <td>{{number_format($obj->price)}}</td>
+                                                    <td>{{number_format($obj->price*$obj->quantity)}}</td>
+                                                    <td>
+                                                        <a class="btn btn-primary" href="/product/detail/{{$obj->book_id}} ">
+                                                            Details
                                                         </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                                <tr>
+                                                    <td colspan="6">
+                                                        <b>Total</b>: {{number_format($order->total)}}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

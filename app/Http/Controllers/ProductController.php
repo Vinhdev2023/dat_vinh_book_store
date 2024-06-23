@@ -9,6 +9,7 @@ class ProductController extends Controller
 {
 
     public function products() {
+        session()->put('cart_in_checkout', false);
         $categories = DB::table('categories')->get();
         foreach ($categories as $category) {
             $category->num_books = DB::table('books')

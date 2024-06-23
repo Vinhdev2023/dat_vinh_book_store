@@ -54,49 +54,29 @@ class CartController extends Controller
             return redirect('/products');
         }
         session()->save();
-        return redirect()->back();
+        return redirect('/');
     }
     public function checkout(){
-        if (!Auth::check()){
+        if (!Auth::guard('customers')->check()){
             return redirect('/sign-in');
-        }elseif (Auth::user()->user_type == 'admin'){
-            session()->put('admin_cart', session()->get('cart'));
-            session()->forget('cart');
-            session()->put('admin_cart_total', session()->get('cart_total'));
-            session()->forget('cart');
-            session()->save();
-            return redirect('/admin/add-order/');
         }
         return redirect('/checkout-form');
     }
 
     public function checkout_form(){
-        if (!Auth::check()){
+        if (!Auth::guard('customers')->check()){
             return redirect('/sign-in');
-        }elseif (Auth::user()->user_type == 'admin'){
-            session()->put('admin_cart', session()->get('cart'));
-            session()->forget('cart');
-            session()->put('admin_cart_total', session()->get('cart_total'));
-            session()->forget('cart');
-            session()->save();
-            return redirect('/admin/add-order/');
         }
+        $customer = DB::table('customers')
+            ->where('id', Auth::guard('customers')->user()->id)
+            ->first();
         session()->put('cart_in_checkout', true);
-        $categories = DB::table('categories')->get();
-        $publishers = DB::table('publishers')->get();
-        return view('CustomerPages.checkout', compact('categories', 'publishers'));
+        return view('CustomerPages.checkout', compact( 'customer'));
     }
 
     public function checkout_post(Request $request){
-        if (!Auth::check()){
+        if (!Auth::guard('customers')->check()){
             return redirect('/sign-in');
-        }elseif (Auth::user()->user_type == 'admin'){
-            session()->put('admin_cart', session()->get('cart'));
-            session()->forget('cart');
-            session()->put('admin_cart_total', session()->get('cart_total'));
-            session()->forget('cart');
-            session()->save();
-            return redirect('/admin/add-order/');
         }
         $name = $request->full_name;
         if($name == null || $name == ''){
@@ -113,8 +93,13 @@ class CartController extends Controller
         $type = 'online';
         $cart = session()->get('cart');
         if(isset($cart)){
+            DB::table('customers')->where('id', Auth::guard('customers')->user()->id)
+                ->update([
+                'full_name' => $name,
+                'phone' => $phone,
+                'address' => $address]);
             $id_order = DB::table('orders')->insertGetId([
-                'customer_id' => Auth::user()->id,
+                'customer_id' => Auth::guard('customers')->user()->id,
                 'cus_name' => $name,
                 'cus_phone' => $phone,
                 'ship_to_address' => $address,
@@ -136,7 +121,7 @@ class CartController extends Controller
             session()->forget('cart');
             session()->forget('cart_total');
             session()->save();
-            return redirect('/orders');
+            return redirect('/order/detail/'.$id_order);
         }
         return redirect('/products');
     }
@@ -192,6 +177,9 @@ class CartController extends Controller
             $total += $obj->price * $obj->quantity;
         }
         session()->put('cart_total', $total);
+        if (session()->get('cart_in_checkout')){
+            return redirect('/checkout-form');
+        }
         return redirect('/products');
     }
 
@@ -215,6 +203,9 @@ class CartController extends Controller
             $total += $obj->price * $obj->quantity;
         }
         session()->put('cart_total', $total);
+        if (session()->get('cart_in_checkout') && session()->has('cart')){
+            return redirect('/checkout-form');
+        }
         return redirect('/products');
     }
 }

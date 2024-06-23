@@ -19,15 +19,24 @@ class AuthCusController extends Controller
                 'cost' => 12,
             ];
             $password = password_hash($password, PASSWORD_BCRYPT, $options);
-            $CheckEmail = DB::table('users')->selectRaw('COUNT(*) AS count')
+//            $CheckEmail = DB::table('users')->selectRaw('COUNT(*) AS count')
+//                ->where('email', '=', $email)
+//                ->first();
+            $CheckEmail = DB::table('customers')
                 ->where('email', '=', $email)
-                ->first();
-            if ($CheckEmail->count == 0){
-                DB::table('users')->insert([
+                ->count();
+            if ($CheckEmail == 0){
+//                DB::table('users')->insert([
+//                    'name' => $name,
+//                    'email' => $email,
+//                    'password' => $password,
+//                    'user_type' => 'customer',
+//                    'created_at' => Carbon::now(),
+//                ]);
+                DB::table('customers')->insert([
                     'name' => $name,
                     'email' => $email,
                     'password' => $password,
-                    'user_type' => 'customer',
                     'created_at' => Carbon::now(),
                 ]);
                 return redirect('/sign-in');
@@ -39,15 +48,13 @@ class AuthCusController extends Controller
     public function sign_in(Request $request) {
         $email = $request->UsernameOrEmail;
         $password = $request->password;
-        $check = Auth::attempt(['email' => $email, 'password' => $password]);
+//        $check = Auth::attempt(['email' => $email, 'password' => $password]);
+        $check = Auth::guard('customers')->attempt(['email' => $email, 'password' => $password]);
 //        dd($check);
 
         if ($check && session()->has('cart')){
             return redirect('/checkout-form');
         }elseif ($check){
-            if(Auth::user()->user_type == 'admin'){
-                return redirect('/admin');
-            }
             return redirect('/');
         }
         return redirect()->back();

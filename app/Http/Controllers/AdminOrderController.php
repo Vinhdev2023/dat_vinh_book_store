@@ -14,7 +14,10 @@ class AdminOrderController extends Controller
             Auth::logout();
             return redirect('/admin/login');
         }
-        $orders = DB::table('orders')->orderBy('created_at', 'DESC')->get();
+        $orders = DB::table('orders')
+            ->selectRaw('orders.*, DATE_FORMAT(created_at, "%d - %m - %Y  %H:%i:%s") AS created_at')
+            ->orderBy('created_at', 'DESC')
+            ->get();
         $path = '/admin/orders';
         return view('AdminPages.AdminOrderData', compact('path', 'orders'));
     }
@@ -26,7 +29,9 @@ class AdminOrderController extends Controller
         }
         $path = '/admin/orders';
         $orders = DB::table('orders')
-            ->where('status', $status)->orderBy('created_at', 'DESC')
+            ->selectRaw('orders.*, DATE_FORMAT(created_at, "%d - %m - %Y  %H:%i:%s") AS created_at')
+            ->where('status', $status)
+            ->orderBy('created_at', 'DESC')
             ->get();
         return view('AdminPages.AdminOrderData', compact('path', 'orders'));
     }
@@ -38,10 +43,14 @@ class AdminOrderController extends Controller
         }
         $path = '/admin/order/detail';
         $order = DB::table('orders')
-            ->select('orders.*')->selectRaw('DATE(orders.created_at) AS created_at')
+            ->select('orders.*')
+            ->selectRaw('DATE_FORMAT(created_at, "%d - %m - %Y  %H:%i:%s") AS created_at')
             ->where('id', $id)
             ->first();
-        $user_check_order = DB::table('users')->where('id', DB::table('orders')->where('id', $id)->select('orders.user_id'))->first();
+        $user_check_order = DB::table('users')
+            ->where('id', DB::table('orders')
+            ->where('id', $id)->select('orders.user_id'))
+            ->first();
         $order_detail = DB::table('order_detail')
             ->select('order_detail.*', 'books.title AS book_title', 'order_detail.price AS book_price', 'order_detail.quantity AS book_quantity')
             ->leftJoin('books', 'order_detail.book_id', '=', 'books.id')
