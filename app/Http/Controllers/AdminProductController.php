@@ -164,4 +164,14 @@ class AdminProductController extends Controller
             ->delete();
         return redirect('/admin/products');
     }
+
+    public function products_empty(){
+        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
+            Auth::logout();
+            return redirect('/admin/login');
+        }
+        $path = '/admin/products';
+        $books = DB::table('books')->where('quantity', '<', 30)->get();
+        return view('AdminPages.AdminBooksData', compact('path', 'books'));
+    }
 }

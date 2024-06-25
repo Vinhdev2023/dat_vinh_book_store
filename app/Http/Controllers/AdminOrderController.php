@@ -64,6 +64,10 @@ class AdminOrderController extends Controller
             Auth::logout();
             return redirect('/admin/login');
         }
+        $check_status = DB::table('orders')->where('id', $id)->first()->status;
+        if ($check_status == 'CANCELED') {
+            return redirect('/order/detail/'.$id);
+        }
         DB::table('orders')->where('id', $id)
             ->update([
                 'user_id' => Auth::user()->id,

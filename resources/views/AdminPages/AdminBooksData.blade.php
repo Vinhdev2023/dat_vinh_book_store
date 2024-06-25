@@ -56,7 +56,8 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">DataTable with minimal features & hover style</h3>
+                                <a href="/admin/products/empty" class="btn btn-primary">book are out</a>
+                                <a href="/admin/products" class="btn btn-primary">View all book</a>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">

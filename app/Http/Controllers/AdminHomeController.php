@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AdminHomeController extends Controller
 {
@@ -12,8 +13,9 @@ class AdminHomeController extends Controller
             Auth::logout();
             return redirect('/admin/login');
         }
+        $newOrder = DB::table('orders')->where('status', 'PENDING')->count();
         $path = '/admin';
-        return view('AdminPages.AdminHome', compact('path'));
+        return view('AdminPages.AdminHome', compact('path', 'newOrder'));
     }
 
     public function login_form(){
