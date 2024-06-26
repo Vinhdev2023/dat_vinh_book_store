@@ -113,7 +113,7 @@
                                             <button type="submit" class="btn btn-primary">@if($path == '/admin/product-in-cart/'){{'Update cart'}}@else{{'Add Cart'}}@endif</button>
                                         </div>
                                     </form>
-                                @else
+                                @elseif($book->status == 0)
                                     <a href="/admin/product/edit-form/{{$book->id}}">
                                         <div class="btn btn-primary btn-lg btn-flat">
                                             Edit

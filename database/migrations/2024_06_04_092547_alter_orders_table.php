@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::table('orders', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id')->nullable(true)->change();
             $table->unsignedBigInteger('customer_id')->nullable(true)->change();
-            $table->dropForeign(['customer_id']);
-            $table->foreign('customer_id')->references('id')->on('customers');
         });
     }
 

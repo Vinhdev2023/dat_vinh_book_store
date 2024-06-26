@@ -162,11 +162,6 @@
                                         <a href="/admin/order/update/COMPLETED/{{$order->id}}" type="button" class="btn btn-success float-right" style="margin-right: 5px;">
                                             Complete
                                         </a>
-                                        @if($order->status == 'SHIPPING')
-                                            <a href="/admin/order/update/CANCELED/{{$order->id}}" type="button" class="btn btn-danger float-right">
-                                                Cancel
-                                            </a>
-                                        @endif
                                     @endif
                                 </div>
                             </div>
