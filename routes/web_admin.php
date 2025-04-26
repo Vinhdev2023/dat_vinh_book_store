@@ -17,8 +17,10 @@ Route::prefix('/admin')->middleware('CheckAdmin')->group(function (){
         Route::get('/logout', [AdminHomeController::class, 'logout'])   ;
     });
 
-    Route::get('/statistics', [StatisticController::class, 'statistic_view']);
-    Route::post('/statistics/get-data', [StatisticController::class, 'statistic_get_data']);
+    Route::controller(StatisticController::class)->group(function (){
+        Route::get('/statistics', 'statistic_view');
+        Route::post('/statistics/get-data', 'statistic_get_data');
+    });
 
     Route::get('/product-to-cart/{id}', [AdminCartController::class, 'index']);
     Route::post('/add-to-cart/{id}', [AdminCartController::class, 'add_to_cart']);

@@ -10,10 +10,6 @@ use function Symfony\Component\HttpKernel\Debug\push;
 class StatisticController extends Controller
 {
     public function statistic_view(){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/statistics';
         $dataDateTotal = [];
         $dataDate = [];
@@ -21,23 +17,24 @@ class StatisticController extends Controller
     }
 
     public function statistic_get_data(Request $request){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/statistics/data';
         $dateInput = $request->FromDateToDate;
         $EndDate = substr($dateInput, strpos($dateInput,' - ') + 3, strlen($dateInput));
         $EndDate = date_format(date_create($EndDate), 'Y-m-d');
         $StartDate = substr($dateInput, 0 , strpos($dateInput,' - '));
         $StartDate = date_format(date_create($StartDate), 'Y-m-d');
+        if ($EndDate == $StartDate){
+            $EndDate = date('Y-m-d', strtotime($EndDate . ' +1 day'));
+            $StartDate = date('Y-m-d', strtotime($StartDate . ' -1 day'));
+        }
+//        dd(number_format($EndDate) - number_format($StartDate));
         $a = DB::table('orders')
             ->whereDate('orders.created_at', '>=', $StartDate)
             ->whereDate('orders.created_at', '<=', $EndDate)
             ->where('orders.status', '=', 'COMPLETED');
-        $data = DB::table($a)
-            ->selectRaw('SUM(total) AS total, date(created_at) AS date')
-            ->groupBy('date')->get();
+//        $data = DB::table($a)
+//            ->selectRaw('SUM(total) AS total, date(created_at) AS date')
+//            ->groupBy('date')->get();
 //        dd($date);
         $sumTotal = $a->selectRaw('SUM(total) AS total')->first()->total;
         $num = 0;
