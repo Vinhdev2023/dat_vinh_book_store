@@ -23,6 +23,7 @@ class AdminPublisherController extends Controller
 
     public function add_publisher(Request $request){
         $PublisherName = $request->PublisherName;
+
         if($PublisherName == null){
             return redirect('admin/publisher/add-form');
         }
