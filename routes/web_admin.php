@@ -7,12 +7,11 @@ use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\AdminPublisherController;
 use App\Http\Controllers\StatisticController;
-use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('/admin')->group(function (){
+Route::prefix('/admin')->middleware('CheckAdmin')->group(function (){
     Route::get('/', [AdminHomeController::class, 'index']);
-    Route::get('/login', [AdminHomeController::class, 'login_form']);
+    Route::get('/login', [AdminHomeController::class, 'login_form'])->withoutMiddleware('CheckAdmin');
     Route::post('/login/post', [AdminHomeController::class, 'login']);
     Route::get('/logout', [AdminHomeController::class, 'logout']);
 
