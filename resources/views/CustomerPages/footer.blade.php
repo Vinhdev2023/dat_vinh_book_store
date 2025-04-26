@@ -6,7 +6,6 @@
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="tg-footercol">
 
-                            <strong class="tg-logo"><a ><img src="/cus_plugin/images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
 
                             <ul class="tg-contactinfo">
                                 <li>
@@ -33,6 +32,9 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <strong class="tg-logo"><a ><img src="/cus_plugin/images/book.png" alt="image description" style="height: 150px; width: 250px"></a></strong>
                     </div>
                 </div>
             </div>

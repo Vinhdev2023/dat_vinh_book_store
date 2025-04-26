@@ -16,7 +16,7 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!Auth::guard('web')->check() || Auth::user()->user_type != 'admin') {
+        if (!Auth::guard('web')->check()) {
             Auth::logout();
             return redirect('/admin/login');
         }

@@ -34,6 +34,7 @@
 			<!--************************************
 					Best Selling Start
 			*************************************-->
+            @if($purchased_books != null && $purchased_books == [])
 			<section class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
@@ -79,12 +80,26 @@
 					</div>
 				</div>
 			</section>
+            @else
+                <section class="tg-sectionspace tg-haslayout">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="tg-sectionhead">
+                                    <h2>No Any Purchased Books</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            @endif
 			<!--************************************
 					Best Selling End
 			*************************************-->
 			<!--************************************
 					New Release Start
 			*************************************-->
+            @if($new_release_books != null && $new_release_books == [])
 			<section class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
@@ -134,6 +149,21 @@
 					</div>
 				</div>
 			</section>
+        @else
+                <section class="tg-sectionspace tg-haslayout">
+                    <div class="container">
+                        <div class="row">
+                            <div class="tg-newrelease">
+                                <div class="col">
+                                    <div class="tg-sectionhead">
+                                        <h2><span>Store</span> No new books yet</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        @endif
 			<!--************************************
 					New Release End
 			*************************************-->
@@ -151,7 +181,7 @@
 									</div>
 									<div class="tg-titlepluscounter">
 										<h2>Drama</h2>
-										<h3 data-from="0" data-to="6179213" data-speed="8000" data-refresh-interval="50">6,179,213</h3>
+										<h3 data-from="0" data-to="9179213" data-speed="8000" data-refresh-interval="50"></h3>
 									</div>
 								</div>
 								<div class="tg-collectioncounter tg-horror">
@@ -192,63 +222,63 @@
 			<!--************************************
 					Testimonials Start
 			*************************************-->
-			<section class="tg-parallax tg-bgtestimonials tg-haslayout" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-05.jpg">
-				<div class="tg-sectionspace tg-haslayout">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-push-2">
-								<div id="tg-testimonialsslider" class="tg-testimonialsslider tg-testimonials owl-carousel">
-									<div class="item tg-testimonial">
-										<figure><img src="/cus_plugin/images/author/image-book.jpg" alt="image description"></figure>
-										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
+{{--			<section class="tg-parallax tg-bgtestimonials tg-haslayout" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-05.jpg">--}}
+{{--				<div class="tg-sectionspace tg-haslayout">--}}
+{{--					<div class="container">--}}
+{{--						<div class="row">--}}
+{{--							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-lg-push-2">--}}
+{{--								<div id="tg-testimonialsslider" class="tg-testimonialsslider tg-testimonials owl-carousel">--}}
+{{--									<div class="item tg-testimonial">--}}
+{{--										<figure><img src="/cus_plugin/images/author/image-book.jpg" alt="image description"></figure>--}}
+{{--										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>--}}
 {{--										<div class="tg-testimonialauthor">--}}
 {{--											<h3>Holli Fenstermacher</h3>--}}
 {{--											<span>Manager @ CIFP</span>--}}
 {{--										</div>--}}
-									</div>
-									<div class="item tg-testimonial">
-										<figure><img src="/cus_plugin/images/author/image-book-2.jpg" alt="image description"></figure>
-										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
+{{--									</div>--}}
+{{--									<div class="item tg-testimonial">--}}
+{{--										<figure><img src="/cus_plugin/images/author/image-book-2.jpg" alt="image description"></figure>--}}
+{{--										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>--}}
 {{--										<div class="tg-testimonialauthor">--}}
 {{--											<h3>Holli Fenstermacher</h3>--}}
 {{--											<span>Manager @ CIFP</span>--}}
 {{--										</div>--}}
-									</div>
-									<div class="item tg-testimonial">
-										<figure><img src="cus_plugin/images/author/vinh.jpg" alt="image description"></figure>
-										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>
+{{--									</div>--}}
+{{--									<div class="item tg-testimonial">--}}
+{{--										<figure><img src="cus_plugin/images/author/vinh.jpg" alt="image description"></figure>--}}
+{{--										<blockquote><q>You should read a lot of books to gain more knowledge.</q></blockquote>--}}
 {{--										<div class="tg-testimonialauthor">--}}
 {{--											<h3>Holli Fenstermacher</h3>--}}
 {{--											<span>Manager @ CIFP</span>--}}
 {{--										</div>--}}
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+{{--									</div>--}}
+{{--								</div>--}}
+{{--							</div>--}}
+{{--						</div>--}}
+{{--					</div>--}}
+{{--				</div>--}}
+{{--			</section>--}}
 			<!--************************************
 					Testimonials End
 			*************************************-->
 			<!--************************************
 					Call to Action Start
 			*************************************-->
-			<section class="tg-parallax tg-bgcalltoaction tg-haslayout" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-06.jpg">
-				<div class="tg-sectionspace tg-haslayout">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+{{--			<section class="tg-parallax tg-bgcalltoaction tg-haslayout" data-z-index="-100" data-appear-top-offset="600" data-parallax="scroll" data-image-src="cus_plugin/images/parallax/bgparallax-06.jpg">--}}
+{{--				<div class="tg-sectionspace tg-haslayout">--}}
+{{--					<div class="container">--}}
+{{--						<div class="row">--}}
+{{--							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
 {{--								<div class="tg-calltoaction">--}}
 {{--									<h2>Open Discount For All</h2>--}}
 {{--									<h3>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</h3>--}}
 {{--									<a class="tg-btn tg-active" href="javascript:void(0);">Read More</a>--}}
 {{--								</div>--}}
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+{{--							</div>--}}
+{{--						</div>--}}
+{{--					</div>--}}
+{{--				</div>--}}
+{{--			</section>--}}
 			<!--************************************
 					Call to Action End
 			*************************************-->

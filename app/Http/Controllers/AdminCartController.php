@@ -10,10 +10,6 @@ use Illuminate\Support\Facades\DB;
 class AdminCartController extends Controller
 {
     public function index($id){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/product-to-cart/';
         $book = DB::table('books')
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
@@ -25,10 +21,6 @@ class AdminCartController extends Controller
     }
 
     public function add_to_cart(Request $request, $id){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $quantity = $request->quantity;
         $book = DB::table('books')
             ->where('id', $id)
@@ -66,10 +58,6 @@ class AdminCartController extends Controller
     }
 
     public function product_in_cart($id){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/product-in-cart/';
         $cart = session()->get('admin_cart');
         $cart_quantity = 0;
@@ -88,10 +76,6 @@ class AdminCartController extends Controller
     }
 
     public function update_cart(Request $request, $id){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $quantity = $request->quantity;
         $cart = session()->get('admin_cart');
         foreach ($cart as $obj) {
@@ -122,20 +106,12 @@ class AdminCartController extends Controller
     }
 
     public function add_order_form(){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/add-order';
         session()->put('admin_cart_in_checkout', true);
         return view('AdminPages.AdminOrderForm', compact('path'));
     }
 
     public function add_order_post(Request $request){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $name = $request->Name;
         if ($name == '' || $name == null){
             return redirect()->back();
@@ -180,10 +156,6 @@ class AdminCartController extends Controller
     }
 
     public function order_repair_form($id) {
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/order/repair';
         $order = DB::table('orders')
             ->select('orders.*')
@@ -193,10 +165,6 @@ class AdminCartController extends Controller
     }
 
     public function order_repair_post(Request $request, $id){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         DB::table('orders')->where('id', $id)
             ->update([
                 'cus_name' => $request->Name,

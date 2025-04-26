@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/admin')->middleware('CheckAdmin')->group(function (){
     Route::get('/', [AdminHomeController::class, 'index']);
-    Route::get('/login', [AdminHomeController::class, 'login_form'])->withoutMiddleware('CheckAdmin');
-    Route::post('/login/post', [AdminHomeController::class, 'login']);
-    Route::get('/logout', [AdminHomeController::class, 'logout']);
+    Route::withoutMiddleware('CheckAdmin')->group(function (){
+        Route::get('/login', [AdminHomeController::class, 'login_form']);
+        Route::post('/login/post', [AdminHomeController::class, 'login']);
+        Route::get('/logout', [AdminHomeController::class, 'logout'])   ;
+    });
 
     Route::get('/statistics', [StatisticController::class, 'statistic_view']);
     Route::post('/statistics/get-data', [StatisticController::class, 'statistic_get_data']);

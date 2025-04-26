@@ -10,20 +10,12 @@ use Illuminate\Support\Facades\DB;
 class AdminProductController extends Controller
 {
     public function index(){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/products';
         $books = DB::table('books')->get();
         return view('AdminPages.AdminBooksData', compact('path', 'books'));
     }
 
     public function product_detail($id){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/product/detail';
         $book = DB::table('books')
             ->select('books.*', 'categories.name AS category_name', 'publishers.name AS publisher_name')
@@ -36,10 +28,6 @@ class AdminProductController extends Controller
     }
 
     public function add_form(){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/product/add-form';
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
@@ -47,10 +35,6 @@ class AdminProductController extends Controller
     }
 
     public function add_product(Request $request){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         if($request->Image == null){
             return redirect('/admin/product/add-form');
         }
@@ -85,10 +69,6 @@ class AdminProductController extends Controller
     }
 
     public function edit_form($id){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/product/edit-form';
         $categories = DB::table('categories')->get();
         $publishers = DB::table('publishers')->get();
@@ -102,10 +82,6 @@ class AdminProductController extends Controller
     }
 
     public function edit_product(Request $request, $id){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         if ($request->BookTitle == null && $request->Price == null && $request->Quantity == null
             && $request->PublisherID == null && $request->CategoriesId == null ){
 
@@ -146,10 +122,6 @@ class AdminProductController extends Controller
     }
 
     public function delete_product($id){
-        if (!Auth::check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $check_order_detail = DB::table('order_detail')->where('book_id', $id)->count();
         if ($check_order_detail > 0) {
             DB::table('books')->where('id', $id)
@@ -166,10 +138,6 @@ class AdminProductController extends Controller
     }
 
     public function products_empty(){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/products';
         $books = DB::table('books')->where('quantity', '<', 30)->get();
         return view('AdminPages.AdminBooksData', compact('path', 'books'));

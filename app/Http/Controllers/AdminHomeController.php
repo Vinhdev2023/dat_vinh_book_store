@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\DB;
 class AdminHomeController extends Controller
 {
     public function index() {
-        if (!Auth::guard('web')->check() || Auth::user()->user_type != 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $newOrder = DB::table('orders')->where('status', 'PENDING')->count();
         $path = '/admin';
         return view('AdminPages.AdminHome', compact('path', 'newOrder'));

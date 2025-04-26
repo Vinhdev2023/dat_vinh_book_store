@@ -10,10 +10,6 @@ use Illuminate\Support\Facades\DB;
 class AdminOrderController extends Controller
 {
     public function index(){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $orders = DB::table('orders')
             ->selectRaw('orders.*, DATE_FORMAT(created_at, "%d - %m - %Y  %H:%i:%s") AS created_at')
             ->orderBy('created_at', 'DESC')
@@ -23,10 +19,6 @@ class AdminOrderController extends Controller
     }
 
     public function orders_filter($status){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/orders';
         $orders = DB::table('orders')
             ->selectRaw('orders.*, DATE_FORMAT(created_at, "%d - %m - %Y  %H:%i:%s") AS created_at')
@@ -37,10 +29,6 @@ class AdminOrderController extends Controller
     }
 
     public function order_detail($id){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $path = '/admin/order/detail';
         $order = DB::table('orders')
             ->select('orders.*')
@@ -60,10 +48,6 @@ class AdminOrderController extends Controller
     }
 
     public function update_order($status, $id){
-        if (!Auth::check() || Auth::user()->user_type!= 'admin') {
-            Auth::logout();
-            return redirect('/admin/login');
-        }
         $check_status = DB::table('orders')->where('id', $id)->first()->status;
         if ($check_status == 'CANCELED') {
             return redirect('/order/detail/'.$id);
