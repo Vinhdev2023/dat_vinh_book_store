@@ -21,7 +21,7 @@ class AdminHomeController extends Controller
     public function login(Request $request){
         $email = $request->email;
         $password = $request->password;
-        if (Auth::guard('web')->attempt(['email' => $email, 'password' => $password, 'user_type' => 'admin'])) {
+        if (Auth::guard('web')->attempt(['email' => $email, 'password' => $password])) {
             return redirect('/admin');
         }
         return redirect('/admin/login');
