@@ -84,7 +84,6 @@
                 <!-- /.row -->
 
                 <div class="row">
-
                     <div class="col">
                         @if($path == '/admin/statistics/data')
                         <!-- Bar chart -->
@@ -117,7 +116,41 @@
                         @endif
                     </div>
                     <!-- /.col -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col">
+                    @if($path == '/admin/statistics/data')
+                        <!-- Bar chart -->
+                            <div class="card card-primary card-outline">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        Thống Kê Theo Ngày
+                                    </h3>
 
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+{{--                                    <button type="button" class="btn btn-tool" data-card-widget="remove">--}}
+{{--                                        <i class="fas fa-times"></i>--}}
+{{--                                    </button>--}}
+                                    </div>
+                                </div>
+                                <div class="card-body" style="padding-right: 150px; padding-left: 150px">
+                                    <div id="line-chart" style="height: 420px;"></div>
+                                </div>
+                                <!-- /.card-body-->
+                                <div class="card-footer">
+                                    <h3 class="card-title">
+                                        Total: {{number_format($sumTotal)}} VND
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- /.card -->
+                        @endif
+                    </div>
+                    <!-- /.col -->
                 </div>
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -189,7 +222,64 @@
             }
         })
         /* END BAR CHART */
+        /*
+         * LINE CHART
+         * ----------
+         */
+        //LINE randomly generated data
 
+        var sin = @json($dataDateTotal);
+        var line_data1 = {
+            data : sin,
+            color: '#3c8dbc'
+        }
+        $.plot('#line-chart', [line_data1], {
+            grid  : {
+                hoverable  : true,
+                borderColor: '#f3f3f3',
+                borderWidth: 1,
+                tickColor  : '#f3f3f3'
+            },
+            series: {
+                shadowSize: 0,
+                lines     : {
+                    show: true
+                },
+                points    : {
+                    show: true
+                }
+            },
+            lines : {
+                fill : false,
+                color: ['#3c8dbc', '#f56954']
+            },
+            yaxis : {
+                show: true
+            },
+            xaxis : {
+                show: true
+            }
+        })
+        //Initialize tooltip on hover
+        $('<div class="tooltip-inner" id="line-chart-tooltip"></div>').css({
+            position: 'absolute',
+            display : 'none',
+            opacity : 0.8
+        }).appendTo('body')
+        $('#line-chart').bind('plothover', function (event, pos, item) {
+            if (item) {
+                $('#line-chart-tooltip').html(sin[item.dataIndex][1] + ' VND in ' + date[item.dataIndex][1])
+                    .css({
+                        top : item.pageY + 5,
+                        left: item.pageX + 5
+                    })
+                    .fadeIn(200)
+            } else {
+                $('#line-chart-tooltip').hide()
+            }
+
+        })
+        /* END LINE CHART */
     })
 
     /*

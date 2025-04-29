@@ -131,7 +131,7 @@
                         <p>
                             Publishers
                             <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">6</span>
+                            <span class="badge badge-info right">0</span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
